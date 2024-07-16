@@ -9,12 +9,10 @@ function init(){
   const root = document.querySelector('#root');
   const nav = Navbar();
   const home = Home();
+  const footer = Footer();
   const main = Main();
   const resume = Resume();
   const portfolio = Portfolio();
-  nav.appendChild(home);
-  nav.appendChild(resume);
-  nav.appendChild(portfolio);
   root.appendChild(nav);
   root.appendChild(home);
   root.appendChild(footer);
