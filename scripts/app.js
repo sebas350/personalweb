@@ -19,3 +19,5 @@ function init(){
   root.appendChild(home);
   root.appendChild(footer);
 };
+
+init();
