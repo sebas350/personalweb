@@ -7,14 +7,15 @@ import { Main } from './components/main.js';
 
 function init(){
   const root = document.querySelector('#root');
-  const nav = Navbar();
   const home = Home();
   const footer = Footer();
   const main = Main();
+  const nav = Navbar(main);
   const resume = Resume();
   const portfolio = Portfolio();
+  
   root.appendChild(nav);
-  root.appendChild(home);
+  root.appendChild(main);
   root.appendChild(footer);
 };
 
