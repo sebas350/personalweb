@@ -1,25 +1,34 @@
 import {Resume} from './resume.js';
+import {Home} from './home.js';
+import {Portfolio} from './portfolio.js';
 
 export function Navbar(main) {
     const nav = document.createElement('nav');
     const home = document.createElement('button');
     const resume = document.createElement('button');
-    const porfolio = document.createElement('button');
+    const portfolio = document.createElement('button');
     
     home.textContent = 'Home';
     resume.textContent = 'Resumen';
-    porfolio.textContent = 'Porfolio';
+    portfolio.textContent = 'Portfolio';
     
-    const innerResume = function() {
-        main.innerHTML = `${Resume().innerHTML}`;
+    const inner = (main) => {
+        return {
+            home: () => {main.innerHTML = Home().innerHTML;},
+            resume: () => {main.innerHTML = Resume().innerHTML;},
+            portfolio: () => {main.innerHTML = Portfolio().innerHTML;},
+        };
         
     };
+        
+    resume.onclick = inner(main).resume;
+    home.onclick = inner(main).home;
+    portfolio.onclick = inner(main).portfolio;
+      
+    const elements = [home,resume,portfolio];
     
-    resume.onclick = innerResume;
-    
-    const items = [home,resume,porfolio];
-    for (let item of items){
-        nav.appendChild(item);
+    for (let element of elements){
+        nav.appendChild(element);
     }; 
     
     nav.style.display = 'flex';
