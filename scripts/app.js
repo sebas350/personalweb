@@ -13,6 +13,7 @@ function init(){
   const nav = Navbar(main);
   const resume = Resume();
   const portfolio = Portfolio();
+  main.innerHTML = home.innerHTML;
   
   root.appendChild(nav);
   root.appendChild(main);
