@@ -8,5 +8,7 @@ export function Home() {
 
     div.appendChild(h1);
     div.appendChild(p);
+
+    div.style.border = '2px solid blue';
     return div;
 }
