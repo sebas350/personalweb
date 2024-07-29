@@ -1,4 +1,5 @@
 export function Resume() {
+    const container = document.createElement('div');
     const div = document.createElement('div');
     const h1 = document.createElement('h1');
     const p = document.createElement('p');
@@ -8,5 +9,9 @@ export function Resume() {
 
     div.appendChild(h1);
     div.appendChild(p);
-    return div;
+    container.appendChild(div);
+
+    
+    
+    return container;
 }
