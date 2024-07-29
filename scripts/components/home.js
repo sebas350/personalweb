@@ -8,14 +8,18 @@ export function Home() {
     circle.style.width = "300px";
     circle.style.height = "300px";
     circle.style.borderRadius = "50%";
-    circle.style.backgroundImage= "url('img/professional-1.jpg')";
+    circle.style.backgroundImage= "url('/scripts/components/img/me.jpg')";
+    circle.style.backgroundSize = 'cover';
+    circle.style.backgroundPosition = 'center';
 
-    h1.textContent = 'Welcome to My Personal Website';
-    p.textContent = 'Hi, I\'m [Your Name], a Fullstack Developer.';
+    h1.textContent = 'Bienvenidos a mi Pagina Web';
+    p.textContent = 'Hola, soy un desarrollador Fullstack.';
     
-    h1.style.border = '2px solid blue';
-    p.style.border = '2px solid blue';
-    circle.style.border = '2px solid blue';
+    //h1.style.border = '2px solid blue';
+    //p.style.border = '2px solid blue';
+    p.style.color = 'rgb(173,()216,230)';
+    h1.style.color = '#dd8e6';
+    //circle.style.border = '2px solid blue';
 
     div.appendChild(h1);
     div.appendChild(p);
@@ -24,7 +28,7 @@ export function Home() {
 
     div.style.color = 'blue';
     div.style.height = '80vh';
-    div.style.border = '2px solid blue';
+    //div.style.border = '2px solid blue';
     div.style.display = 'flex';
     div.style.flexDirection = 'column';
     div.style.justifyContent = 'space-around';
