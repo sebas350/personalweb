@@ -1,4 +1,5 @@
 export function Home() {
+    const container = document.createElement('div');
     const div = document.createElement('div');
     const h1 = document.createElement('h1');
     const p = document.createElement('p');
@@ -10,5 +11,7 @@ export function Home() {
     div.appendChild(p);
 
     div.style.border = '2px solid blue';
-    return div;
+
+    container.appendChild(div);
+    return conteiner;
 }
