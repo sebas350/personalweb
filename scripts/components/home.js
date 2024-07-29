@@ -15,6 +15,7 @@ export function Home() {
     div.style.display = 'flex';
     div.style.justifyContent = 'center';
     div.style.alignItems = 'center';
+    div.style.flexDirection = 'column';
     container.appendChild(div);
     return container;
 }
