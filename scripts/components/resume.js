@@ -9,9 +9,14 @@ export function Resume() {
 
     div.appendChild(h1);
     div.appendChild(p);
-    container.appendChild(div);
 
-    
-    
+    div.style.color = 'blue';
+    div.style.border = '2px solid blue';
+    div.style.display = 'flex';
+    div.style.justifyContent = 'center';
+    div.style.alignItems = 'center';
+    div.style.flexDirection = 'column';
+
+    container.appendChild(div);
     return container;
 }
