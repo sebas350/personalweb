@@ -3,12 +3,19 @@ export function Home() {
     const div = document.createElement('div');
     const h1 = document.createElement('h1');
     const p = document.createElement('p');
+    const circle = document.createElement('div');
+
+    circle.style.width = "100px";
+    circle.style.height = "100px";
+    circle.style.borderRadius = "50%";
+    circle.style.backgroundColor = 'blue';
 
     h1.textContent = 'Welcome to My Personal Website';
     p.textContent = 'Hi, I\'m [Your Name], a Fullstack Developer.';
 
     div.appendChild(h1);
     div.appendChild(p);
+    div.appendChild(circle);
 
     div.style.color = 'blue';
     div.style.border = '2px solid blue';
