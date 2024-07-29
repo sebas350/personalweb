@@ -16,6 +16,7 @@ export function Home() {
     p.textContent = 'Hola, soy un desarrollador Fullstack.';
     
     h1.style.border = '2px solid blue';
+    h1.style.textAlign = 'center';
     //p.style.border = '2px solid blue';
     p.style.color = 'rgb(173,()216,230)';
     h1.style.color = '#dd8e6';
