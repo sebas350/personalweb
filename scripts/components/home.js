@@ -8,7 +8,7 @@ export function Home() {
     circle.style.width = "300px";
     circle.style.height = "300px";
     circle.style.borderRadius = "50%";
-    circle.style.backgroundImage= "url('/img/me.jpg')";
+    circle.style.backgroundImage= "url('/scripts/components/img/me.jpg')";
     circle.style.backgroundSize = 'cover';
     circle.style.backgroundPosition = 'center';
 
