@@ -11,8 +11,7 @@ export function Home() {
     div.appendChild(p);
 
     div.style.color = 'blue';
-    container.style.border = '2px solid blue';
-
+    div.style.border = '2px solid blue';
     container.appendChild(div);
     return container;
 }
