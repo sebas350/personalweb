@@ -12,6 +12,9 @@ export function Home() {
 
     div.style.color = 'blue';
     div.style.border = '2px solid blue';
+    div.style.display = 'flex';
+    div.style.justifyContent = 'center';
+    div.style.alignItems = 'center';
     container.appendChild(div);
     return container;
 }
