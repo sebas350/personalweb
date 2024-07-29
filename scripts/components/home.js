@@ -10,7 +10,7 @@ export function Home() {
     div.appendChild(h1);
     div.appendChild(p);
 
-    div.style.border = '2px solid blue';
+    div.style.color = 'blue';
 
     container.appendChild(div);
     return container;
