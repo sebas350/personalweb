@@ -53,8 +53,8 @@ Revisa mi trabajo`;
     div.appendChild(circle);
     
 
-    div.style.color = 'blue';
-    div.style.height = '80vh';
+    //div.style.color = 'blue';
+    //div.style.height = '80vh';
     //div.style.border = '2px solid blue';
     div.style.display = 'flex';
     div.style.flexDirection = 'column';
