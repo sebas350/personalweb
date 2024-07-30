@@ -47,7 +47,7 @@ export function Home() {
 
     //div.appendChild(h1);
     div.appendChild(sectionMe);
-    const h1 = document.querySelectorAll('h1');
+    const h1 = document.querySelector('h1');
     
     h1.style.color = 'blue';
     div.appendChild(circle);
