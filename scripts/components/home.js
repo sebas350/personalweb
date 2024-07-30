@@ -12,7 +12,7 @@ export function Home() {
     circle.style.backgroundSize = 'cover';
     circle.style.backgroundPosition = 'center';
 
-    h1.textContent = 'Bienvenidos a mi Pagina Web';
+    h1.textContent = 'Bienvenidos a mi Pagina Profesional';
     p.textContent = '¡Bienvenido a mi página profesional!
 Hola, soy Tello, Sebastián José un apasionado desarrollador fullstack con más de 2 años de experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables. Mi objetivo es crear soluciones tecnológicas que no solo cumplan con los requisitos técnicos, sino que también ofrezcan una experiencia de usuario excepcional.
 
