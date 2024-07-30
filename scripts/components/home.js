@@ -1,7 +1,7 @@
 export function Home() {
     const container = document.createElement('div');
     const div = document.createElement('div');
-    let sectionMe= document.createElement('section');
+    const sectionMe= document.createElement('section');
     const circle = document.createElement('div');
 
     circle.style.width = "300px";
@@ -39,6 +39,10 @@ export function Home() {
 <p>Conoce más sobre mí</p>
 <p>Revisa mi trabajo</p>`;
 
+
+const h1 = sectionMe.querySelector('h1');
+    
+    h1.style.color = 'blue';
     //h1.style.textAlign = 'center';
     //p.style.border = '2px solid blue';
     //p.style.color = 'rgb(173,()216,230)';
@@ -47,9 +51,6 @@ export function Home() {
 
     //div.appendChild(h1);
     div.appendChild(sectionMe);
-    const h1 = document.querySelector('h1');
-    
-    h1.style.color = 'blue';
     div.appendChild(circle);
     
 
