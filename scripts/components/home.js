@@ -1,8 +1,7 @@
 export function Home() {
     const container = document.createElement('div');
     const div = document.createElement('div');
-    const h1 = document.createElement('h1');
-    const p = document.createElement('p');
+    const seccionMe= document.createElement('section');
     const circle = document.createElement('div');
 
     circle.style.width = "300px";
@@ -12,34 +11,32 @@ export function Home() {
     circle.style.backgroundSize = 'cover';
     circle.style.backgroundPosition = 'center';
 
-    h1.textContent = 'Bienvenidos a mi Pagina Profesional';
-    p.textContent = `Hola, soy Tello, Sebastián José un apasionado desarrollador fullstack con más de 2 años de experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables. Mi objetivo es crear soluciones tecnológicas que no solo cumplan con los requisitos técnicos, sino que también ofrezcan una experiencia de usuario excepcional.
+    seccionMe.innerHTML = `<h1>Bienvenidos a mi Pagina Profesional</h1>
+    <p>Hola, soy Tello, Sebastián José un apasionado desarrollador fullstack con más de 2 años de experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables. Mi objetivo es crear soluciones tecnológicas que no solo cumplan con los requisitos técnicos, sino que también ofrezcan una experiencia de usuario excepcional.</p>
 
-En este sitio, encontrarás información sobre mi trayectoria profesional, mis habilidades técnicas, y una muestra de los proyectos en los que he trabajado. Me encanta enfrentar nuevos desafíos y aprender continuamente para mejorar mis competencias y ofrecer lo mejor de mí en cada proyecto.
+<p>En este sitio, encontrarás información sobre mi trayectoria profesional, mis habilidades técnicas, y una muestra de los proyectos en los que he trabajado. Me encanta enfrentar nuevos desafíos y aprender continuamente para mejorar mis competencias y ofrecer lo mejor de mí en cada proyecto.</p>
 
-¿Quién soy?
-Soy un desarrollador dedicado y creativo, con un fuerte enfoque en la calidad del código y las mejores prácticas de desarrollo. Tengo experiencia trabajando con una variedad de tecnologías tanto en el frontend como en el backend, incluyendo JavaScript, React, Node.js, Python, y muchas más.
+<h2>¿Quién soy?</h2>
+<p>Soy un desarrollador dedicado y creativo, con un fuerte enfoque en la calidad del código y las mejores prácticas de desarrollo. Tengo experiencia trabajando con una variedad de tecnologías tanto en el frontend como en el backend, incluyendo JavaScript, React, Node.js, Python, y muchas más.</p>
 
-¿Qué puedo hacer?
-Desde construir interfaces de usuario intuitivas hasta desarrollar complejos sistemas backend, tengo la capacidad de manejar todos los aspectos del desarrollo de aplicaciones web. Mis habilidades incluyen:
+<h2>¿Qué puedo hacer?</h2>
+<p>Desde construir interfaces de usuario intuitivas hasta desarrollar complejos sistemas backend, tengo la capacidad de manejar todos los aspectos del desarrollo de aplicaciones web. Mis habilidades incluyen:</p>
 
-Frontend: HTML, CSS, JavaScript, React, Angular
-Backend: Node.js, Express, Django, Ruby on Rails
-Bases de datos: MySQL, PostgreSQL, MongoDB
-Herramientas y DevOps: Git, Docker, Jenkins, AWS
-¿Qué encontrarás aquí?
-Resume: Un recorrido detallado por mi experiencia laboral, educación y habilidades técnicas.
-Portfolio: Ejemplos de proyectos en los que he trabajado, destacando los desafíos enfrentados y las soluciones implementadas.
-Blog: Artículos y reflexiones sobre desarrollo web, nuevas tecnologías y mejores prácticas.
-Contacto
-Estoy siempre en busca de nuevas oportunidades y colaboraciones. Si te interesa trabajar conmigo o simplemente quieres saber más, no dudes en contactarme.
+<p>Frontend: HTML, CSS, JavaScript, React, Angular</p>
+<p>Backend: Node.js, Express, Django, Ruby on Rails</p>
+<p>Bases de datos: MySQL, PostgreSQL, MongoDB</p>
+<p>Herramientas y DevOps: Git, Docker, Jenkins, AWS</p>
+<h2>¿Qué encontrarás aquí?</h2>
+<p>Resume: Un recorrido detallado por mi experiencia laboral, educación y habilidades técnicas.</p>
+<p>Portfolio: Ejemplos de proyectos en los que he trabajado, destacando los desafíos enfrentados y las soluciones implementadas.</p>
+<p>Blog: Artículos y reflexiones sobre desarrollo web, nuevas tecnologías y mejores prácticas.</p>
+<h2>Contacto</h2>
+<p>Estoy siempre en busca de nuevas oportunidades y colaboraciones. Si te interesa trabajar conmigo o simplemente quieres saber más, no dudes en contactarme.</p>
 
-Explora mi trabajo y descubre cómo puedo ayudarte a llevar tus ideas al siguiente nivel. ¡Gracias por visitar mi página!
+<p>Explora mi trabajo y descubre cómo puedo ayudarte a llevar tus ideas al siguiente nivel. ¡Gracias por visitar mi página!</p>
 
-Botones:
-
-Conoce más sobre mí
-Revisa mi trabajo`;
+<p>Conoce más sobre mí</p>
+<p>Revisa mi trabajo</p>`;
     
     //h1.style.border = '2px solid blue';
     h1.style.textAlign = 'center';
