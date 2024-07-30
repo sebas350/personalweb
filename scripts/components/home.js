@@ -13,7 +13,7 @@ export function Home() {
     circle.style.backgroundPosition = 'center';
 
     h1.textContent = 'Bienvenidos a mi Pagina Profesional';
-    p.textContent = '¡Bienvenido a mi página profesional!
+    p.textContent = `¡Bienvenido a mi página profesional!
 Hola, soy Tello, Sebastián José un apasionado desarrollador fullstack con más de 2 años de experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables. Mi objetivo es crear soluciones tecnológicas que no solo cumplan con los requisitos técnicos, sino que también ofrezcan una experiencia de usuario excepcional.
 
 En este sitio, encontrarás información sobre mi trayectoria profesional, mis habilidades técnicas, y una muestra de los proyectos en los que he trabajado. Me encanta enfrentar nuevos desafíos y aprender continuamente para mejorar mis competencias y ofrecer lo mejor de mí en cada proyecto.
@@ -40,7 +40,7 @@ Explora mi trabajo y descubre cómo puedo ayudarte a llevar tus ideas al siguien
 Botones:
 
 Conoce más sobre mí
-Revisa mi trabajo';
+Revisa mi trabajo`;
     
     //h1.style.border = '2px solid blue';
     h1.style.textAlign = 'center';
