@@ -10,7 +10,8 @@ export function Home() {
     circle.style.backgroundImage= "url('https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/me.jpg')";
     circle.style.backgroundSize = 'cover';
     circle.style.backgroundPosition = 'center';
-
+    
+    sectionMe.id = 'me';
     sectionMe.innerHTML = `<h1>Bienvenidos a mi Pagina Profesional</h1>
     <p>Hola, soy Tello, Sebastián José un apasionado desarrollador fullstack con más de 2 años de experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables. Mi objetivo es crear soluciones tecnológicas que no solo cumplan con los requisitos técnicos, sino que también ofrezcan una experiencia de usuario excepcional.</p>
 
@@ -37,8 +38,10 @@ export function Home() {
 
 <p>Conoce más sobre mí</p>
 <p>Revisa mi trabajo</p>`;
+
+    const h1 = document.querySelector('#me h1');
     
-    //h1.style.border = '2px solid blue';
+    h1.style.color = 'lightblue';
     //h1.style.textAlign = 'center';
     //p.style.border = '2px solid blue';
     //p.style.color = 'rgb(173,()216,230)';
