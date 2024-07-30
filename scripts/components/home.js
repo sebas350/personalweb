@@ -13,7 +13,34 @@ export function Home() {
     circle.style.backgroundPosition = 'center';
 
     h1.textContent = 'Bienvenidos a mi Pagina Web';
-    p.textContent = 'Hola, soy un desarrollador Fullstack.';
+    p.textContent = '¡Bienvenido a mi página profesional!
+Hola, soy Tello, Sebastián José un apasionado desarrollador fullstack con más de 2 años de experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables. Mi objetivo es crear soluciones tecnológicas que no solo cumplan con los requisitos técnicos, sino que también ofrezcan una experiencia de usuario excepcional.
+
+En este sitio, encontrarás información sobre mi trayectoria profesional, mis habilidades técnicas, y una muestra de los proyectos en los que he trabajado. Me encanta enfrentar nuevos desafíos y aprender continuamente para mejorar mis competencias y ofrecer lo mejor de mí en cada proyecto.
+
+¿Quién soy?
+Soy un desarrollador dedicado y creativo, con un fuerte enfoque en la calidad del código y las mejores prácticas de desarrollo. Tengo experiencia trabajando con una variedad de tecnologías tanto en el frontend como en el backend, incluyendo JavaScript, React, Node.js, Python, y muchas más.
+
+¿Qué puedo hacer?
+Desde construir interfaces de usuario intuitivas hasta desarrollar complejos sistemas backend, tengo la capacidad de manejar todos los aspectos del desarrollo de aplicaciones web. Mis habilidades incluyen:
+
+Frontend: HTML, CSS, JavaScript, React, Angular
+Backend: Node.js, Express, Django, Ruby on Rails
+Bases de datos: MySQL, PostgreSQL, MongoDB
+Herramientas y DevOps: Git, Docker, Jenkins, AWS
+¿Qué encontrarás aquí?
+Resume: Un recorrido detallado por mi experiencia laboral, educación y habilidades técnicas.
+Portfolio: Ejemplos de proyectos en los que he trabajado, destacando los desafíos enfrentados y las soluciones implementadas.
+Blog: Artículos y reflexiones sobre desarrollo web, nuevas tecnologías y mejores prácticas.
+Contacto
+Estoy siempre en busca de nuevas oportunidades y colaboraciones. Si te interesa trabajar conmigo o simplemente quieres saber más, no dudes en contactarme.
+
+Explora mi trabajo y descubre cómo puedo ayudarte a llevar tus ideas al siguiente nivel. ¡Gracias por visitar mi página!
+
+Botones:
+
+Conoce más sobre mí
+Revisa mi trabajo';
     
     //h1.style.border = '2px solid blue';
     h1.style.textAlign = 'center';
