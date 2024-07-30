@@ -58,7 +58,7 @@ Revisa mi trabajo`;
     //div.style.border = '2px solid blue';
     div.style.display = 'flex';
     div.style.flexDirection = 'column';
-    div.style.justifyContent = 'space-around';
+    //div.style.justifyContent = 'space-around';
     div.style.alignItems = 'center';
     //div.style.padding = '0';
     //div.style.margin = '0';
