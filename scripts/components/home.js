@@ -1,7 +1,7 @@
 export function Home() {
     const container = document.createElement('div');
     const div = document.createElement('div');
-    const sectionMe= document.createElement('section');
+    let sectionMe= document.createElement('section');
     const circle = document.createElement('div');
 
     circle.style.width = "300px";
