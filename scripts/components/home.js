@@ -1,7 +1,7 @@
 export function Home() {
     const container = document.createElement('div');
     const div = document.createElement('div');
-    const seccionMe= document.createElement('section');
+    const sectionMe= document.createElement('section');
     const circle = document.createElement('div');
 
     circle.style.width = "300px";
@@ -11,7 +11,7 @@ export function Home() {
     circle.style.backgroundSize = 'cover';
     circle.style.backgroundPosition = 'center';
 
-    seccionMe.innerHTML = `<h1>Bienvenidos a mi Pagina Profesional</h1>
+    sectionMe.innerHTML = `<h1>Bienvenidos a mi Pagina Profesional</h1>
     <p>Hola, soy Tello, Sebastián José un apasionado desarrollador fullstack con más de 2 años de experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables. Mi objetivo es crear soluciones tecnológicas que no solo cumplan con los requisitos técnicos, sino que también ofrezcan una experiencia de usuario excepcional.</p>
 
 <p>En este sitio, encontrarás información sobre mi trayectoria profesional, mis habilidades técnicas, y una muestra de los proyectos en los que he trabajado. Me encanta enfrentar nuevos desafíos y aprender continuamente para mejorar mis competencias y ofrecer lo mejor de mí en cada proyecto.</p>
@@ -39,14 +39,14 @@ export function Home() {
 <p>Revisa mi trabajo</p>`;
     
     //h1.style.border = '2px solid blue';
-    h1.style.textAlign = 'center';
+    //h1.style.textAlign = 'center';
     //p.style.border = '2px solid blue';
-    p.style.color = 'rgb(173,()216,230)';
-    h1.style.color = '#dd8e6';
+    //p.style.color = 'rgb(173,()216,230)';
+    //h1.style.color = '#dd8e6';
     //circle.style.border = '2px solid blue';
 
-    div.appendChild(h1);
-    div.appendChild(p);
+    //div.appendChild(h1);
+    div.appendChild(sectionMe);
     div.appendChild(circle);
     
 
