@@ -39,9 +39,6 @@ export function Home() {
 <p>Conoce más sobre mí</p>
 <p>Revisa mi trabajo</p>`;
 
-    const h1 = document.querySelector('#me h1');
-    
-    h1.style.color = 'lightblue';
     //h1.style.textAlign = 'center';
     //p.style.border = '2px solid blue';
     //p.style.color = 'rgb(173,()216,230)';
@@ -50,6 +47,9 @@ export function Home() {
 
     //div.appendChild(h1);
     div.appendChild(sectionMe);
+    const h1 = document.querySelector('#me h1');
+    
+    h1.style.color = 'blue';
     div.appendChild(circle);
     
 
