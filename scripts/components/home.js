@@ -43,7 +43,7 @@ export function Home() {
 const h1 = sectionMe.querySelector('h1');
     
     h1.style.color = 'blue';
-    //h1.style.textAlign = 'center';
+    h1.style.textAlign = 'justify';
     //p.style.border = '2px solid blue';
     //p.style.color = 'rgb(173,()216,230)';
     //h1.style.color = '#dd8e6';
