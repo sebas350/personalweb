@@ -13,9 +13,14 @@ export function Home() {
     
     sectionMe.id = 'me';
     sectionMe.innerHTML = `<h1>Bienvenidos a mi Pagina Profesional</h1>
-    <p>Hola, soy Tello, Sebastián José un apasionado desarrollador fullstack con más de 2 años de experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables. Mi objetivo es crear soluciones tecnológicas que no solo cumplan con los requisitos técnicos, sino que también ofrezcan una experiencia de usuario excepcional.</p>
+    
+    <div>
+        <p>Hola, soy Tello, Sebastián José un apasionado desarrollador fullstack con más de 2 años de experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables. Mi objetivo es crear soluciones tecnológicas que no solo cumplan con los requisitos técnicos, sino que también ofrezcan una experiencia de usuario excepcional.</p>
 
 <p>En este sitio, encontrarás información sobre mi trayectoria profesional, mis habilidades técnicas, y una muestra de los proyectos en los que he trabajado. Me encanta enfrentar nuevos desafíos y aprender continuamente para mejorar mis competencias y ofrecer lo mejor de mí en cada proyecto.</p>
+    </div>
+    
+    
 
 <h2>¿Quién soy?</h2>
 <p>Soy un desarrollador dedicado y creativo, con un fuerte enfoque en la calidad del código y las mejores prácticas de desarrollo. Tengo experiencia trabajando con una variedad de tecnologías tanto en el frontend como en el backend, incluyendo JavaScript, React, Node.js, Python, y muchas más.</p>
@@ -23,28 +28,57 @@ export function Home() {
 <h2>¿Qué puedo hacer?</h2>
 <p>Desde construir interfaces de usuario intuitivas hasta desarrollar complejos sistemas backend, tengo la capacidad de manejar todos los aspectos del desarrollo de aplicaciones web. Mis habilidades incluyen:</p>
 
-<p>Frontend: HTML, CSS, JavaScript, React, Angular</p>
-<p>Backend: Node.js, Express, Django, Ruby on Rails</p>
-<p>Bases de datos: MySQL, PostgreSQL, MongoDB</p>
-<p>Herramientas y DevOps: Git, Docker, Jenkins, AWS</p>
+<div>
+    <p><strong>Frontend:</strong> HTML, CSS, JavaScript, React, Angular</p>
+    <p><strong>Backend:</strong> Node.js, Express, Django, Ruby on Rails</p>
+    <p><strong>Bases de datos:</strong> MySQL, PostgreSQL, MongoDB</p>
+    <p><strong>Herramientas y DevOps:</strong> Git, Docker, Jenkins, AWS</p>
+</div>
+
 <h2>¿Qué encontrarás aquí?</h2>
-<p>Resume: Un recorrido detallado por mi experiencia laboral, educación y habilidades técnicas.</p>
-<p>Portfolio: Ejemplos de proyectos en los que he trabajado, destacando los desafíos enfrentados y las soluciones implementadas.</p>
-<p>Blog: Artículos y reflexiones sobre desarrollo web, nuevas tecnologías y mejores prácticas.</p>
+<div>
+    <p><strong>Resume:</strong> Un recorrido detallado por mi experiencia laboral, educación y habilidades técnicas.</p>
+<p><strong>Portfolio:</strong> Ejemplos de proyectos en los que he trabajado, destacando los desafíos enfrentados y las soluciones implementadas.</p>
+<p><strong>Blog:</strong> Artículos y reflexiones sobre desarrollo web, nuevas tecnologías y mejores prácticas.</p>
+</div>
+
 <h2>Contacto</h2>
-<p>Estoy siempre en busca de nuevas oportunidades y colaboraciones. Si te interesa trabajar conmigo o simplemente quieres saber más, no dudes en contactarme.</p>
+<div>
+    <p>Estoy siempre en busca de nuevas oportunidades y colaboraciones. Si te interesa trabajar conmigo o simplemente quieres saber más, no dudes en contactarme.</p>
 
 <p>Explora mi trabajo y descubre cómo puedo ayudarte a llevar tus ideas al siguiente nivel. ¡Gracias por visitar mi página!</p>
 
 <p>Conoce más sobre mí</p>
-<p>Revisa mi trabajo</p>`;
+<p>Revisa mi trabajo</p>
+</div>
+`;
 
 
 const h1 = sectionMe.querySelector('h1');
-const p = sectionMe.querySelector('p');   
+const ps = sectionMe.querySelectorAll('p');
+
+const h2s = sectionMe.querySelectorAll('h2');
+
+
+
+for (const p of ps){
+    p.style.textAlign = 'justify';
+    p.style.textIndent = '20px';
+};
+
+for (const h2 of h2s){
+    h2.style.textIndent = '20px';
+};
+    
+    
+    sectionMe.style.display = 'flex';
+    sectionMe.style.flexDirection = 'column';
+    sectionMe.style.gap= '20px';
     
     h1.style.color = 'blue';
-    p.style.textAlign = 'justify';
+    h1.style.textAlign = 'center';
+    //pa.style.textAlign = 'justify';
+    //pa.style.textIndent = '20px';
     //p.style.border = '2px solid blue';
     //p.style.color = 'rgb(173,()216,230)';
     //h1.style.color = '#dd8e6';
@@ -58,6 +92,7 @@ const p = sectionMe.querySelector('p');
     //div.style.color = 'blue';
     //div.style.height = '80vh';
     //div.style.border = '2px solid blue';
+    //div.gap = '100px';
     div.style.display = 'flex';
     div.style.flexDirection = 'column';
     //div.style.justifyContent = 'space-around';
