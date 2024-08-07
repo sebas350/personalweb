@@ -52,6 +52,15 @@ secMe_2.innerHTML =`<h2>¿Qué puedo hacer?</h2>
 <p>Revisa mi trabajo</p>
 </div>`;
 
+    secMe_1.style.display = 'flex';
+    secMe_1.style.flexDirection = 'column';
+    secMe_1.style.gap = '15px';
+    secMe_1.style.paddingTop = '20px';
+    
+    secMe_2.style.display = 'flex';
+    secMe_2.style.flexDirection = 'column';
+    secMe_2.style.gap = '15px';
+    
     secMe.appendChild(secMe_1);
     secMe.appendChild(circle);
     secMe.appendChild(secMe_2);
@@ -78,8 +87,7 @@ for (const h2 of h2s){
     
     h1.style.color = 'blue';
     h1.style.textAlign = 'center';
-    
-    circle.style.textAlign = 'center';
+    circle.style.margin = 'auto';
     //pa.style.textAlign = 'justify';
     //pa.style.textIndent = '20px';
     //p.style.border = '2px solid blue';
