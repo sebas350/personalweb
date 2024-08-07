@@ -1,7 +1,9 @@
 export function Home() {
     const container = document.createElement('div');
     const div = document.createElement('div');
-    const sectionMe= document.createElement('section');
+    const secMe= document.createElement('section');
+    const secMe_1= document.createElement('div');
+    const secMe_2= document.createElement('div');
     const circle = document.createElement('div');
 
     circle.style.width = "300px";
@@ -11,8 +13,7 @@ export function Home() {
     circle.style.backgroundSize = 'cover';
     circle.style.backgroundPosition = 'center';
     
-    sectionMe.id = 'me';
-    sectionMe.innerHTML = `<h1>Bienvenidos a mi Pagina Profesional</h1>
+    secMe_1.innerHTML = `<h1>Bienvenidos a mi Pagina Profesional</h1>
     
     <div>
         <p>Hola, soy Tello, Sebastián José un apasionado desarrollador fullstack con más de 2 años de experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables. Mi objetivo es crear soluciones tecnológicas que no solo cumplan con los requisitos técnicos, sino que también ofrezcan una experiencia de usuario excepcional.</p>
@@ -20,12 +21,11 @@ export function Home() {
 <p>En este sitio, encontrarás información sobre mi trayectoria profesional, mis habilidades técnicas, y una muestra de los proyectos en los que he trabajado. Me encanta enfrentar nuevos desafíos y aprender continuamente para mejorar mis competencias y ofrecer lo mejor de mí en cada proyecto.</p>
     </div>
     
-    
-
 <h2>¿Quién soy?</h2>
-<p>Soy un desarrollador dedicado y creativo, con un fuerte enfoque en la calidad del código y las mejores prácticas de desarrollo. Tengo experiencia trabajando con una variedad de tecnologías tanto en el frontend como en el backend, incluyendo JavaScript, React, Node.js, Python, y muchas más.</p>
+<p>Soy un desarrollador dedicado y creativo, con un fuerte enfoque en la calidad del código y las mejores prácticas de desarrollo. Tengo experiencia trabajando con una variedad de tecnologías tanto en el frontend como en el backend, incluyendo JavaScript, React, Node.js, Python, y muchas más.</p>`;
 
-<h2>¿Qué puedo hacer?</h2>
+
+secMe_2.innerHTML =`<h2>¿Qué puedo hacer?</h2>
 <p>Desde construir interfaces de usuario intuitivas hasta desarrollar complejos sistemas backend, tengo la capacidad de manejar todos los aspectos del desarrollo de aplicaciones web. Mis habilidades incluyen:</p>
 
 <div>
@@ -50,16 +50,17 @@ export function Home() {
 
 <p>Conoce más sobre mí</p>
 <p>Revisa mi trabajo</p>
-</div>
-`;
+</div>`;
 
+    secMe.appendChild(secMe_1);
+    secMe.appendChild(circle);
+    secMe.appendChild(secMe_2);
+    
+    //seccion mia
+const h1 = secMe.querySelector('h1');
+const ps = secMe.querySelectorAll('p');
 
-const h1 = sectionMe.querySelector('h1');
-const ps = sectionMe.querySelectorAll('p');
-
-const h2s = sectionMe.querySelectorAll('h2');
-
-
+const h2s = secMe.querySelectorAll('h2');
 
 for (const p of ps){
     p.style.textAlign = 'justify';
@@ -71,22 +72,25 @@ for (const h2 of h2s){
 };
     
     
-    sectionMe.style.display = 'flex';
-    sectionMe.style.flexDirection = 'column';
-    sectionMe.style.gap= '20px';
+    secMe.style.display = 'flex';
+    secMe.style.flexDirection = 'column';
+    secMe.style.gap= '20px';
     
     h1.style.color = 'blue';
     h1.style.textAlign = 'center';
+    
+    circle.style.textAlign = 'center';
     //pa.style.textAlign = 'justify';
     //pa.style.textIndent = '20px';
     //p.style.border = '2px solid blue';
     //p.style.color = 'rgb(173,()216,230)';
     //h1.style.color = '#dd8e6';
     //circle.style.border = '2px solid blue';
-
+    
     //div.appendChild(h1);
-    div.appendChild(sectionMe);
-    div.appendChild(circle);
+    
+    div.appendChild(secMe);
+    
     
 
     //div.style.color = 'blue';
@@ -95,6 +99,7 @@ for (const h2 of h2s){
     //div.gap = '100px';
     div.style.display = 'flex';
     div.style.flexDirection = 'column';
+    div.style.padding = '0 20px';
     //div.style.justifyContent = 'space-around';
     div.style.alignItems = 'center';
     //div.style.padding = '0';
