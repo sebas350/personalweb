@@ -75,7 +75,7 @@ for (const p of ps){
     p.style.textAlign = 'justify';
     //p.style.transform = 'translateX(100px)';
     p.style.opacity = '0';
-    p.style.transition = '1000ms';
+    p.style.transition = 'opacity 1000ms';
     //p.style.textIndent = '20px';
     p.style.color = 'black';
 };
@@ -92,7 +92,7 @@ const effect = entries => {
 
 
 
-const observer = new IntersectionObserver(effect,{threshold:0.5});
+const observer = new IntersectionObserver(effect,{threshold:0.1});
 
 ps.forEach(entry => observer.observe(entry));
 
