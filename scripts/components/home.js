@@ -73,12 +73,31 @@ const h2s = secMe.querySelectorAll('h2');
 
 for (const p of ps){
     p.style.textAlign = 'justify';
+    p.style.transform = 'translateX(400px)';
+    p.style.opacity = '0';
     //p.style.textIndent = '20px';
     p.style.color = 'red';
 };
 
+const effect = entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting){
+            entry.target.style.transform = 'translateX(0px)';
+        }else{
+            etry.target.style.opacity = '1';
+        }
+    })
+}
+
+
+
+const oberver = new IntersectionObserver(effect,{threshold:0.5});
+
+ps.forEach(entry => observer.observe(entry));
+
+
 for (const h2 of h2s){
-    h2.style.textIndent = '20px';
+    //h2.style.textIndent = '20px';
 };
     
     
