@@ -73,8 +73,9 @@ const h2s = secMe.querySelectorAll('h2');
 
 for (const p of ps){
     p.style.textAlign = 'justify';
-    p.style.transform = 'translateX(400px)';
+    p.style.transform = 'translateX(100px)';
     p.style.opacity = '0';
+    p.style.transition = '200ms';
     //p.style.textIndent = '20px';
     p.style.color = 'red';
 };
