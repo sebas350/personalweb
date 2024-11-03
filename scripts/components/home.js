@@ -77,7 +77,7 @@ for (const p of ps){
     //p.style.opacity = '0';
     p.style.transition = '1000ms';
     //p.style.textIndent = '20px';
-    //p.style.color = 'red';
+    p.style.color = 'black';
 };
 
 const effect = entries => {
