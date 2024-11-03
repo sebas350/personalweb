@@ -74,6 +74,7 @@ const h2s = secMe.querySelectorAll('h2');
 for (const p of ps){
     p.style.textAlign = 'justify';
     //p.style.textIndent = '20px';
+    p.style.color = 'red';
 };
 
 for (const h2 of h2s){
