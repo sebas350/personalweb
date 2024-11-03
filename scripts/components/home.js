@@ -84,6 +84,7 @@ const effect = entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting){
             entry.target.style.opacity = '1';
+            entry.target.style.color = 'black';
         }else{
             entry.target.style.opacity = '0';
         }
