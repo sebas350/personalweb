@@ -1,4 +1,4 @@
-faexport function Home() {
+export function Home() {
     const container = document.createElement('div');
     const div = document.createElement('div');
     const secMe= document.createElement('section');
