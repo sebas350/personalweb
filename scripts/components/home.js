@@ -84,16 +84,15 @@ const effect = entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting){
             entry.target.style.opacity = '1';
-            entry.target.style.color = 'black';
         }else{
-            entry.target.style.opacity = '1';
+            entry.target.style.opacity = '0';
         }
     })
 }
 
 
 
-const observer = new IntersectionObserver(effect,{threshold:0.1});
+const observer = new IntersectionObserver(effect,{threshold:0.1, root: null});
 
 ps.forEach(entry => observer.observe(entry));
 
