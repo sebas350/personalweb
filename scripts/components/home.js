@@ -85,7 +85,7 @@ const effect = entries => {
         if (entry.isIntersecting){
             entry.target.style.opacity = '1';
         }else{
-            entry.target.style.opacity = '0';
+            entry.target.style.opacity = '1';
         }
     })
 }
