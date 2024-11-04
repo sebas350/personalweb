@@ -1,4 +1,4 @@
-export function Home() {
+faexport function Home() {
     const container = document.createElement('div');
     const div = document.createElement('div');
     const secMe= document.createElement('section');
@@ -86,7 +86,7 @@ const effect = entries => {
             entry.target.style.opacity = '1';
             entry.target.style.color = 'black';
         }else{
-            entry.target.style.opacity = '0';
+            entry.target.style.opacity = '1';
         }
     })
 }
