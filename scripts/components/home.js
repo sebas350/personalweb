@@ -50,7 +50,34 @@ secMe_2.innerHTML =`<h2>¿Qué puedo hacer?</h2>
 
 <p>Conoce más sobre mí</p>
 <p>Revisa mi trabajo</p>
-</div>`;
+</div>
+
+<script>
+    const ps = document.querySelectorAll('p');
+    ps.forEach(p => {p.style.textAlign = 'justify';
+    p.style.opacity = '0';
+    p.style.transition = 'opacity 1000ms';
+    })
+    
+    const effect = entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting){
+            entry.target.style.opacity = '1';
+        }else{
+            entry.target.style.opacity = '0';
+            }
+        })
+    };
+
+
+
+const observer = new IntersectionObserver(effect,{threshold:0.5});
+
+ps.forEach(entry => observer.observe(entry));
+
+</script>
+
+`;
 
     secMe_1.style.display = 'flex';
     secMe_1.style.flexDirection = 'column';
@@ -65,43 +92,6 @@ secMe_2.innerHTML =`<h2>¿Qué puedo hacer?</h2>
     secMe.appendChild(circle);
     secMe.appendChild(secMe_2);
     
-const script = document.createElement('script');
-
-script.innerHTML = `const h1 = secMe.querySelector('h1');
-const ps = secMe.querySelectorAll('p');
-
-const h2s = secMe.querySelectorAll('h2');
-
-for (const p of ps){
-    p.style.textAlign = 'justify';
-    //p.style.transform = 'translateX(400px)';
-    p.style.opacity = '0';
-    //p.style.textIndent = '20px';
-    //p.style.color = 'red';
-    p.style.transition = 'opacity 1000ms';
-};
-
-const effect = entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting){
-            entry.target.style.opacity = '1';
-        }else{
-            entry.target.style.opacity = '0';
-        }
-    })
-};
-
-
-
-const observer = new IntersectionObserver(effect,{threshold:0.5});
-
-ps.forEach(entry => observer.observe(entry));`;
-    
-//seccion mia
-
-secMe.appendChild(script);
-
-
 for (const h2 of h2s){
     //h2.style.textIndent = '20px';
 };
