@@ -51,32 +51,6 @@ secMe_2.innerHTML =`<h2>¿Qué puedo hacer?</h2>
 <p>Conoce más sobre mí</p>
 <p>Revisa mi trabajo</p>
 </div>
-
-<script>
-    const ps = document.querySelectorAll('p');
-    ps.forEach(p => {p.style.textAlign = 'justify';
-    p.style.opacity = '0';
-    p.style.transition = 'opacity 1000ms';
-    })
-    
-    const effect = entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting){
-            entry.target.style.opacity = '1';
-        }else{
-            entry.target.style.opacity = '0';
-            }
-        })
-    };
-
-
-
-const observer = new IntersectionObserver(effect,{threshold:0.5});
-
-ps.forEach(entry => observer.observe(entry));
-
-</script>
-
 `;
 
     secMe_1.style.display = 'flex';
