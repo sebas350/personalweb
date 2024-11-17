@@ -65,19 +65,20 @@ secMe_2.innerHTML =`<h2>¿Qué puedo hacer?</h2>
     secMe.appendChild(circle);
     secMe.appendChild(secMe_2);
     
-    //seccion mia
-const h1 = secMe.querySelector('h1');
+const script = document.createElement('script')
+
+script.innerHTML = `const h1 = secMe.querySelector('h1');
 const ps = secMe.querySelectorAll('p');
 
 const h2s = secMe.querySelectorAll('h2');
 
 for (const p of ps){
     p.style.textAlign = 'justify';
-    //p.style.transform = 'translateX(100px)';
-    //p.style.opacity = '0';
-    p.style.transition = 'opacity 1000ms';
+    //p.style.transform = 'translateX(400px)';
+    p.style.opacity = '0';
     //p.style.textIndent = '20px';
-    p.style.color = 'black';
+    //p.style.color = 'red';
+    p.style.transition = 'opacity 1000ms';
 };
 
 const effect = entries => {
@@ -92,9 +93,13 @@ const effect = entries => {
 
 
 
-const observer = new IntersectionObserver(effect,{threshold:0.1, root: null});
+const observer = new IntersectionObserver(effect,{threshold:0.5});
 
-ps.forEach(entry => observer.observe(entry));
+ps.forEach(entry => observer.observe(entry));`;
+    
+//seccion mia
+
+secMe.appendChild(script);
 
 
 for (const h2 of h2s){
