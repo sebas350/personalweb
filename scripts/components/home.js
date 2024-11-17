@@ -89,7 +89,7 @@ const effect = entries => {
             entry.target.style.opacity = '0';
         }
     })
-}
+};
 
 
 
