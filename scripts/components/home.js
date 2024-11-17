@@ -65,7 +65,7 @@ secMe_2.innerHTML =`<h2>¿Qué puedo hacer?</h2>
     secMe.appendChild(circle);
     secMe.appendChild(secMe_2);
     
-const script = document.createElement('script')
+const script = document.createElement('script');
 
 script.innerHTML = `const h1 = secMe.querySelector('h1');
 const ps = secMe.querySelectorAll('p');
