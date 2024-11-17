@@ -50,8 +50,7 @@ secMe_2.innerHTML =`<h2>¿Qué puedo hacer?</h2>
 
 <p>Conoce más sobre mí</p>
 <p>Revisa mi trabajo</p>
-</div>
-`;
+</div>`;
 
     secMe_1.style.display = 'flex';
     secMe_1.style.flexDirection = 'column';
