@@ -64,18 +64,13 @@ secMe_2.innerHTML =`<h2>¿Qué puedo hacer?</h2>
     secMe.appendChild(secMe_1);
     secMe.appendChild(circle);
     secMe.appendChild(secMe_2);
-    
-for (const h2 of h2s){
-    //h2.style.textIndent = '20px';
-};
-    
-    
+
     secMe.style.display = 'flex';
     secMe.style.flexDirection = 'column';
     secMe.style.gap= '20px';
     
-    h1.style.color = 'blue';
-    h1.style.textAlign = 'center';
+    //h1.style.color = 'blue';
+    //h1.style.textAlign = 'center';
     circle.style.margin = 'auto';
     //pa.style.textAlign = 'justify';
     //pa.style.textIndent = '20px';
