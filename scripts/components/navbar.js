@@ -1,3 +1,5 @@
+//import { document } from '../dom.js';
+
 import {Resume} from './resume.js';
 import {Home} from './home.js';
 import {Portfolio} from './portfolio.js';
@@ -7,29 +9,68 @@ export function Navbar(main) {
     const home = document.createElement('button');
     const resume = document.createElement('button');
     const portfolio = document.createElement('button');
+    const languageSelect = document.createElement('select');
     
-    home.textContent = 'Home';
-    resume.textContent = 'Resumen';
-    portfolio.textContent = 'Portfolio';
+    // Traducciones de los elementos del navbar
+    const translations = {
+        en: {
+            home: 'Home',
+            resume: 'Resume',
+            portfolio: 'Portfolio',
+        },
+        es: {
+            home: 'Inicio',
+            resume: 'Resumen',
+            portfolio: 'Portafolio',
+        },
+    };
     
-    const inner = (main) => {
-        return {
-            home: () => {main.innerHTML = Home().innerHTML;},
-            resume: () => {main.innerHTML = Resume().innerHTML;},
-            portfolio: () => {main.innerHTML = Portfolio().innerHTML;},
-        };
-        
+    // objeto lenguaje
+    const languages = { es: 'Español', en: 'English' };
+    
+    //creacion de etiqueta opciones con las dos opciones ingles-espanol
+    for (const [value, text] of Object.entries(languages)) {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = text;
+        languageSelect.appendChild(option);
+    };
+
+    // Estado inicial del idioma
+    let currentLanguage = 'es';
+    
+    // Función para actualizar los textos del navbar
+    const updateNavbarTexts = () => {
+        home.textContent = translations[currentLanguage].home;
+        resume.textContent = translations[currentLanguage].resume;
+        portfolio.textContent = translations[currentLanguage].portfolio;
+    };
+    
+    
+    const updateComponent = (newComponent)=>{
+        main.textContent = '';
+        main.appendChild(newComponent(currentLanguage)); //pasar el lenguaje actual al componente.
+    };
+    
+     // Evento de cambio de idioma
+    languageSelect.onchange = (event) => {
+        currentLanguage = event.target.value; // Actualiza el idioma actual
+        updateNavbarTexts(); // Actualiza los textos del navbar
+        updateComponent(Home); // Recarga el contenido inicial en el nuevo idioma
     };
         
-    resume.onclick = inner(main).resume;
-    home.onclick = inner(main).home;
-    portfolio.onclick = inner(main).portfolio;
-      
-    const elements = [home,resume,portfolio];
+    resume.onclick = () => updateComponent(Resume);
+    home.onclick = () => updateComponent(Home);
+    portfolio.onclick = () => updateComponent(Portfolio);
     
-    for (let element of elements){
+     // Inicializa los textos del navbar
+    updateNavbarTexts();
+      
+    const elements = [home,resume,portfolio,languageSelect];
+    
+    elements.forEach((element) => {
         nav.appendChild(element);
-    }; 
+    }); 
     
     nav.style.display = 'flex';
     nav.style.justifyContent = 'flex-end';

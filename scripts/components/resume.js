@@ -1,4 +1,6 @@
-export function Resume() {
+//import { document } from '../dom.js';
+
+export function Resume(language='es') {
     const container = document.createElement('div');
     const div = document.createElement('div');
     const h1 = document.createElement('h1');

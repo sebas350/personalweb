@@ -1,3 +1,5 @@
+//import { document } from '../dom.js';
+
 export function Footer(){
   const footer = document.createElement('div');
   footer.className = 'footer';

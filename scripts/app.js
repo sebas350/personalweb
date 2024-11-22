@@ -1,3 +1,4 @@
+//import { document } from './dom.js';
 import { Navbar } from './components/navbar.js';
 import { Home } from './components/home.js';
 import { Resume } from './components/resume.js';
@@ -13,7 +14,8 @@ function init(){
   const nav = Navbar(main);
   const resume = Resume();
   const portfolio = Portfolio();
-  main.innerHTML = home.innerHTML;
+
+  main.appendChild(home);
   
   root.appendChild(nav);
   root.appendChild(main);

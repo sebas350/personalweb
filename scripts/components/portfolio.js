@@ -1,4 +1,6 @@
-export function Portfolio() {
+//import { document } from '../dom.js';
+
+export function Portfolio(language='es') {
     const div = document.createElement('div');
     const h1 = document.createElement('h1');
     const p = document.createElement('p');
