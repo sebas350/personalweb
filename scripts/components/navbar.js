@@ -20,7 +20,7 @@ export function Navbar(main) {
         },
         es: {
             home: 'Inicio',
-            resume: 'Resumen',
+            resume: 'Curriculum',
             portfolio: 'Portafolio',
         },
     };
