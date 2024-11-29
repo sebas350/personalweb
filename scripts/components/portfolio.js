@@ -14,7 +14,7 @@ const translations = {
                 title: 'Beauty Spa',
                 description: 'En esta aplicación web, los usuarios pueden explorar diferentes técnicas de cuidado de la piel, conocer los servicios que ofrecemos, y reservar turnos para realizar tratamientos. Además, proporcionamos información sobre nuestra ubicación física.',
                 navbar: [
-                    'En la barra de navegacion podemos como se trabajo con los botones y el diseno.',
+                    'En la barra de navegacion podemos ver como se trabajo con los botones y el diseno.',
                     'Los link nos llevan a distintas partes del la pagina',
                     'Por detras de la barra de navegacion podemos ver que su codigo esta compuesto por un html que cuenta con elementos ul y li',
                     'Tambien contamos con un menu amburgeza dependiendo del tamaneo de pantalla'
@@ -81,13 +81,20 @@ const translations = {
     
     
     const html = `<h1>${title}</h1>
-            <p>${description}</p>
-            <h1>${webs.title}</h1>
-            <p>${webs.description}</p>
-            <p>${web1.title}</p>
-            <p>${web1.description}</p>
+            <h5>${description}</h5>
+            <h3>${webs.title}</h3>
+            <h5>${webs.description}</h5>
+            </br>
+            <h3>${web1.title}</h3>
+            <h5>${web1.description}</h5>
+            
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
             
             ${web1.navbar.map((p) => `<p>${p}</p>`).join('')}
+            
+ <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar1.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
+ 
+ <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar2.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
             
             ${web1.main.map((p) => `<p>${p}</p>`).join('')}
             
