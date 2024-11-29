@@ -96,7 +96,11 @@ const translations = {
  
  <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar2.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
             
-            ${web1.main.map((p) => `<p>${p}</p>`).join('')}
+            ${web1.main[0]}
+            ${web1.main[1]}
+            
+            
+            
             
             ${web1.footer.map((p) => `<p>${p}</p>`).join('')}
             
