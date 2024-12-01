@@ -105,7 +105,7 @@ const translations = {
             
             ${web1.navbar.map((p) => `<p>${p}</p>`).join('')}
   
-  <div style="display: flex;">  
+  <div style="display: inline-flex;">  
       <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar1.png" style="width:100%; margin:auto; padding:20px 10px;"  alt="">
  
  <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar2.png" style="width:100%; margin:auto; padding:20px 10px;"  alt="">
