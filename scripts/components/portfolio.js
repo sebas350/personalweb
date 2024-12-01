@@ -136,6 +136,7 @@ const translations = {
     
     //styles
     container.style.padding = '20px';
+    container.style.boxSizing = 'border-box';
     
     //observer    
     
