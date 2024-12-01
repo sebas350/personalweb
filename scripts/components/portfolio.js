@@ -93,7 +93,7 @@ const translations = {
     
     const html = `
     
-    <h1 style="text-align: center; color: red;">${title}</h1>
+    <h1 style="text-align: center; color: blue;">${title}</h1>
             <h3>${description}</h3></br>
             <h2>${webs.title}</h2>
             <h3>${webs.description}</h3>
