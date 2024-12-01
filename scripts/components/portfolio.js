@@ -93,7 +93,7 @@ const translations = {
     
     const html = `
     
-    <h1 style="text-align: center; color: blue;">${title}</h1>
+    <h1 style="text-align: center; color: red;">${title}</h1>
             <h3>${description}</h3></br>
             <h2>${webs.title}</h2>
             <h3>${webs.description}</h3>
@@ -106,9 +106,9 @@ const translations = {
             ${web1.navbar.map((p) => `<p>${p}</p>`).join('')}
   
   <div style="display: inline-flex; gap:10px; margin: 20px;">  
-      <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar1.png" style="width:100%"  alt="">
+      <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar1.png" style="width:50%"  alt="">
  
- <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar2.png" style="width:100%;"  alt="">
+ <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar2.png" style="width:50%;"  alt="">
  
  </div>
                   
