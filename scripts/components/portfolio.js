@@ -23,11 +23,16 @@ const translations = {
                     'En el cuerpo principal de la Pagina podemos ver como esta organizada en secciones',
                     'Cuenta una carrucel para poder seleccionar y tener mas informacion acerca de los tratamientos',
                     'Cuenta con una secciones donde podemos encotrar a los profesionales, el codigo trabajado aqui se relizo usando la api nativa de js',
+                    'Podemos contactarnos mediente un formulario donde podemos detallar los pedidos',
+                    
                     'En la seccion de ubicacion usamos ijustramos un etiqueta iframe para logar mostrar la ubicacion del lugar'
                 ],
                 footer: [
                     'El foother cuenta con un codigo que nos muestra los contactos y usamos iconos para los link',
                     'Tambien podemos destacar que tanto el fooder como el navbar esta presente en todos los html usando un template',
+                ],
+                tools: [
+                    'Herramientas usadas para este Proyecto',
                 ],
             },
             employers: {},
@@ -57,11 +62,17 @@ const translations = {
                     'In the main body of the page, we can see how it is organized into sections.',
                     'It includes a carousel to select and get more information about the treatments.',
                     'There is a section where we can find professionals, and the code here was created using the native JavaScript API.',
+                    
+                    'We can contact us through a form where we can detail the orders',
+
                     'In the location section, we use an iframe tag to display the location of the spa.'
                 ],
                 footer: [
                     'The footer includes code displaying contact details and icons for the links.',
                     'We also highlight that both the footer and the navbar are present across all HTML files using a template.'
+                ],
+                tools: [
+                    'Tools used for this Project',
                 ],
             },
             employers: {},
@@ -80,36 +91,81 @@ const translations = {
     const web1 = webs.beautySpa;
     
     
-    const html = `<h1>${title}</h1>
-            <h5>${description}</h5>
-            <h3>${webs.title}</h3>
-            <h5>${webs.description}</h5>
+    const html = `
+    
+    <h1 style="text-align: center;">${title}</h1>
+            <h3>${description}</h3></br>
+            <h2>${webs.title}</h2>
+            <h3>${webs.description}</h3>
             </br>
             <h3>${web1.title}</h3>
             <h5>${web1.description}</h5>
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar.png" style="width:100%; margin:auto; padding:20px 10px;"  alt="">
             
             ${web1.navbar.map((p) => `<p>${p}</p>`).join('')}
-            
- <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar1.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
+  
+  <div style="display: flex;">  
+      <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar1.png" style="width:100%; margin:auto; padding:20px 10px;"  alt="">
  
- <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar2.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
-            
-            ${web1.main[0]}
+ <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar2.png" style="width:100%; margin:auto; padding:20px 10px;"  alt="">
+ 
+ </div>
+                  
+            ${web1.main[0]} </br>
             ${web1.main[1]}
             
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main1.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
+            ${web1.main[2]}
             
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main2.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
+            ${web1.main[3]}
             
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main3.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
+            ${web1.main[4]}
+            
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main4.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
             
             ${web1.footer.map((p) => `<p>${p}</p>`).join('')}
             
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/footer.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
+        
             `;
             
     container.innerHTML = html;
     
     //styles
     container.style.padding = '20px';
+    
+    //observer    
+    
+    const imgs = container.querySelectorAll('img');
+
+imgs.forEach(img => {
+
+//img.style.opacity = '0';
+img.style.transform = 'translateX(-50%)';
+
+img.style.transition = 'transform 1000ms';
+
+});
+
+const effect = entries => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          //entry.target.style.opacity ='1';
+          entry.target.style.transform = 'translateX(0px)';
+        }else{
+      //entry.target.style.opacity = '0';
+      //entry.target.style.transform = 'translateX(-50%)';
+     }
+      
+  })
+};
+
+const observer = new IntersectionObserver(effect,{threshold: 0.3});
+
+imgs.forEach(entry => observer.observe(entry));
     
     
     return container;
