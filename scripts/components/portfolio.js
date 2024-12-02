@@ -94,7 +94,7 @@ const translations = {
     const html = `
     
     <h1 style="text-align: center; color: red;">${title}</h1>
-            <h3>${description}</h3></br>
+            <h3 id="description">${description}</h3></br>
             <h2>${webs.title}</h2>
             <h3>${webs.description}</h3>
             </br>
@@ -141,21 +141,27 @@ const translations = {
     //observer    
     
     const imgs = container.querySelectorAll('img');
+    const webdescrip = container.querySelector('#description');
+    webdescrip.style.opacity = '0';
+    webdescrip.style.transition = 'opacity 1000ms';
 
 imgs.forEach(img => {
 
-//img.style.opacity = '0';
+img.style.opacity = '0';
 img.style.transform = 'translateX(-50%)';
 
-img.style.transition = 'transform 1000ms';
+img.style.transition = 'transform 1000ms, opacity 1000ms';
 
 });
 
 const effect = entries => {
   entries.forEach(entry => {
       if (entry.isIntersecting) {
-          //entry.target.style.opacity ='1';
-          entry.target.style.transform = 'translateX(0px)';
+          entry.target.style.opacity ='1';
+          if (entry.target.tagName === 'IMG') {
+              entry.target.style.transform = 'translateX(0px)';
+          }
+            
         }else{
       //entry.target.style.opacity = '0';
       //entry.target.style.transform = 'translateX(-50%)';
@@ -167,7 +173,8 @@ const effect = entries => {
 const observer = new IntersectionObserver(effect,{threshold: 0.3});
 
 imgs.forEach(entry => observer.observe(entry));
-    
+
+observer.observe(webdescrip);    
     
     return container;
 }
