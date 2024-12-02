@@ -115,20 +115,20 @@ const translations = {
             ${web1.main[0]} </br>
             ${web1.main[1]}
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main1.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main1.png" style="width:100%; margin:20px 0px;"  alt="">
             ${web1.main[2]}
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main2.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main2.png" style="width:100%; margin:20px 0px;"  alt="">
             ${web1.main[3]}
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main3.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main3.png" style="width:100%; margin:20px 0px;"  alt="">
             ${web1.main[4]}
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main4.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main4.png" style="width:100%; margin:20px 0px;"  alt="">
             
             ${web1.footer.map((p) => `<p>${p}</p>`).join('')}
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/footer.png" style="width:100%; margin:auto; padding:20px 100px;"  alt="">
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/footer.png" style="width:100%; margin:20px 0px;"  alt="">
         
             `;
             
