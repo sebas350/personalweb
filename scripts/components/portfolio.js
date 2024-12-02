@@ -101,14 +101,14 @@ const translations = {
             <h3>${web1.title}</h3>
             <h5>${web1.description}</h5>
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar.png" style="width:100%; margin:auto; padding:20px 10px;"  alt="">
+            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar.png" style="width:100%; margin: 20px 0px;"  alt="">
             
             ${web1.navbar.map((p) => `<p>${p}</p>`).join('')}
   
-  <div style="display: inline-flex; gap:10px; margin: 20px;">  
-      <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar1.png" style="width:50%"  alt="">
+  <div style="display: flex; flex-wrap: wrap; gap:10px; margin: 20px 0px; ">  
+      <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar1.png" style="width:100%"  alt="">
  
- <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar2.png" style="width:50%;"  alt="">
+ <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar2.png" style="width:100%;"  alt="">
  
  </div>
                   
