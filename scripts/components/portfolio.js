@@ -6,7 +6,7 @@ export function Portfolio(language='es') {
 const translations = {
     es: {
         title: 'Portfolio',
-        description: 'En esta sección encontrarás una muestra representativa de mis proyectos, habilidades y experiencia técnica. Desde desarrollos web completos hasta programación con Arduino y soluciones de reparación e instalación de software, este portafolio refleja mi trayectoria profesional y pasión por la tecnología. Explora trabajos destacados y conoce más sobre mis competencias y creatividad en diferentes áreas.',
+        description: 'Explora trabajos destacados y conoce más sobre mis competencias y creatividad en diferentes áreas.',
         webs: {
             title: 'Desarrollo Web',
             description: 'En esta seccion encotraras los proyectos mas destacados sobre desarrollo Web',
@@ -45,7 +45,7 @@ const translations = {
     },
     en: {
         title: 'Portfolio',
-        description: 'In this section, you will find a representative showcase of my projects, skills, and technical experience. From complete web developments to Arduino programming and software repair and installation solutions, this portfolio reflects my professional journey and passion for technology. Explore featured works and learn more about my competencies and creativity across different areas.',
+        description: 'Explore featured works and learn more about my competencies and creativity across different areas.',
         webs: {
             title: 'Web Development',
             description: 'In this section, you will find the most outstanding projects related to Web Development',
@@ -93,13 +93,13 @@ const translations = {
     
     const html = `
     
-    <h1 style="text-align: center; color: red;">${title}</h1>
-            <h3 id="description">${description}</h3></br>
-            <h2>${webs.title}</h2>
-            <h3>${webs.description}</h3>
+    <h1 style="text-align: center; color: red;">${title}</h1></br>
+            <p class="salient" id="description">${description}</p></br></br>
+            <h1 style="color: blue;">${webs.title}</h1>
+            <p class="salient">${webs.description}</p>
             </br>
-            <h3>${web1.title}</h3>
-            <h5>${web1.description}</h5>
+            <h2 style="color: skyblue;">${web1.title}</h2>
+            <p style="font-size:1.5em;">${web1.description}</p>
             
             <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar.png" style="width:100%; margin: 20px 0px;"  alt="">
             
@@ -112,17 +112,17 @@ const translations = {
  
  </div>
                   
-            ${web1.main[0]} </br>
-            ${web1.main[1]}
+            <p>${web1.main[0]}</p></br>
+            <p>${web1.main[1]}</p>
             
             <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main1.png" style="width:100%; margin:20px 0px;"  alt="">
-            ${web1.main[2]}
+            <p>${web1.main[2]}</p>
             
             <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main2.png" style="width:100%; margin:20px 0px;"  alt="">
-            ${web1.main[3]}
+            <p>${web1.main[3]}</p>
             
             <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main3.png" style="width:100%; margin:20px 0px;"  alt="">
-            ${web1.main[4]}
+            <p>${web1.main[4]}</p>
             
             <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main4.png" style="width:100%; margin:20px 0px;"  alt="">
             
@@ -134,11 +134,29 @@ const translations = {
             
     container.innerHTML = html;
     
-    //styles
+
+//styles
+    
     container.style.padding = '20px';
     container.style.boxSizing = 'border-box';
+    container.style.fontFamily = "'Lora', serif";
+    const salient = container.querySelectorAll('.salient');
     
-    //observer    
+    const ps = container.querySelectorAll('p');
+    ps.forEach(e => {
+        e.style.fontSize = '1.2em';
+        e.style.lineHeight = '1.5';
+        //e.style.textAlign = 'center';
+    });
+    
+    salient.forEach(e => {
+        e.style.fontSize = '2em';
+        e.style.lineHeight = '1.5';
+        e.style.textAlign = 'center';
+    });
+    
+
+//observer    
     
     const imgs = container.querySelectorAll('img');
     const webdescrip = container.querySelector('#description');
