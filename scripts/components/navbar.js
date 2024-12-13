@@ -72,13 +72,16 @@ export function Navbar(main) {
         nav.appendChild(element);
     }); 
     
+//styles
+
     nav.style.display = 'flex';
     nav.style.justifyContent = 'flex-end';
     nav.style.position = 'fixed';
     nav.style.top = '0';
     nav.style.right = '0';
     nav.style.width = '100%';
-    nav.style.background = 'red';
+    nav.style.height = '5%';
+    nav.style.background = 'skyblue';
     nav.style.zIndex = '1000';
 
     return nav;

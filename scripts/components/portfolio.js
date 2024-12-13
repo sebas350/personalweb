@@ -6,7 +6,7 @@ export function Portfolio(language='es') {
 const translations = {
     es: {
         title: 'Portfolio',
-        description: 'Explora trabajos destacados y conoce más sobre mis competencias y creatividad en diferentes áreas.',
+        description: 'Una mustra que va desde desarrollos web completos hasta programación con Arduino y soluciones de reparación e instalación de software, este portafolio refleja mi trayectoria profesional y pasión por la tecnología. Explora trabajos destacados y conoce más sobre mis competencias y creatividad en diferentes áreas.',
         webs: {
             title: 'Desarrollo Web',
             description: 'En esta seccion encotraras los proyectos mas destacados sobre desarrollo Web',
@@ -45,7 +45,7 @@ const translations = {
     },
     en: {
         title: 'Portfolio',
-        description: 'Explore featured works and learn more about my competencies and creativity across different areas.',
+        description: 'Ranging from complete web development to Arduino programming and software repair and installation solutions, this portfolio reflects my professional career and passion for technology. Explore featured work and learn more about my skills and creativity in different areas.',
         webs: {
             title: 'Web Development',
             description: 'In this section, you will find the most outstanding projects related to Web Development',
@@ -91,10 +91,30 @@ const translations = {
     const web1 = webs.beautySpa;
     
     
-    const html = `
+    //div presentacion
+    const divout = document.createElement('div');
     
-    <h1 style="text-align: center; color: red;">${title}</h1></br>
-            <p class="salient" id="description">${description}</p></br></br>
+    const htmlout = `
+    
+<div id="out">
+    
+    <h1>${title}</h1>
+    <p class="salient" id="description">${description}</p>
+    
+</div>     
+    
+    `;
+    
+    divout.innerHTML = htmlout;
+    
+    
+    //div seccion desarrollo web
+    
+    const sectionWeb = document.createElement('div');
+    
+    
+    const htmlWeb = ` 
+            
             <h1 style="color: blue;">${webs.title}</h1>
             <p class="salient">${webs.description}</p>
             </br>
@@ -132,16 +152,29 @@ const translations = {
         
             `;
             
-    container.innerHTML = html;
+    sectionWeb.innerHTML = htmlWeb;
+    
+    container.appendChild(divout);
+    container.appendChild(sectionWeb);
     
 
 //styles
-    
-    container.style.padding = '20px';
-    container.style.boxSizing = 'border-box';
-    container.style.fontFamily = "'Lora', serif";
+
+    //container.style.fontFamily = "'Lora', serif";
     const salient = container.querySelectorAll('.salient');
-    
+    const webdescrip = container.querySelector('#description');
+    const outv = container.querySelector('#out');
+    outv.style.width = '100%';
+    outv.style.height = '90vh';
+    outv.style.display = 'flex';
+    outv.style.flexDirection = 'column';
+    outv.style.alignItems = 'center';
+    outv.style.justifyContent = 'space-around';
+    //outv.style.gap = '40px';
+    outv.style.backgroundColor = 'red';
+    outv.style.color = 'white';
+    //outv.style.paddingTop = '4%';
+
     const ps = container.querySelectorAll('p');
     ps.forEach(e => {
         e.style.fontSize = '1.2em';
@@ -151,15 +184,20 @@ const translations = {
     
     salient.forEach(e => {
         e.style.fontSize = '2em';
-        e.style.lineHeight = '1.5';
+        e.style.lineHeight = '8vh';
         e.style.textAlign = 'center';
     });
+    
+    //webdescrip.style.height = '100vh';
+    //webdescrip.style.border = '3px solid red';
+    //webdescrip.style.display = 'flex';
+    //webdescrip.style.justifyContent = 'center';
+    //webdescrip.style.alignContent = 'center';
     
 
 //observer    
     
     const imgs = container.querySelectorAll('img');
-    const webdescrip = container.querySelector('#description');
     webdescrip.style.opacity = '0';
     webdescrip.style.transition = 'opacity 1000ms';
 

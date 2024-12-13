@@ -122,7 +122,7 @@ export function Resume(language = 'es') {
       .join('')}
   `;
 
-  container.style.padding = '20px';
+  //container.style.padding = '5%';
 
   // Aplicar efecto de entrada con IntersectionObserver
   const paragraphs = container.querySelectorAll('p, li');

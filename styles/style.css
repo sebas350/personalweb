@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Lora, sans-serif;
     margin: 0;
     padding: 0;
     background-color: ;
@@ -22,7 +22,5 @@ nav li {
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100%;
 }
