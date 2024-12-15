@@ -6,7 +6,7 @@ export function Portfolio(language='es') {
 const translations = {
     es: {
         title: 'Portfolio',
-        description: 'Una mustra que va desde desarrollos web completos hasta programación con Arduino y soluciones de reparación e instalación de software, este portafolio refleja mi trayectoria profesional y pasión por la tecnología. Explora trabajos destacados y conoce más sobre mis competencias y creatividad en diferentes áreas.',
+        description: 'Una muestra que va desde desarrollos web completos hasta programación con Arduino y soluciones de reparación e instalación de software, este portafolio refleja mi trayectoria profesional y pasión por la tecnología. Explora trabajos destacados y conoce más sobre mis competencias y creatividad en diferentes áreas.',
         webs: {
             title: 'Desarrollo Web',
             description: 'En esta seccion encotraras los proyectos mas destacados sobre desarrollo Web',
@@ -45,7 +45,7 @@ const translations = {
     },
     en: {
         title: 'Portfolio',
-        description: 'Ranging from complete web development to Arduino programming and software repair and installation solutions, this portfolio reflects my professional career and passion for technology. Explore featured work and learn more about my skills and creativity in different areas.',
+        description: 'Ranging from full web development to Arduino programming to software repair and installation solutions, this portfolio reflects my professional background and passion for technology. Explore featured work and learn more about my skills and creativity in different areas.',
         webs: {
             title: 'Web Development',
             description: 'In this section, you will find the most outstanding projects related to Web Development',
@@ -98,7 +98,7 @@ const translations = {
     
 <div id="out">
     
-    <h1>${title}</h1>
+    <h1 style="font-size: 3em;">${title}</h1>
     <p class="salient" id="description">${description}</p>
     
 </div>     
@@ -165,15 +165,19 @@ const translations = {
     const webdescrip = container.querySelector('#description');
     const outv = container.querySelector('#out');
     outv.style.width = '100%';
-    outv.style.height = '90vh';
+    outv.style.height = '100vh';
     outv.style.display = 'flex';
     outv.style.flexDirection = 'column';
     outv.style.alignItems = 'center';
-    outv.style.justifyContent = 'space-around';
-    //outv.style.gap = '40px';
+    outv.style.justifyContent = 'center';
+    outv.style.gap = '60px';
     outv.style.backgroundColor = 'red';
     outv.style.color = 'white';
     //outv.style.paddingTop = '4%';
+    outv.style.transform = 'translateY(50%)';
+    outv.style.transition = 'transform 1000ms, opacity 1000ms';
+    outv.style.opacity = '0';
+    
 
     const ps = container.querySelectorAll('p');
     ps.forEach(e => {
@@ -184,7 +188,7 @@ const translations = {
     
     salient.forEach(e => {
         e.style.fontSize = '2em';
-        e.style.lineHeight = '8vh';
+        e.style.lineHeight = '1.5';
         e.style.textAlign = 'center';
     });
     
@@ -215,10 +219,12 @@ const effect = entries => {
       if (entry.isIntersecting) {
           entry.target.style.opacity ='1';
           if (entry.target.tagName === 'IMG') {
-              entry.target.style.transform = 'translateX(0px)';
+              entry.target.style.transform = 'translateX(0px)';    
           }
-            
-        }else{
+          if(entry.target.id === 'out'){
+                  entry.target.style.transform = 'translateY(0px)';
+          }  
+       }else{
       //entry.target.style.opacity = '0';
       //entry.target.style.transform = 'translateX(-50%)';
      }
@@ -230,7 +236,9 @@ const observer = new IntersectionObserver(effect,{threshold: 0.3});
 
 imgs.forEach(entry => observer.observe(entry));
 
-observer.observe(webdescrip);    
+observer.observe(outv);
+observer.observe(webdescrip);
+   
     
     return container;
 }

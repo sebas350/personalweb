@@ -80,7 +80,7 @@ export function Navbar(main) {
     nav.style.top = '0';
     nav.style.right = '0';
     nav.style.width = '100%';
-    nav.style.height = '5%';
+    nav.style.height = '30px';
     nav.style.background = 'skyblue';
     nav.style.zIndex = '1000';
 
