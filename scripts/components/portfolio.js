@@ -187,7 +187,7 @@ const translations = {
     });
     
     salient.forEach(e => {
-        e.style.fontSize = '4vh';
+        e.style.fontSize = '4vw';
         e.style.lineHeight = '1.5';
         e.style.textAlign = 'center';
     });
