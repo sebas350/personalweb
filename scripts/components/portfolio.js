@@ -160,6 +160,8 @@ const translations = {
 
 //styles
 
+    sectionWeb.style.padding = '10px';
+
     //container.style.fontFamily = "'Lora', serif";
     const salient = container.querySelectorAll('.salient');
     const webdescrip = container.querySelector('#description');
@@ -171,11 +173,15 @@ const translations = {
     outv.style.alignItems = 'center';
     outv.style.justifyContent = 'center';
     outv.style.gap = '10px';
-    outv.style.backgroundColor = 'red';
-    outv.style.color = 'white';
+    outv.style.backgroundColor = '#546de5';
+    outv.style.color = '#e0e0e0';
+    outv.style.textShadow= '#bdbdbd';
     //outv.style.paddingTop = '4%';
     //outv.style.transition = 'transform 1000ms, opacity 1000ms';
     //outv.style.opacity = '0';
+    const outitle = outv.querySelector('h1');
+    outitle.style.color = 'white';
+    outitle.style.textShadow= '#bdbdbd';
     
 
     const ps = container.querySelectorAll('p');
@@ -183,6 +189,8 @@ const translations = {
         e.style.fontSize = '1.2em';
         e.style.lineHeight = '1.5';
         //e.style.textAlign = 'center';
+        e.style.color = '#333333';
+        e.style.textShadow = '#E0E0E0';
     });
     
     salient.forEach(e => {
@@ -211,6 +219,8 @@ img.style.opacity = '0';
 img.style.transform = 'translateX(-10%)';
 
 img.style.transition = 'transform 1000ms, opacity 1000ms';
+
+img.style.borderRadius = '10px';
 
 });
 

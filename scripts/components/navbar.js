@@ -81,7 +81,7 @@ export function Navbar(main) {
     nav.style.right = '0';
     nav.style.width = '100%';
     nav.style.height = '30px';
-    nav.style.background = 'skyblue';
+    nav.style.background = '#546de5';
     nav.style.zIndex = '1000';
 
     return nav;

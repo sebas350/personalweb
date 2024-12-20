@@ -5,5 +5,6 @@ export function Main(language='es'){
     //div.textContent='hola';
     //div.style.boxSizing = 'border-box';
     div.style.padding = '30px 0px';
+    div.style.background = '#f0f0f3';
     return div;
 }
