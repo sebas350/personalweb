@@ -170,13 +170,12 @@ const translations = {
     outv.style.flexDirection = 'column';
     outv.style.alignItems = 'center';
     outv.style.justifyContent = 'center';
-    outv.style.gap = '60px';
+    outv.style.gap = '30px';
     outv.style.backgroundColor = 'red';
     outv.style.color = 'white';
     //outv.style.paddingTop = '4%';
-    outv.style.transform = 'translateY(50%)';
-    outv.style.transition = 'transform 1000ms, opacity 1000ms';
-    outv.style.opacity = '0';
+    //outv.style.transition = 'transform 1000ms, opacity 1000ms';
+    //outv.style.opacity = '0';
     
 
     const ps = container.querySelectorAll('p');
@@ -203,12 +202,13 @@ const translations = {
     
     const imgs = container.querySelectorAll('img');
     webdescrip.style.opacity = '0';
-    webdescrip.style.transition = 'opacity 1000ms';
+    webdescrip.style.transition = 'opacity 1000ms, transform 1000ms';
+    webdescrip.style.transform = 'translateY(50%)';
 
 imgs.forEach(img => {
 
 img.style.opacity = '0';
-img.style.transform = 'translateX(-50%)';
+img.style.transform = 'translateX(-10%)';
 
 img.style.transition = 'transform 1000ms, opacity 1000ms';
 
@@ -221,7 +221,7 @@ const effect = entries => {
           if (entry.target.tagName === 'IMG') {
               entry.target.style.transform = 'translateX(0px)';    
           }
-          if(entry.target.id === 'out'){
+          if(entry.target.id === 'description'){
                   entry.target.style.transform = 'translateY(0px)';
           }  
        }else{
