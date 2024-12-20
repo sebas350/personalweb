@@ -170,7 +170,7 @@ const translations = {
     outv.style.flexDirection = 'column';
     outv.style.alignItems = 'center';
     outv.style.justifyContent = 'center';
-    outv.style.gap = '30px';
+    outv.style.gap = '10px';
     outv.style.backgroundColor = 'red';
     outv.style.color = 'white';
     //outv.style.paddingTop = '4%';
@@ -236,7 +236,7 @@ const observer = new IntersectionObserver(effect,{threshold: 0.3});
 
 imgs.forEach(entry => observer.observe(entry));
 
-observer.observe(outv);
+//observer.observe(outv);
 observer.observe(webdescrip);
    
     
