@@ -175,7 +175,7 @@ const translations = {
     outv.style.gap = '10px';
     outv.style.backgroundColor = '#546de5';
     outv.style.color = '#e0e0e0';
-    outv.style.textShadow= '#bdbdbd';
+    //outv.style.textShadow= '3px 3px #bdbdbd';
     //outv.style.paddingTop = '4%';
     //outv.style.transition = 'transform 1000ms, opacity 1000ms';
     //outv.style.opacity = '0';
@@ -190,7 +190,7 @@ const translations = {
         e.style.lineHeight = '1.5';
         //e.style.textAlign = 'center';
         e.style.color = '#333333';
-        e.style.textShadow = '#E0E0E0';
+        e.style.textShadow = '2px 2px #E0E0E0';
     });
     
     salient.forEach(e => {
@@ -212,6 +212,8 @@ const translations = {
     webdescrip.style.opacity = '0';
     webdescrip.style.transition = 'opacity 1000ms, transform 1000ms';
     webdescrip.style.transform = 'translateY(50%)';
+    webdescrip.style.textShadow = '0px 0px #E0E0E0';
+    webdescrip.style.color = 'white';
 
 imgs.forEach(img => {
 
@@ -221,6 +223,7 @@ img.style.transform = 'translateX(-10%)';
 img.style.transition = 'transform 1000ms, opacity 1000ms';
 
 img.style.borderRadius = '10px';
+img.style.boxShadow = '2px 2px #E0E0E0';
 
 });
 

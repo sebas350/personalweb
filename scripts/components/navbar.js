@@ -5,11 +5,19 @@ import {Home} from './home.js';
 import {Portfolio} from './portfolio.js';
 
 export function Navbar(main) {
+    const container = document.createElement('div');
     const nav = document.createElement('nav');
     const home = document.createElement('button');
     const resume = document.createElement('button');
     const portfolio = document.createElement('button');
     const languageSelect = document.createElement('select');
+    const language = document.createElement('div');
+    const textLang = document.createElement('p');
+    language.appendChild(textLang);
+    language.appendChild(languageSelect);
+    
+    const menu = document.createElement('div');
+    const btn = document.createElement('button');
     
     // Traducciones de los elementos del navbar
     const translations = {
@@ -17,11 +25,13 @@ export function Navbar(main) {
             home: 'Home',
             resume: 'Resume',
             portfolio: 'Portfolio',
+            language: 'Language >',
         },
         es: {
             home: 'Inicio',
             resume: 'Curriculum',
             portfolio: 'Portafolio',
+            language: 'Lenguaje >',
         },
     };
     
@@ -44,6 +54,7 @@ export function Navbar(main) {
         home.textContent = translations[currentLanguage].home;
         resume.textContent = translations[currentLanguage].resume;
         portfolio.textContent = translations[currentLanguage].portfolio;
+        textLang.textContent = translations[currentLanguage].language;
     };
     
     
@@ -57,19 +68,52 @@ export function Navbar(main) {
         currentLanguage = event.target.value; // Actualiza el idioma actual
         updateNavbarTexts(); // Actualiza los textos del navbar
         updateComponent(Home); // Recarga el contenido inicial en el nuevo idioma
+        menu.style.transform = 'translateY(-100%)';
     };
         
-    resume.onclick = () => updateComponent(Resume);
-    home.onclick = () => updateComponent(Home);
-    portfolio.onclick = () => updateComponent(Portfolio);
+    resume.onclick = () => {
+        updateComponent(Resume);
+        menu.style.transform = 'translateY(-100%)';
+    };
+    home.onclick = () => {
+        updateComponent(Home);
+        menu.style.transform = 'translateY(-100%)';
+    };
+    portfolio.onclick = () => {
+        updateComponent(Portfolio);
+        menu.style.transform = 'translateY(-100%)';
+    };
     
      // Inicializa los textos del navbar
     updateNavbarTexts();
+    
+    
+    
+//svg
+
+const svg = document.createElement('div');
+svg.innerHTML = `
+   
+ <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25" />
+</svg>     
+`;
+
+const svgImg = svg.querySelector('svg');
+svgImg.style.width = '30px';
+svgImg.style.height = '30px';
+
+
+
+btn.appendChild(svg);
+btn.style.all = 'unset';
+btn.style.cursor = 'pointer';
+    
       
-    const elements = [home,resume,portfolio,languageSelect];
+    const elements = [home,resume,portfolio,language];
     
     elements.forEach((element) => {
-        nav.appendChild(element);
+        menu.appendChild(element);
     }); 
     
 //styles
@@ -82,7 +126,71 @@ export function Navbar(main) {
     nav.style.width = '100%';
     nav.style.height = '30px';
     nav.style.background = '#546de5';
+    nav.style.transform = 'translateY(-20px)';
+    nav.style.transition = 'transform 500ms';
     nav.style.zIndex = '1000';
+    
+    language.style.display = 'flex';
+    language.style.justifyContent = 'center';
+    language.style.gap = '10px';
+    
+    textLang.textContent = 'Lenguaje >';
+    //textLang.style.border = '3px solid red';
+    
+    languageSelect.style.all = 'unset';
+    languageSelect.style.cursor = 'pointer';
+    resume.style.all = 'unset';
+    resume.style.cursor = 'pointer';
+    home.style.all = 'unset';
+    home.style.cursor = 'pointer';
+    portfolio.style.all = 'unset';
+    portfolio.style.cursor = 'pointer';
+    
+    
+    
+    
+//observer
 
-    return nav;
+const effect = entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.transform = 'translateY(0px)';
+        }
+    })
+};    
+    
+const observer =  new IntersectionObserver(effect,{threshold: 0.3})
+
+observer.observe(nav);
+
+menu.style.width = '100%';
+menu.style.height = '100vh';
+//menu.style.border = '2px solid red';
+menu.style.position = 'fixed';
+menu.style.top = '30px';
+menu.style.left = '0';
+menu.style.background = 'white';
+menu.style.zIndex = '999';
+menu.style.display = 'flex';
+menu.style.flexDirection = 'column';
+menu.style.alignItems = 'center';
+menu.style.justifyContent = 'space-evenly';
+//menu.style.display = 'none';
+menu.style.transform = 'translateY(-100%)'
+menu.style.transition = 'transform 500ms';
+
+btn.onclick = () => {
+    if (menu.style.transform === 'translateY(-100%)') {
+        //menu.style.display = 'flex';
+        menu.style.transform = 'translateY(0px)';
+    }else{
+        menu.style.transform = 'translateY(-100%)';
+    }
+};
+
+nav.appendChild(btn);
+container.appendChild(nav);
+container.appendChild(menu);    
+
+    return container;
 }
