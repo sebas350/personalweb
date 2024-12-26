@@ -100,6 +100,13 @@ const translations = {
     
     <h1 style="font-size: 3em;">${title}</h1>
     <p class="salient" id="description">${description}</p>
+    <button>
+       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+</svg> 
+    </button>
+    
+
     
 </div>     
     
@@ -171,7 +178,7 @@ const translations = {
     outv.style.display = 'flex';
     outv.style.flexDirection = 'column';
     outv.style.alignItems = 'center';
-    outv.style.justifyContent = 'center';
+    outv.style.justifyContent = 'space-around';
     outv.style.gap = '10px';
     outv.style.backgroundColor = '#546de5';
     outv.style.color = '#e0e0e0';
@@ -183,6 +190,27 @@ const translations = {
     outitle.style.color = 'white';
     outitle.style.textShadow= '#bdbdbd';
     
+    const svg = divout.querySelector('svg');
+    svg.style.width = '50px';
+    svg.style.height = '50px';
+    
+    
+    container.style.transition = 'transform 1000ms';
+    const btn = container.querySelector('button');
+    btn.style.all = 'unset';
+    btn.style.cursor = 'pointer';
+    //btn.onclick = () => sectionWeb.scrollIntoView({behavior: 'smooth', block: 'start'});
+    
+    btn.onclick = () => {window.scrollTo({
+  top: sectionWeb.offsetTop,
+  behavior: 'smooth'
+});
+
+};
+    
+    
+    
+    //btn.onclick = () => {container.style.transform = 'translateY(-100vh)'};
 
     const ps = container.querySelectorAll('p');
     ps.forEach(e => {
@@ -251,7 +279,6 @@ imgs.forEach(entry => observer.observe(entry));
 
 //observer.observe(outv);
 observer.observe(webdescrip);
-   
-    
+
     return container;
 }

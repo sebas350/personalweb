@@ -6,5 +6,6 @@ export function Main(language='es'){
     //div.style.boxSizing = 'border-box';
     div.style.padding = '30px 0px';
     div.style.background = '#f0f0f3';
+    //div.style.overflow = 'hidden';
     return div;
 }
