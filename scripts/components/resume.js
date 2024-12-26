@@ -129,7 +129,7 @@ export function Resume(language = 'es') {
 
   paragraphs.forEach((el) => {
     el.style.opacity = '0';
-    el.style.transition = 'opacity 1000ms';
+    el.style.transition = 'opacity 1500ms';
   });
 
   const observer = new IntersectionObserver(

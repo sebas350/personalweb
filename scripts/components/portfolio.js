@@ -210,7 +210,7 @@ const translations = {
     
     const imgs = container.querySelectorAll('img');
     webdescrip.style.opacity = '0';
-    webdescrip.style.transition = 'opacity 1000ms, transform 1000ms';
+    webdescrip.style.transition = 'opacity 1500ms, transform 1500ms';
     webdescrip.style.transform = 'translateY(50%)';
     webdescrip.style.textShadow = '0px 0px #E0E0E0';
     webdescrip.style.color = 'white';

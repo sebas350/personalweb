@@ -69,19 +69,24 @@ export function Navbar(main) {
         updateNavbarTexts(); // Actualiza los textos del navbar
         updateComponent(Home); // Recarga el contenido inicial en el nuevo idioma
         menu.style.transform = 'translateY(-100%)';
+        svgMenu();
+        
     };
         
     resume.onclick = () => {
         updateComponent(Resume);
         menu.style.transform = 'translateY(-100%)';
+        svgMenu();
     };
     home.onclick = () => {
         updateComponent(Home);
         menu.style.transform = 'translateY(-100%)';
+        svgMenu();
     };
     portfolio.onclick = () => {
         updateComponent(Portfolio);
         menu.style.transform = 'translateY(-100%)';
+        svgMenu();
     };
     
      // Inicializa los textos del navbar
@@ -92,16 +97,25 @@ export function Navbar(main) {
 //svg
 
 const svg = document.createElement('div');
-svg.innerHTML = `
-   
- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25" />
-</svg>     
-`;
 
-const svgImg = svg.querySelector('svg');
-svgImg.style.width = '30px';
-svgImg.style.height = '30px';
+const svgMenuCdn = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25" />
+</svg>`;
+
+const svgXCdn = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>`;
+
+
+
+const svgMenu = () => {
+    svg.innerHTML = svgMenuCdn;
+    const svgImg = svg.querySelector('svg');
+    svgImg.style.width = '30px';
+    svgImg.style.height = '30px';
+};
+
+svgMenu();
 
 
 
@@ -179,12 +193,24 @@ menu.style.justifyContent = 'space-evenly';
 menu.style.transform = 'translateY(-100%)'
 menu.style.transition = 'transform 500ms';
 
+
+const svgX = () => {
+        svg.innerHTML = svgXCdn;
+    const svgImg = svg.querySelector('svg');
+    svgImg.style.width = '30px';
+    svgImg.style.height = '30px';
+};
+
+
 btn.onclick = () => {
     if (menu.style.transform === 'translateY(-100%)') {
-        //menu.style.display = 'flex';
         menu.style.transform = 'translateY(0px)';
+        svgX();
+        
+
     }else{
         menu.style.transform = 'translateY(-100%)';
+        svgMenu();
     }
 };
 

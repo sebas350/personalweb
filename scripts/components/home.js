@@ -132,7 +132,7 @@ entriesp.forEach(p => {
 
 p.style.opacity = '0';
 
-p.style.transition = 'opacity 1000ms';});
+p.style.transition = 'opacity 1500ms';});
 
 const effect = entries => {
   entries.forEach(entry => {
