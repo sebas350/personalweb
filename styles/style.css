@@ -24,3 +24,8 @@ nav li {
 .container {
     width: 100%;
 }
+
+@keyframes moveUpDown {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(20px);}
+}

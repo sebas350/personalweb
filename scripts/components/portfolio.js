@@ -178,7 +178,7 @@ const translations = {
     outv.style.display = 'flex';
     outv.style.flexDirection = 'column';
     outv.style.alignItems = 'center';
-    outv.style.justifyContent = 'space-evenly';
+    outv.style.justifyContent = 'flex-start';
     outv.style.gap = '10px';
     outv.style.backgroundColor = '#546de5';
     outv.style.color = '#e0e0e0';
@@ -199,9 +199,11 @@ const translations = {
     const btn = container.querySelector('button');
     btn.style.all = 'unset';
     btn.style.cursor = 'pointer';
-    btn.onclick = () => 
     
+    btn.onclick = () => 
     sectionWeb.scrollIntoView({behavior: 'smooth', block: 'start'});
+    
+    btn.style.animation = 'moveUpDown 1s infinite alternate ease-in-out';
 
     const ps = container.querySelectorAll('p');
     ps.forEach(e => {
