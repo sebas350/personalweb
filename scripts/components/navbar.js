@@ -68,6 +68,7 @@ export function Navbar(main) {
         currentLanguage = event.target.value; // Actualiza el idioma actual
         updateNavbarTexts(); // Actualiza los textos del navbar
         updateComponent(Home); // Recarga el contenido inicial en el nuevo idioma
+        window.scrollTo(0,0);
         menu.style.transform = 'translateY(-100%)';
         svgMenu();
         
@@ -75,16 +76,19 @@ export function Navbar(main) {
         
     resume.onclick = () => {
         updateComponent(Resume);
+        window.scrollTo(0,0);
         menu.style.transform = 'translateY(-100%)';
         svgMenu();
     };
     home.onclick = () => {
         updateComponent(Home);
+        window.scrollTo(0,0);
         menu.style.transform = 'translateY(-100%)';
         svgMenu();
     };
     portfolio.onclick = () => {
         updateComponent(Portfolio);
+        window.scrollTo(0,0);
         menu.style.transform = 'translateY(-100%)';
         svgMenu();
     };
