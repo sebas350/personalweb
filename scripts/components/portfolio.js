@@ -200,8 +200,9 @@ const translations = {
     btn.style.all = 'unset';
     btn.style.cursor = 'pointer';
     
-    btn.onclick = () => 
-    sectionWeb.scrollIntoView({behavior: 'smooth', block: 'start'});
+    const vh = window.innerHeight;
+    
+    btn.onclick = () => window.scrollTo({top: vh-10, behavior: 'smooth'});
     
     btn.style.animation = 'moveUpDown 1s infinite alternate ease-in-out';
 
