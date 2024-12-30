@@ -3,6 +3,7 @@
 import {Resume} from './resume.js';
 import {Home} from './home.js';
 import {Portfolio} from './portfolio.js';
+import {Certificates} from './certificates.js';
 
 export function Navbar(main) {
     const container = document.createElement('div');
@@ -19,18 +20,22 @@ export function Navbar(main) {
     const menu = document.createElement('div');
     const btn = document.createElement('button');
     
+    const cert = document.createElement('button');
+    
     // Traducciones de los elementos del navbar
     const translations = {
         en: {
             home: 'Home',
             resume: 'Resume',
             portfolio: 'Portfolio',
-            language: 'Language >',
+            certificates: 'Certificates',
+            language: 'Language >', 
         },
         es: {
             home: 'Inicio',
             resume: 'Curriculum',
             portfolio: 'Portafolio',
+            certificates: 'Certificados',
             language: 'Lenguaje >',
         },
     };
@@ -54,6 +59,7 @@ export function Navbar(main) {
         home.textContent = translations[currentLanguage].home;
         resume.textContent = translations[currentLanguage].resume;
         portfolio.textContent = translations[currentLanguage].portfolio;
+        cert.textContent = translations[currentLanguage].certificates
         textLang.textContent = translations[currentLanguage].language;
     };
     
@@ -88,6 +94,12 @@ export function Navbar(main) {
     };
     portfolio.onclick = () => {
         updateComponent(Portfolio);
+        window.scrollTo(0,0);
+        menu.style.transform = 'translateY(-100%)';
+        svgMenu();
+    };
+    cert.onclick = () => {
+        updateComponent(Certificates);
         window.scrollTo(0,0);
         menu.style.transform = 'translateY(-100%)';
         svgMenu();
@@ -128,7 +140,7 @@ btn.style.all = 'unset';
 btn.style.cursor = 'pointer';
     
       
-    const elements = [home,resume,portfolio,language];
+    const elements = [home,resume,portfolio,cert,language];
     
     elements.forEach((element) => {
         menu.appendChild(element);
@@ -163,6 +175,8 @@ btn.style.cursor = 'pointer';
     home.style.cursor = 'pointer';
     portfolio.style.all = 'unset';
     portfolio.style.cursor = 'pointer';
+    cert.style.all = 'unset';
+    cert.style.cursor = 'pointer';
     
     
     
