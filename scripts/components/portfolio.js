@@ -1,4 +1,5 @@
 //import { document } from '../dom.js';
+import { Present } from './present.js';
 
 export function Portfolio(language='es') {
 
@@ -92,27 +93,11 @@ const translations = {
     
     
     //div presentacion
-    const divout = document.createElement('div');
-    
-    const htmlout = `
-    
-<div id="out">
-    
-    <h1 style="font-size: 3em;">${title}</h1>
-    <p class="salient" id="description">${description}</p>
-    <button>
-       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-</svg> 
-    </button>
-    
+const divout = document.createElement('div');
 
+    divout.appendChild(Present(description, title, 'skyblue'));
     
-</div>     
     
-    `;
-    
-    divout.innerHTML = htmlout;
     
     
     //div seccion desarrollo web
@@ -171,40 +156,17 @@ const translations = {
 
     //container.style.fontFamily = "'Lora', serif";
     const salient = container.querySelectorAll('.salient');
-    const webdescrip = container.querySelector('#description');
-    const outv = container.querySelector('#out');
-    outv.style.width = '100%';
-    outv.style.height = '90vh';
-    outv.style.display = 'flex';
-    outv.style.flexDirection = 'column';
-    outv.style.alignItems = 'center';
-    outv.style.justifyContent = 'space-evenly';
-    outv.style.gap = '10px';
-    outv.style.backgroundColor = '#546de5';
-    outv.style.color = '#e0e0e0';
+    const webdescrip = container.querySelector('#subtitle');
+    
+    
     //outv.style.textShadow= '3px 3px #bdbdbd';
     //outv.style.paddingTop = '4%';
     //outv.style.transition = 'transform 1000ms, opacity 1000ms';
     //outv.style.opacity = '0';
-    const outitle = outv.querySelector('h1');
-    outitle.style.color = 'white';
-    outitle.style.textShadow= '#bdbdbd';
-    
-    const svg = divout.querySelector('svg');
-    svg.style.width = '50px';
-    svg.style.height = '50px';
     
     
     container.style.transition = 'transform 1000ms';
-    const btn = container.querySelector('button');
-    btn.style.all = 'unset';
-    btn.style.cursor = 'pointer';
     
-    const vh = window.innerHeight;
-    
-    btn.onclick = () => window.scrollTo({top: vh-10, behavior: 'smooth'});
-    
-    btn.style.animation = 'moveUpDown 1s infinite alternate ease-in-out';
 
     const ps = container.querySelectorAll('p');
     ps.forEach(e => {
@@ -221,6 +183,7 @@ const translations = {
         e.style.textAlign = 'center';
     });
     
+    webdescrip.style.fontSize = '1.8em';
     //webdescrip.style.height = '100vh';
     //webdescrip.style.border = '3px solid red';
     //webdescrip.style.display = 'flex';
@@ -231,9 +194,9 @@ const translations = {
 //observer    
     
     const imgs = container.querySelectorAll('img');
-    webdescrip.style.opacity = '0';
-    webdescrip.style.transition = 'opacity 1500ms, transform 1500ms';
-    webdescrip.style.transform = 'translateY(50%)';
+    //webdescrip.style.opacity = '0';
+    //webdescrip.style.transition = 'opacity 1500ms, transform 1500ms';
+    //webdescrip.style.transform = 'translateY(50%)';
     webdescrip.style.textShadow = '0px 0px #E0E0E0';
     webdescrip.style.color = 'white';
 
@@ -256,8 +219,8 @@ const effect = entries => {
           if (entry.target.tagName === 'IMG') {
               entry.target.style.transform = 'translateX(0px)';    
           }
-          if(entry.target.id === 'description'){
-                  entry.target.style.transform = 'translateY(0px)';
+          if(entry.target.id === 'subtitle'){
+                 entry.target.style.transform = 'translateY(0px)';
           }  
        }else{
       //entry.target.style.opacity = '0';

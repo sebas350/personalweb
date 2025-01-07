@@ -5,6 +5,7 @@ import { Resume } from './components/resume.js';
 import { Portfolio } from './components/portfolio.js';
 import { Footer } from './components/footer.js';
 import { Main } from './components/main.js';
+import { Loader } from './components/loader.js';
 
 function init(){
   const root = document.querySelector('#root');
@@ -14,12 +15,19 @@ function init(){
   const nav = Navbar(main);
   const resume = Resume();
   const portfolio = Portfolio();
-
+  const loader = Loader();
+  
   main.appendChild(home);
   
-  root.appendChild(nav);
-  root.appendChild(main);
-  root.appendChild(footer);
+  root.appendChild(loader);
+  
+  setTimeout(() => {
+      root.removeChild(loader);
+      root.appendChild(nav);
+      root.appendChild(main);
+      root.appendChild(footer);
+  }, 4000);
+  
 };
 
 init();

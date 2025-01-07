@@ -1,4 +1,5 @@
 //import { document } from '../dom.js';
+import { Present } from './present.js';
 
 export function Certificates
 
@@ -55,19 +56,13 @@ export function Certificates
   const { title, subtitle, certificates } = translations[language];
 
   const container = document.createElement('div'); 
-  const head = document.createElement('div');
+  const heade = document.createElement('div');
   const certs = document.createElement('div');
   
   
+  heade.appendChild(Present(subtitle, title, '#546de5'));
   
-  
-  
-  head.innerHTML = `
-    <h1 style="font-size:3em; color:white;">${title}</h1>
-    <p style="font-size:1.8em;">${subtitle}</p>
-  `;
-  
- container.appendChild(head);
+ container.appendChild(heade);
  
  const certsArray = Object.values(certificates);
  
@@ -75,7 +70,7 @@ export function Certificates
      const div = document.createElement('div');
      div.innerHTML = `
          <h2>${cert.title}</h2>
-         <p>${cert.subtitle}</p>
+         <p style="font-size: 0.8em;">${cert.subtitle}</p>
     
     <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/cert${index+1}.png" style="width:100%;"  alt="">
      `;
@@ -88,12 +83,12 @@ export function Certificates
     
 //style
     
-    head.style.display = 'flex';
-    head.style.flexDirection = 'column';
-    head.style.justifyContent = 'center';
-    head.style.gap = '30px';
-    head.style.height = '90vh';
-    head.style.background = 'skyblue';
+    heade.style.display = 'flex';
+    heade.style.flexDirection = 'column';
+    heade.style.justifyContent = 'center';
+    heade.style.gap = '30px';
+    heade.style.height = '90vh';
+    //heade.style.background = 'skyblue';
     //head.fontSize = 'em';
     
     
@@ -116,11 +111,14 @@ export function Certificates
   
   const imgs = container.querySelectorAll('img');
   
-
+//config for observer
+ 
+     //img
+      
   imgs.forEach(img => {
 
     img.style.opacity = '0';
-    img.style.transform = 'translateY(100px)';
+    img.style.transform = 'translateY(100px) scale(0.8)';
     img.style.filter = 'blur(10px)';
 
     img.style.transition = 'transform 1000ms, opacity 1000ms, filter 0.5s';
@@ -131,13 +129,17 @@ export function Certificates
 
 });
 
+    //present subtitle
+
+    const sub = heade.querySelector('#subtitle');
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
           entry.target.style.filter = 'blur(0)';
-          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.transform = 'translateY(0) scale(1)';
         } else {
           //entry.target.style.opacity = '0';
         }
@@ -146,7 +148,9 @@ export function Certificates
     { threshold: 0.3 }
   );
 
+//observe  
   imgs.forEach((el) => observer.observe(el));
+  observer.observe(sub);
 
   return container;
 }
