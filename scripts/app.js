@@ -26,7 +26,7 @@ function init(){
       root.appendChild(nav);
       root.appendChild(main);
       root.appendChild(footer);
-  }, 4000);
+  }, 1000);
   
 };
 

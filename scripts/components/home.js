@@ -5,8 +5,8 @@ export function Home(language='es') {
     const translations = {
     en: {
         sec1_h1: `Welcome to my Professional Page`,
-        sec1_p1: `Hello, I'm Tello, Sebastián José, a passionate fullstack developer with more than 2 years of experience in the design and development of robust and scalable web applications. My goal is to create technology solutions that not only meet technical requirements but also offer an exceptional user experience.`,
-        sec1_p2: `On this site, you will find information about my professional career, my technical skills, and a sample of the projects I have worked on. I love facing new challenges and continually learning to improve my skills and offer the best of myself in each project.`,
+        sec1_p1: `Hello, I am Sebastián and I am dedicated to the development of web applications. With 3 years of experience, I am capable of creating websites using the latest in design, taking into account the aesthetics and elegance that each project requires.`,
+        sec1_p2: `On this site, you will find information about my professional career, my technical skills, and a sample of the projects I have worked on and are currently working on.`,
         sec1_h2: `Who am I?`,
         sec1_p3: `I am a dedicated and creative developer, with a strong focus on code quality and development best practices. I have experience working with a variety of technologies on both the frontend and backend, including JavaScript, React, Node.js, Python, and many more.`,
         sec2_h2: `What can I do?`,
@@ -27,8 +27,8 @@ export function Home(language='es') {
     },
     es: {
         sec1_h1: `Bienvenidos a mi Página Profesional`,
-        sec1_p1: `Hola, soy Tello, Sebastián José un apasionado desarrollador fullstack con más de 2 años de experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables. Mi objetivo es crear soluciones tecnológicas que no solo cumplan con los requisitos técnicos, sino que también ofrezcan una experiencia de usuario excepcional.`,
-        sec1_p2: `En este sitio, encontrarás información sobre mi trayectoria profesional, mis habilidades técnicas, y una muestra de los proyectos en los que he trabajado. Me encanta enfrentar nuevos desafíos y aprender continuamente para mejorar mis competencias y ofrecer lo mejor de mí en cada proyecto.`,
+        sec1_p1: `Hola soy Sebastián y me dedico al desarrollo de aplicaciones web, con una experiencia de 3 años soy capaza de crear webs usando lo ultmo en diseño teniendo encuenta la estetica y elegancia que exige cada proyecto.`,
+        sec1_p2: `En este sitio, encontrarás información sobre mi trayectoria profesional, mis habilidades técnicas, y una muestra de los proyectos en los que he trabajado y trabajo actuamente.`,
         sec1_h2: `¿Quién soy?`,
         sec1_p3: `Soy un desarrollador dedicado y creativo, con un fuerte enfoque en la calidad del código y las mejores prácticas de desarrollo. Tengo experiencia trabajando con una variedad de tecnologías tanto en el frontend como en el backend, incluyendo JavaScript, React, Node.js, Python, y muchas más.`,
         sec2_h2: `¿Qué puedo hacer?`,
@@ -73,11 +73,26 @@ const {
     circle.style.backgroundPosition = 'center';
     
     secMe_1.innerHTML = `
-    <h1>${sec1_h1}</h1>
+    <h1 style="text-align: center;">${sec1_h1}</h1>
     <div>
+        <svg fill="white" style="width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+
+<path d="M96 128a128 128 0 1 0 256 0A128 128 0 1 0 96 128zm94.5 200.2l18.6 31L175.8 483.1l-36-146.9c-2-8.1-9.8-13.4-17.9-11.3C51.9 342.4 0 405.8 0 481.3c0 17 13.8 30.7 30.7 30.7l131.7 0c0 0 0 0 .1 0l5.5 0 112 0 5.5 0c0 0 0 0 .1 0l131.7 0c17 0 30.7-13.8 30.7-30.7c0-75.5-51.9-138.9-121.9-156.4c-8.1-2-15.9 3.3-17.9 11.3l-36 146.9L238.9 359.2l18.6-31c6.4-10.7-1.3-24.2-13.7-24.2L224 304l-19.7 0c-12.4 0-20.1 13.6-13.7 24.2z"/>
+
+</svg>
+        
         <p>${sec1_p1}</p>
+        
+    </div>
+    
+    <div>
+        <svg fill="white" style="width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"/>
+     </svg>
+     
         <p>${sec1_p2}</p>
     </div>
+    
     <h2>${sec1_h2}</h2>
     <p>${sec1_p3}</p>
 `;
@@ -110,6 +125,25 @@ secMe_2.innerHTML = `
     secMe_1.style.flexDirection = 'column';
     secMe_1.style.gap = '15px';
     secMe_1.style.paddingTop = '20px';
+    secMe_1.style.padding = '10px';
+    
+    const sec1_divs = secMe_1.querySelectorAll('div');
+    
+    sec1_divs.forEach(div=>{
+        div.style.border = '1px solid black';
+        div.style.borderRadius = '5px';
+        div.style.padding = '20px';
+        div.style.display = 'flex';
+        div.style.flexDirection = 'column';
+        div.style.gap = '10px';
+        div.style.color = 'white';
+        div.style.background = 'black';
+        div.style.boxShadow = '0px 10px 10px rgba(0, 0, 0, 0.5)'
+        
+    });
+    
+    
+    
     
     secMe_2.style.display = 'flex';
     secMe_2.style.flexDirection = 'column';

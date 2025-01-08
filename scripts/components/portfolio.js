@@ -183,7 +183,7 @@ const divout = document.createElement('div');
         e.style.textAlign = 'center';
     });
     
-    webdescrip.style.fontSize = '1.8em';
+    webdescrip.style.fontSize = '1.5em';
     //webdescrip.style.height = '100vh';
     //webdescrip.style.border = '3px solid red';
     //webdescrip.style.display = 'flex';
