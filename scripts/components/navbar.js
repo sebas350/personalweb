@@ -69,6 +69,11 @@ export function Navbar(main) {
         main.appendChild(newComponent(currentLanguage)); //pasar el lenguaje actual al componente.
     };
     
+//context updatecomponet(global)        
+//window.updateComponent = updateComponent;
+
+//updateComponent(Home.bind(null, updateComponent));
+    
      // Evento de cambio de idioma
     languageSelect.onchange = (event) => {
         currentLanguage = event.target.value; // Actualiza el idioma actual
