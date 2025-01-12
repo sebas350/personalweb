@@ -312,7 +312,7 @@ svgBackg.style.height = '500px';
 
 svgBackg.style.display = 'flex';
 svgBackg.style.flexDirection = 'column';
-svgBackg.style.justifyContent = 'flex-end';
+svgBackg.style.justifyContent = 'space-between';
 svgBackg.style.gap = '10px';
 //svgBackg.style.border = '3px solid red';
 
