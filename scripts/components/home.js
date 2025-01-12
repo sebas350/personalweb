@@ -120,11 +120,12 @@ secMe_2.innerHTML = `
     
     <div id="port">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-            <path d="M192 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8 384l0-128 16 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-288 56 0 64 0 16 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16 0 0-64 192 0 0 192-192 0 0-32-64 0 0 48c0 26.5 21.5 48 48 48l224 0c26.5 0 48-21.5 48-48l0-224c0-26.5-21.5-48-48-48L368 0c-26.5 0-48 21.5-48 48l0 80-76.9 0-65.9 0c-33.7 0-64.9 17.7-82.3 46.6l-58.3 97c-9.1 15.1-4.2 34.8 10.9 43.9s34.8 4.2 43.9-10.9L120 256.9 120 480c0 17.7 14.3 32 32 32s32-14.3 32-32z"/></svg>
+        <section id="svgbackg">
+           <h2 class="light" >${sec2_h2}</h2>
+           <p>${sec2_p1}</p> 
+            
+        </section>
         
-        <h2 class="light" >${sec2_h2}</h2>
-        <p>${sec2_p1}</p>
     
     <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
         <path d="M64 0C28.7 0 0 28.7 0 64L0 352c0 35.3 28.7 64 64 64l176 0-10.7 32L160 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l256 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-69.3 0L336 416l176 0c35.3 0 64-28.7 64-64l0-288c0-35.3-28.7-64-64-64L64 0zM512 64l0 224L64 288 64 64l448 0z"/></svg>
@@ -300,12 +301,27 @@ const btnPort = document.createElement('button');
     classResume.forEach(div => div.style.background = '#001F3F');
     
     port.style.background = '#013220';
+    
+//svg background port
+
+const svgBackg = secMe_2.querySelector('#svgbackg');
+svgBackg.style.background = "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 512\"%3E%3Cpath d=\"M192 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8 384l0-128 16 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-288 56 0 64 0 16 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16 0 0-64 192 0 0 192-192 0 0-32-64 0 0 48c0 26.5 21.5 48 48 48l224 0c26.5 0 48-21.5 48-48l0-224c0-26.5-21.5-48-48-48L368 0c-26.5 0-48 21.5-48 48l0 80-76.9 0-65.9 0c-33.7 0-64.9 17.7-82.3 46.6l-58.3 97c-9.1 15.1-4.2 34.8 10.9 43.9s34.8 4.2 43.9-10.9L120 256.9 120 480c0 17.7 14.3 32 32 32s32-14.3 32-32z\"/%3E%3C/svg%3E') no-repeat center center";
+
+svgBackg.style.backgroundSize = '100%';
+svgBackg.style.height = '500px';
+
+svgBackg.style.display = 'flex';
+svgBackg.style.flexDirection = 'column';
+svgBackg.style.justifyContent = 'flex-end';
+svgBackg.style.gap = '10px';
+//svgBackg.style.border = '3px solid red';
 
 //style light
 
 const classLight = secMe.querySelectorAll('.light');
     
     classLight.forEach(e => e.style.fontWeight = '300');
+    
 
 
 //observer    
