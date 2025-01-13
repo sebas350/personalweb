@@ -96,6 +96,7 @@ const {
     </div>
     
     <div>
+       
         <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"/>
      </svg>
@@ -105,12 +106,15 @@ const {
     
     
     <div class="resume">
-        <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-<path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/>
-</svg>
-        <h2 class="light">${sec1_h2}</h2>
-        <p>${sec1_p3}</p>
-    
+          
+          <section class="div-1">
+              <svg class="svg-absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path fill="#2C2C2C" d="M224 16c-6.7 0-10.8-2.8-15.5-6.1C201.9 5.4 194 0 176 0c-30.5 0-52 43.7-66 89.4C62.7 98.1 32 112.2 32 128c0 14.3 25 27.1 64.6 35.9c-.4 4-.6 8-.6 12.1c0 17 3.3 33.2 9.3 48l-59.9 0C38 224 32 230 32 237.4c0 1.7 .3 3.4 1 5l38.8 96.9C28.2 371.8 0 423.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7c0-58.5-28.2-110.4-71.7-143L415 242.4c.6-1.6 1-3.3 1-5c0-7.4-6-13.4-13.4-13.4l-59.9 0c6-14.8 9.3-31 9.3-48c0-4.1-.2-8.1-.6-12.1C391 155.1 416 142.3 416 128c0-15.8-30.7-29.9-78-38.6C324 43.7 302.5 0 272 0c-18 0-25.9 5.4-32.5 9.9c-4.8 3.3-8.8 6.1-15.5 6.1zm56 208l-12.4 0c-16.5 0-31.1-10.6-36.3-26.2c-2.3-7-12.2-7-14.5 0c-5.2 15.6-19.9 26.2-36.3 26.2L168 224c-22.1 0-40-17.9-40-40l0-14.4c28.2 4.1 61 6.4 96 6.4s67.8-2.3 96-6.4l0 14.4c0 22.1-17.9 40-40 40zm-88 96l16 32L176 480 128 288l64 32zm128-32L272 480 240 352l16-32 64-32z"/></svg>
+            <h2 class="light relative">${sec1_h2}</h2>
+            <p class="relative">${sec1_p3}</p>
+              
+          </section>            
+     
     </div>    
 `;
 
@@ -120,13 +124,15 @@ secMe_2.innerHTML = `
     
     <div id="port">
         
-        <section id="svgbackg">
-           <h2 class="light" >${sec2_h2}</h2>
-           <p>${sec2_p1}</p> 
+        <section class="div-1">
+            
+            <svg class="svg-absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+            <path d="M192 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8 384l0-128 16 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-288 56 0 64 0 16 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16 0 0-64 192 0 0 192-192 0 0-32-64 0 0 48c0 26.5 21.5 48 48 48l224 0c26.5 0 48-21.5 48-48l0-224c0-26.5-21.5-48-48-48L368 0c-26.5 0-48 21.5-48 48l0 80-76.9 0-65.9 0c-33.7 0-64.9 17.7-82.3 46.6l-58.3 97c-9.1 15.1-4.2 34.8 10.9 43.9s34.8 4.2 43.9-10.9L120 256.9 120 480c0 17.7 14.3 32 32 32s32-14.3 32-32z"/></svg>
+           <h2 class="light relative" >${sec2_h2}</h2>
+           <p class="relative">${sec2_p1}</p>
             
         </section>
-        
-    
+            
     <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
         <path d="M64 0C28.7 0 0 28.7 0 64L0 352c0 35.3 28.7 64 64 64l176 0-10.7 32L160 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l256 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-69.3 0L336 416l176 0c35.3 0 64-28.7 64-64l0-288c0-35.3-28.7-64-64-64L64 0zM512 64l0 224L64 288 64 64l448 0z"/></svg>
     
@@ -147,15 +153,26 @@ secMe_2.innerHTML = `
         <p><strong>Herramientas y DevOps:</strong> ${sec2_p5}</p>
     </div>
     
-    <div>
+   <div id="certifi">
+        
+     <section class="div-1">
+         
+         <svg class="svg-absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+             <path fill="#FFD43B" d="M219.3 .5c3.1-.6 6.3-.6 9.4 0l200 40C439.9 42.7 448 52.6 448 64s-8.1 21.3-19.3 23.5L352 102.9l0 57.1c0 70.7-57.3 128-128 128s-128-57.3-128-128l0-57.1L48 93.3l0 65.1 15.7 78.4c.9 4.7-.3 9.6-3.3 13.3s-7.6 5.9-12.4 5.9l-32 0c-4.8 0-9.3-2.1-12.4-5.9s-4.3-8.6-3.3-13.3L16 158.4l0-71.8C6.5 83.3 0 74.3 0 64C0 52.6 8.1 42.7 19.3 40.5l200-40zM111.9 327.7c10.5-3.4 21.8 .4 29.4 8.5l71 75.5c6.3 6.7 17 6.7 23.3 0l71-75.5c7.6-8.1 18.9-11.9 29.4-8.5C401 348.6 448 409.4 448 481.3c0 17-13.8 30.7-30.7 30.7L30.7 512C13.8 512 0 498.2 0 481.3c0-71.9 47-132.7 111.9-153.6z"/></svg>
+            
+       <h2 class="light relative" >${sec2_h2_2}</h2>
+      <p class="relative"><strong>Resume:</strong> ${sec2_p6}</p>
+      <p class="relative"><strong>Portfolio:</strong> ${sec2_p7}</p>
+      <p class="relative"><strong>Blog:</strong> ${sec2_p8}</p>
+    
+     </section>
+    
+    
+   </div>  
+            
         
         
         
-        <h2 class="light" >${sec2_h2_2}</h2>
-        <p><strong>Resume:</strong> ${sec2_p6}</p>
-        <p><strong>Portfolio:</strong> ${sec2_p7}</p>
-        <p><strong>Blog:</strong> ${sec2_p8}</p>
-    </div>
     
     <div>    
         
@@ -174,6 +191,9 @@ secMe_2.innerHTML = `
     secMe_1.style.gap = '15px';
     secMe_1.style.paddingTop = '20px';
     //secMe_1.style.padding = '10px';
+    
+    
+//segundo div resumen    
     
     const divResume2 = document.createElement('div');
     divResume2.className = 'resume';
@@ -302,18 +322,55 @@ const btnPort = document.createElement('button');
     
     port.style.background = '#013220';
     
+const div1s = secMe.querySelectorAll('.div-1');
+
+div1s.forEach(div => {
+    div.style.position = 'relative';
+    div.style.width = '100%';
+    div.style.height = '400px';
+    div.style.display = 'flex';
+    div.style.flexDirection = 'column';
+    div.style.justifyContent = 'flex-end';
+    div.style.gap = '20px';
+});
+
+//div1Res.style.border = '3px solid red';
+
+const elemRes = secMe.querySelectorAll('.relative');
+elemRes.forEach(e => e.style.position = 'relative');
+
+const svgsAbso = secMe.querySelectorAll('.svg-absolute');
+
+svgsAbso.forEach(svg => {
+    svg.style.position = 'absolute';
+    svg.style.top = '0';
+    svg.style.left = '0';
+    svg.style.width = '100%';
+    svg.style.height = '100%';
+});
+
+const certi = secMe.querySelector('#certifi');
+    
+    certi.style.background = '#B8860B';
+
+//svg1Res.style.textAlign = 'left';
+//svg1Res.style.border = '3px solid black';
+
+    
 //svg background port
 
-const svgBackg = secMe_2.querySelector('#svgbackg');
-svgBackg.style.background = "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 512\"%3E%3Cpath d=\"M192 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8 384l0-128 16 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-288 56 0 64 0 16 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16 0 0-64 192 0 0 192-192 0 0-32-64 0 0 48c0 26.5 21.5 48 48 48l224 0c26.5 0 48-21.5 48-48l0-224c0-26.5-21.5-48-48-48L368 0c-26.5 0-48 21.5-48 48l0 80-76.9 0-65.9 0c-33.7 0-64.9 17.7-82.3 46.6l-58.3 97c-9.1 15.1-4.2 34.8 10.9 43.9s34.8 4.2 43.9-10.9L120 256.9 120 480c0 17.7 14.3 32 32 32s32-14.3 32-32z\"/%3E%3C/svg%3E') no-repeat center center";
+//const svgBackg = secMe.querySelectorAll('.svgbackg');
 
-svgBackg.style.backgroundSize = 'auto';
-svgBackg.style.height = '350px';
+///////////
+//svgBackg.style.background = "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 512\"%3E%3Cpath d=\"M192 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8 384l0-128 16 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-288 56 0 64 0 16 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16 0 0-64 192 0 0 192-192 0 0-32-64 0 0 48c0 26.5 21.5 48 48 48l224 0c26.5 0 48-21.5 48-48l0-224c0-26.5-21.5-48-48-48L368 0c-26.5 0-48 21.5-48 48l0 80-76.9 0-65.9 0c-33.7 0-64.9 17.7-82.3 46.6l-58.3 97c-9.1 15.1-4.2 34.8 10.9 43.9s34.8 4.2 43.9-10.9L120 256.9 120 480c0 17.7 14.3 32 32 32s32-14.3 32-32z\"/%3E%3C/svg%3E') no-repeat";
 
-svgBackg.style.display = 'flex';
-svgBackg.style.flexDirection = 'column';
-svgBackg.style.justifyContent = 'space-between';
-svgBackg.style.gap = '10px';
+//svgBackg.style.backgroundSize = 'auto';
+//svgBackg.style.height = '350px';
+
+//svgBackg.style.display = 'flex';
+//svgBackg.style.flexDirection = 'column';
+//svgBackg.style.justifyContent = 'space-between';
+//svgBackg.style.gap = '10px';
 //svgBackg.style.border = '3px solid red';
 
 //style light
