@@ -1,6 +1,7 @@
 //import { document } from '../dom.js';
 import {Resume} from './resume.js';
 import {Portfolio} from './portfolio.js';
+import {Certificates} from './certificates.js';
 
 export function Home(language='es') {
 
@@ -21,15 +22,15 @@ export function Home(language='es') {
         sec2_p4: `MySQL, PostgreSQL, MongoDB`,
         sec2_p5: `Git, Docker, Jenkins, AWS`,
         btnPortLang:'Get to know my works and projects',
-        sec2_h2_2: `What will you find here?`,
-        sec2_p6: `A detailed tour of my work experience, education and technical skills.`,
-        sec2_p7: `Examples of projects I've worked on, highlighting challenges faced and solutions implemented.`,
-        sec2_p8:`Articles and reflections on web development, new technologies and best practices.`,
-        sec2_h2_3:`Contact`,
-        sec2_p9: `I am always looking for new opportunities and collaborations. If you're interested in working with me or just want to learn more, don't hesitate to get in touch.`,
-        sec2_p10: `Explore my work and see how I can help take your ideas to the next level. Thanks for visiting my page!`,
-        sec2_p11: `Learn more about me`,
-        sec2_p12: `Check my work`,
+        sec2_h2_2: `ACADEMIC DISTINCTIONS`,
+        sec2_p6: `The most notable achievements obtained during my academic and professional training reflect my commitment to continuous learning and excellence in specific areas of knowledge.`,
+        sec2_p7: `WEB DEVELOPER`,
+        sec2_p8:`FullStack`,
+        btnCertiLang:`LEARN ABOUT OTHER CERTIFICATES`,
+        sec2_p9: `PROGRAMMER`,
+        sec2_p10: `Advanced in Python`,
+        sec2_p11: `PROGRAMMER`,
+        sec2_p12: `Object Oriented and Visualization with Python`,
     },
     es: {
         sec1_h1:`PÁGINA PROFESIONAL`,
@@ -47,21 +48,21 @@ export function Home(language='es') {
         sec2_p4: `MySQL, PostgreSQL, MongoDB`,
         sec2_p5: `Git, Docker, Jenkins, AWS`,
         btnPortLang:'CONOCE MIS TRABAJOS Y PROYECTOS',
-        sec2_h2_2: `¿Qué encontrarás aquí?`,
-        sec2_p6: `Un recorrido detallado por mi experiencia laboral, educación y habilidades técnicas.`,
-        sec2_p7: `Ejemplos de proyectos en los que he trabajado, destacando los desafíos enfrentados y las soluciones implementadas.`,
-        sec2_p8:`Artículos y reflexiones sobre desarrollo web, nuevas tecnologías y mejores prácticas.`,
-        sec2_h2_3:`Contacto`,
-        sec2_p9: `Estoy siempre en busca de nuevas oportunidades y colaboraciones. Si te interesa trabajar conmigo o simplemente quieres saber más, no dudes en contactarme.`,
-        sec2_p10: `Explora mi trabajo y descubre cómo puedo ayudarte a llevar tus ideas al siguiente nivel. ¡Gracias por visitar mi página!`,
-        sec2_p11: `Conoce más sobre mí`,
-        sec2_p12: `Revisa mi trabajo`,
+        sec2_h2_2: `DISTINCIONES ACADEMICAS`,
+        sec2_p6: `Los logros más destacados obtenidos durante mi formación académica y profesional, refleja mi compromiso con el aprendizaje continuo y la excelencia en áreas específicas de conocimiento.`,
+        sec2_p7: `DESARROLLADOR WEB`,
+        sec2_p8:`FullStack`,
+        btnCertiLang:`CONOCE OTROS CERTIFICADOS`,
+        sec2_p9: `PROGRAMADOR`,
+        sec2_p10: `Avanzado en Python`,
+        sec2_p11: `PROGRAMADOR`,
+        sec2_p12: `Orientada a Objetos y Visualizacion con Python`,
     },
 };
 
 // Traducciones según el idioma actual
 const { 
-    sec1_h1, sec1_h2_, sec1_p1, sec1_p2, sec1_h2, sec1_p3, sec1_p4, btnResumeLang, sec2_h2, sec2_p1, sec2_p2, sec2_p3, sec2_p4, sec2_p5, btnPortLang, sec2_h2_2, sec2_p6, sec2_p7, sec2_p8, sec2_h2_3, sec2_p9,sec2_p10,sec2_p11, sec2_p12 
+    sec1_h1, sec1_h2_, sec1_p1, sec1_p2, sec1_h2, sec1_p3, sec1_p4, btnResumeLang, sec2_h2, sec2_p1, sec2_p2, sec2_p3, sec2_p4, sec2_p5, btnPortLang, sec2_h2_2, sec2_p6, sec2_p7, sec2_p8, btnCertiLang, sec2_p9,sec2_p10,sec2_p11, sec2_p12 
 } = translations[language];
 
 
@@ -158,30 +159,28 @@ secMe_2.innerHTML = `
      <section class="div-1">
          
          <svg class="svg-absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-             <path fill="#FFD43B" d="M219.3 .5c3.1-.6 6.3-.6 9.4 0l200 40C439.9 42.7 448 52.6 448 64s-8.1 21.3-19.3 23.5L352 102.9l0 57.1c0 70.7-57.3 128-128 128s-128-57.3-128-128l0-57.1L48 93.3l0 65.1 15.7 78.4c.9 4.7-.3 9.6-3.3 13.3s-7.6 5.9-12.4 5.9l-32 0c-4.8 0-9.3-2.1-12.4-5.9s-4.3-8.6-3.3-13.3L16 158.4l0-71.8C6.5 83.3 0 74.3 0 64C0 52.6 8.1 42.7 19.3 40.5l200-40zM111.9 327.7c10.5-3.4 21.8 .4 29.4 8.5l71 75.5c6.3 6.7 17 6.7 23.3 0l71-75.5c7.6-8.1 18.9-11.9 29.4-8.5C401 348.6 448 409.4 448 481.3c0 17-13.8 30.7-30.7 30.7L30.7 512C13.8 512 0 498.2 0 481.3c0-71.9 47-132.7 111.9-153.6z"/></svg>
+             <path fill="#FFFDD0" d="M219.3 .5c3.1-.6 6.3-.6 9.4 0l200 40C439.9 42.7 448 52.6 448 64s-8.1 21.3-19.3 23.5L352 102.9l0 57.1c0 70.7-57.3 128-128 128s-128-57.3-128-128l0-57.1L48 93.3l0 65.1 15.7 78.4c.9 4.7-.3 9.6-3.3 13.3s-7.6 5.9-12.4 5.9l-32 0c-4.8 0-9.3-2.1-12.4-5.9s-4.3-8.6-3.3-13.3L16 158.4l0-71.8C6.5 83.3 0 74.3 0 64C0 52.6 8.1 42.7 19.3 40.5l200-40zM111.9 327.7c10.5-3.4 21.8 .4 29.4 8.5l71 75.5c6.3 6.7 17 6.7 23.3 0l71-75.5c7.6-8.1 18.9-11.9 29.4-8.5C401 348.6 448 409.4 448 481.3c0 17-13.8 30.7-30.7 30.7L30.7 512C13.8 512 0 498.2 0 481.3c0-71.9 47-132.7 111.9-153.6z"/></svg>
             
-       <h2 class="light relative" >${sec2_h2_2}</h2>
-      <p class="relative"><strong>Resume:</strong> ${sec2_p6}</p>
-      <p class="relative"><strong>Portfolio:</strong> ${sec2_p7}</p>
-      <p class="relative"><strong>Blog:</strong> ${sec2_p8}</p>
+       <h2 class="light relative" style="color:black;" >${sec2_h2_2}</h2>
+       <p class="relative" style="color:black;"> ${sec2_p6} </p>
     
      </section>
-    
-    
-   </div>  
-            
-        
-        
-        
-    
-    <div>    
-        
-        <h2 class="light" >${sec2_h2_3}</h2>
-        <p>${sec2_p9}</p>
-        <p>${sec2_p10}</p>
-        <p>${sec2_p11}</p>
-        <p>${sec2_p12}</p>
-    </div>
+     
+     <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+         <path fill="#FFFDD0" d="M173.8 5.5c11-7.3 25.4-7.3 36.4 0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4 0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4 0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2 .8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4 0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1 .4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM1.3 441.8L44.4 339.3c.2 .1 .3 .2 .4 .4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2 0 .5 0 .7 .2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7 .8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1 .4-.2 .7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2 .2-.3 .4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z"/></svg>
+     <p style="color: black"><strong>${sec2_p7}: </strong>${sec2_p8}</p>
+     
+<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+         <path fill="#FFFDD0" d="M173.8 5.5c11-7.3 25.4-7.3 36.4 0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4 0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4 0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2 .8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4 0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1 .4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM1.3 441.8L44.4 339.3c.2 .1 .3 .2 .4 .4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2 0 .5 0 .7 .2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7 .8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1 .4-.2 .7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2 .2-.3 .4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z"/></svg>     
+     
+     <p style="color: black"><strong>${sec2_p9}:</strong> ${sec2_p10}</p>
+
+<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+         <path fill="#FFFDD0" d="M173.8 5.5c11-7.3 25.4-7.3 36.4 0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4 0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4 0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2 .8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4 0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1 .4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM1.3 441.8L44.4 339.3c.2 .1 .3 .2 .4 .4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2 0 .5 0 .7 .2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7 .8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1 .4-.2 .7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2 .2-.3 .4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z"/></svg>
+         <p style="color: black"><strong>${sec2_p11}: </strong>${sec2_p12}</p>         
+   
+   </div>
+               
 `;
 
 //style section 1    
@@ -352,6 +351,22 @@ svgsAbso.forEach(svg => {
 const certi = secMe.querySelector('#certifi');
     
     certi.style.background = '#B8860B';
+    
+
+//btn certi
+
+const btnCerti = document.createElement('button');
+
+    btnCerti.textContent = btnCertiLang;
+    
+    btnCerti.onclick = () => {
+        window.scrollTo(0,0);
+        updateComp(Certificates);     
+    };
+    
+    certi.appendChild(btnCerti);
+    
+    
 
 //svg1Res.style.textAlign = 'left';
 //svg1Res.style.border = '3px solid black';
