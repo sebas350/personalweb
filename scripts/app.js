@@ -12,7 +12,7 @@ function init(){
   const footer = Footer();
   const main = Main();
   const home = Home();
-  const nav = Navbar(main);
+  const nav = Navbar(main, footer);
   const resume = Resume();
   const portfolio = Portfolio();
   const loader = Loader();

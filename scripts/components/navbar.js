@@ -4,8 +4,9 @@ import {Resume} from './resume.js';
 import {Home} from './home.js';
 import {Portfolio} from './portfolio.js';
 import {Certificates} from './certificates.js';
+import {Footer} from './footer.js';
 
-export function Navbar(main) {
+export function Navbar(main, footer) {
     const container = document.createElement('div');
     const nav = document.createElement('nav');
     const home = document.createElement('button');
@@ -66,7 +67,10 @@ export function Navbar(main) {
     
     const updateComponent = (newComponent)=>{
         main.textContent = '';
+        footer.textContent = '';
         main.appendChild(newComponent(currentLanguage)); //pasar el lenguaje actual al componente.
+   footer.appendChild(Footer(currentLanguage)) 
+    
     };
     
 //context updatecomponet(global)        

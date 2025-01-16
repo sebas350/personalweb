@@ -31,6 +31,7 @@ export function Home(language='es') {
         sec2_p10: `Advanced in Python`,
         sec2_p11: `PROGRAMMER`,
         sec2_p12: `Object Oriented and Visualization with Python`,
+        btnTopLang: 'Back to top',
     },
     es: {
         sec1_h1:`PÁGINA PROFESIONAL`,
@@ -57,12 +58,13 @@ export function Home(language='es') {
         sec2_p10: `Avanzado en Python`,
         sec2_p11: `PROGRAMADOR`,
         sec2_p12: `Orientada a Objetos y Visualizacion con Python`,
+        btnTopLang: 'Volver arriba',
     },
 };
 
 // Traducciones según el idioma actual
 const { 
-    sec1_h1, sec1_h2_, sec1_p1, sec1_p2, sec1_h2, sec1_p3, sec1_p4, btnResumeLang, sec2_h2, sec2_p1, sec2_p2, sec2_p3, sec2_p4, sec2_p5, btnPortLang, sec2_h2_2, sec2_p6, sec2_p7, sec2_p8, btnCertiLang, sec2_p9,sec2_p10,sec2_p11, sec2_p12 
+    sec1_h1, sec1_h2_, sec1_p1, sec1_p2, sec1_h2, sec1_p3, sec1_p4, btnResumeLang, sec2_h2, sec2_p1, sec2_p2, sec2_p3, sec2_p4, sec2_p5, btnPortLang, sec2_h2_2, sec2_p6, sec2_p7, sec2_p8, btnCertiLang, sec2_p9,sec2_p10,sec2_p11, sec2_p12, btnTopLang 
 } = translations[language];
 
 
@@ -366,27 +368,17 @@ const btnCerti = document.createElement('button');
     
     certi.appendChild(btnCerti);
     
-    
 
-//svg1Res.style.textAlign = 'left';
-//svg1Res.style.border = '3px solid black';
+//btn go top
 
-    
-//svg background port
+const btnTop = document.createElement('button');
+btnTop.textContent = btnTopLang;
 
-//const svgBackg = secMe.querySelectorAll('.svgbackg');
+btnTop.onclick = () => window.scrollTo({top: 0,
+      behavior: 'smooth'});
 
-///////////
-//svgBackg.style.background = "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 512\"%3E%3Cpath d=\"M192 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8 384l0-128 16 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-288 56 0 64 0 16 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16 0 0-64 192 0 0 192-192 0 0-32-64 0 0 48c0 26.5 21.5 48 48 48l224 0c26.5 0 48-21.5 48-48l0-224c0-26.5-21.5-48-48-48L368 0c-26.5 0-48 21.5-48 48l0 80-76.9 0-65.9 0c-33.7 0-64.9 17.7-82.3 46.6l-58.3 97c-9.1 15.1-4.2 34.8 10.9 43.9s34.8 4.2 43.9-10.9L120 256.9 120 480c0 17.7 14.3 32 32 32s32-14.3 32-32z\"/%3E%3C/svg%3E') no-repeat";
+secMe.appendChild(btnTop);
 
-//svgBackg.style.backgroundSize = 'auto';
-//svgBackg.style.height = '350px';
-
-//svgBackg.style.display = 'flex';
-//svgBackg.style.flexDirection = 'column';
-//svgBackg.style.justifyContent = 'space-between';
-//svgBackg.style.gap = '10px';
-//svgBackg.style.border = '3px solid red';
 
 //style light
 
