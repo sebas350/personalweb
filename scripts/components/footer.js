@@ -83,7 +83,7 @@ container.style.flexDirection = 'column';
 container.style.padding = '20px';
 container.style.gap = '20px';
     
-info.style.display = 'flex';
+info.style.display = 'inline-flex';
 info.style.justifyContent = 'space-around';
 //info.style.background = 'black';
 //info.style.color = 'white';
