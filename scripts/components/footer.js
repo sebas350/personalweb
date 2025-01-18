@@ -77,7 +77,7 @@ async function fetchTime() {
         date.querySelector('#date-time').textContent = `${formattedDate} - ${formattedTime}`;
     } catch (error) {
         console.error(error);
-        date.querySelector('#date-time').textContent = "Actualizando...";
+        //date.querySelector('#date-time').textContent = "Actualizando...";
     }
 }
 
