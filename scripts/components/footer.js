@@ -58,7 +58,7 @@ function sendEmail() {
 
 async function fetchTime() {
     try {
-        const response = await fetch('http://worldtimeapi.org/api/timezone/etc/UTC');
+        const response = await fetch('http://worldtimeapi.org/api/timezone/America/Argentina/Buenos_Aires');
         if (!response.ok) {
             throw new Error(`Error fetching time: ${response.statusText}`);
         }
