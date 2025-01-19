@@ -56,6 +56,16 @@ function sendEmail() {
     window.open(`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
 }
 
+
+var timeLang = '';
+
+if (language == 'es') {
+    timeLang = 'es-ES';    
+}else{
+    timeLang = 'en-US';
+};
+
+
 async function fetchTime() {
     try {
         const response = await fetch('https://worldtimeapi.org/api/timezone/America/Argentina/Buenos_Aires');
@@ -64,7 +74,7 @@ async function fetchTime() {
         }
         const data = await response.json();
         const dateTime = new Date(data.datetime);
-        const formattedDate = dateTime.toLocaleDateString('es-ES', {
+        const formattedDate = dateTime.toLocaleDateString(timeLang, {
             weekday: 'long',
             year: 'numeric',
             month: 'long',
