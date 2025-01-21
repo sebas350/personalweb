@@ -1,4 +1,5 @@
 //import { document } from '../dom.js';
+import { Present } from './present.js';
 
 export function Resume(language = 'es') {
   const translations = {
@@ -106,13 +107,23 @@ export function Resume(language = 'es') {
   const { title, subtitle, sections } = translations[language];
 
   const container = document.createElement('div');
-  container.innerHTML = `
-    <h1>${title}</h1>
-    <p>${subtitle}</p>
+  const heade = Present(subtitle, title, '#546de5');
+  const secs = document.createElement('section');
+  const btnDL = document.createElement('button');
+  btnDL.textContent = 'hola';
+  
+  const heade_p = heade.querySelector('#subtitle');
+  
+  //btnRow.style.background = 'red';
+
+// Insertar después de <p> (antes de <btn>)
+heade_p.insertAdjacentElement('afterend', btnDL);
+
+secs.innerHTML = `
     ${Object.values(sections)
       .map(
         (section) => `
-        <section>
+        <section class="sec">
           <h2>${section.title}</h2>
           <ul>
             ${section.content.map((item) => `<li>${item}</li>`).join('')}
@@ -132,11 +143,17 @@ export function Resume(language = 'es') {
     el.style.transition = 'opacity 1500ms';
   });
 
+//present subtitle
+
+    const sub = heade.querySelector('#subtitle');
+  
+  
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
         } else {
           entry.target.style.opacity = '0';
         }
@@ -145,7 +162,19 @@ export function Resume(language = 'es') {
     { threshold: 0.3 }
   );
 
-  paragraphs.forEach((el) => observer.observe(el));
+    paragraphs.forEach((el) => observer.observe(el));
+    
+    observer.observe(sub);
+
+//appendChild
+
+container.appendChild(heade);
+container.appendChild(secs);
+
+
+
+
+
 
   return container;
 }
