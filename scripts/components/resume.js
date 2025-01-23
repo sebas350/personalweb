@@ -148,7 +148,7 @@ secs.innerHTML = `
           ${secSvgs[index]}  
           <h2>${section.title}</h2>
           <ul>
-            ${section.content.map((item) => `<li>${item}</li>`).join('')}
+            ${section.content.map((item) => `<li style="position: relative;">${item}<span style="position:absolute; width: 100%; height: 100%; right: 0; top: 0; background: black; transition: 3000ms"></span></li>`).join('')}
           </ul>
         </section>`
       )
@@ -161,8 +161,8 @@ secs.innerHTML = `
   const paragraphs = container.querySelectorAll('p, li');
 
   paragraphs.forEach((el) => {
-    el.style.opacity = '0';
-    el.style.transition = 'opacity 1500ms';
+    //el.style.opacity = '0';
+    //el.style.transition = 'opacity 1500ms';
   });
 
 //present subtitle
@@ -176,15 +176,21 @@ secs.innerHTML = `
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0)';
+          if (entry.target.nodeName === 'svg') {
+              entry.target.style.transform = 'translateX(0px)';
+          }
+          if (entry.target.nodeName === 'SPAN') {
+              entry.target.style.width = '0px';
+          }
         } else {
-          entry.target.style.opacity = '0';
+          //entry.target.style.opacity = '0';
         }
       });
     },
     { threshold: 0.3 }
   );
 
-    paragraphs.forEach((el) => observer.observe(el));
+    //paragraphs.forEach((el) => observer.observe(el));
     
     observer.observe(sub);
 
@@ -209,7 +215,7 @@ const sec1_divs = secs.querySelectorAll('.sec');
         
     });
 
-secs.style.display = 'flex';
+    secs.style.display = 'flex';
     secs.style.flexDirection = 'column';
     secs.style.gap= '20px';
     secs.style.padding = '10px';
@@ -218,9 +224,17 @@ secs.style.display = 'flex';
 //svgs    
     const svgs = secs.querySelectorAll('svg');
     svgs.forEach(svg => {
+        observer.observe(svg);
         svg.style.fill= 'white';
         svg.style.width = '30px';
         svg.style.height = '30px';
+        svg.style.transform = 'translateX(-50px)';
+        svg.style.transition = 'transform 1000ms';
+    });
+    
+    const spans = secs.querySelectorAll('span');
+    spans.forEach(span => {
+        observer.observe(span);
     });
 
   return container;
