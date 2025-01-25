@@ -6,6 +6,7 @@ export function Resume(language = 'es') {
     en: {
       title: "Resume",
       subtitle: "A detailed tour of my work experience, education, and technical skills.",
+      btnTopLang: 'Back to top',
       sections: {
         personal: {
           title: "Personal Information",
@@ -55,6 +56,7 @@ export function Resume(language = 'es') {
     es: {
       title: "Currículum",
       subtitle: "Un recorrido detallado por mi experiencia laboral, educación y habilidades técnicas.",
+      btnTopLang: 'Volver arriba',
       sections: {
         personal: {
           title: "Información Personal",
@@ -104,7 +106,7 @@ export function Resume(language = 'es') {
   };
 
   // Traducciones dinámicas
-  const { title, subtitle, sections } = translations[language];
+  const { title, subtitle, btnTopLang, sections } = translations[language];
 
   const container = document.createElement('div');
   const heade = Present(subtitle, title, '#546de5');
@@ -146,7 +148,7 @@ secs.innerHTML = `
         (section, index) => `
         <section class="sec">
           ${secSvgs[index]}  
-          <h2>${section.title}</h2>
+          <h2 class="light">${section.title}</h2>
           <ul>
             ${section.content.map((item) => `<li style="position: relative;">${item}<span style="position:absolute; width: 100%; height: 100%; right: 0; top: 0; background: black; transition: 3000ms"></span></li>`).join('')}
           </ul>
@@ -236,6 +238,25 @@ const sec1_divs = secs.querySelectorAll('.sec');
     spans.forEach(span => {
         observer.observe(span);
     });
+    
+    //btn go top
+
+const btnTop = document.createElement('button');
+btnTop.textContent = btnTopLang;
+
+//btnTop.style.width = '100%';
+//btnTop.style.margin = '10px';
+
+btnTop.onclick = () => window.scrollTo({top: 0,
+      behavior: 'smooth'});
+
+secs.appendChild(btnTop);
+
+//style light
+
+//const classLight = secs.querySelectorAll('.light');
+    
+    //classLight.forEach(e => e.style.fontWeight = '300');
 
   return container;
 }
