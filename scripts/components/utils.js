@@ -6,3 +6,11 @@ export function styleSvgs(container, fillColor = 'white', size = '30px') {
         svg.style.height = size;
     });
 };
+
+export function svgsSize(container, size = '30px') {
+    const svgs = container.querySelectorAll('.svg');
+    svgs.forEach(svg => {
+        svg.style.width = size;
+        svg.style.height = size;
+    });
+};
