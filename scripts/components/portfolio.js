@@ -1,6 +1,6 @@
 //import { document } from '../dom.js';
 import { Present } from './present.js';
-import {svgsTecno} from './svgs.js';
+import {svgsTecno, others} from './svgs.js';
 import {svgsSize} from './utils.js';
 
 export function Portfolio(language='es') {
@@ -35,7 +35,7 @@ const translations = {
                     'Tambien podemos destacar que tanto el fooder como el navbar esta presente en todos los html usando un template',
                 ],
                 tools: [
-                    'Herramientas usadas para este Proyecto',
+                    'Herramientas usadas para Beauty Spa',
                 ],
             },
             employers: {},
@@ -75,7 +75,7 @@ const translations = {
                     'We also highlight that both the footer and the navbar are present across all HTML files using a template.'
                 ],
                 tools: [
-                    'Tools used for this Project',
+                    'Tools used for Beauty Spa',
                 ],
             },
             employers: {},
@@ -149,9 +149,11 @@ const beautySpa = document.createElement('div');
             
     beautySpa.innerHTML = htmlSpa;
     
+//display none para los svg
+
 const tecno = document.createElement('div');
-const front = document.createElement('div');
-const back = document.createElement('div');
+//const front = document.createElement('div');
+//const back = document.createElement('div');
 
 //const tecnoP = document.createElement('p');
 
@@ -159,8 +161,11 @@ tecno.style.border = '1px solid black';
 tecno.style.borderRadius = '10px';
 tecno.style.padding = '10px';
 
-tecno.innerHTML = `<p style="text-align: center;">${web1.tools}</p>`;
 
+/*
+//1era forma de incluir los svg de una variable.
+
+tecno.innerHTML = `<p style="text-align: center;">${web1.tools}</p>`;
 
 front.innerHTML = `<p>Frontend</p>${svgsTecno}`;
 back.innerHTML = `<p>Backend</p>${svgsTecno}`;
@@ -173,9 +178,27 @@ frontOff.forEach(svg => svg.style.display = 'none');
 
 backOff.forEach(svg => svg.style.display = 'none');
 
-
 tecno.appendChild(front);
 tecno.appendChild(back);
+
+*/
+
+//2da forma  de filtrar svg de un variable
+
+tecno.innerHTML = `<p style="text-align: center;">${web1.tools}</p>
+<p>Frontend</p>
+<div class="sec-front">${svgsTecno}</div>
+<p>Backend</p>
+<div class="sec-back">${svgsTecno}</div>
+<p>Otros</p>
+${others}`;
+
+const secFront = tecno.querySelectorAll('.sec-front .back');
+secFront.forEach(svg => svg.style.display = 'none');
+
+const secBack = tecno.querySelectorAll('.sec-back .front');
+secBack.forEach(svg => svg.style.display = 'none');
+
 
 svgsSize(tecno);
 
