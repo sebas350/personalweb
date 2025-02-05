@@ -223,10 +223,15 @@ slider.style.position = 'relative';
 
 
 const btns = document.createElement('div');
-btns.style.position = 'absolute';
+//btns.style.position = 'absolute';
 
 const sliderBtnRight = document.createElement('button');
 sliderBtnRight.textContent = '>';
+sliderBtnRight.style.position = 'absolute';
+sliderBtnRight.style.top = '50%';
+sliderBtnRight.style.right = '0px';
+sliderBtnRight.style.zIndex = '10';
+sliderBtnRight.style.padding = '10px';
 
 sliderBtnRight.onclick = () => {
     sliderContainer.scrollBy({ left: 200, behavior: 'smooth' });
@@ -234,6 +239,10 @@ sliderBtnRight.onclick = () => {
 
 const sliderBtnLeft = document.createElement('button');
 sliderBtnLeft.textContent = '<';
+sliderBtnLeft.style.position = 'absolute';
+sliderBtnLeft.style.padding = '10px';
+sliderBtnLeft.style.top = '50%';
+sliderBtnLeft.style.zIndex = '10';
 
 sliderBtnLeft.onclick = () => {
     sliderContainer.scrollBy({ left: -200, behavior: 'smooth' });
@@ -242,6 +251,9 @@ sliderBtnLeft.onclick = () => {
 const sliderContainer = document.createElement('div');
 sliderContainer.style.transition = 'transform 1000ms';
 sliderContainer.style.overflow = 'scroll';
+sliderContainer.style.zIndex = '1';
+sliderContainer.style.position = 'relative';
+
 
 
 sliderContainer.innerHTML = `<img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index1.png" alt="empleados">
@@ -250,13 +262,13 @@ sliderContainer.innerHTML = `<img src="https://raw.githubusercontent.com/sebas35
 <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index4.png" alt="empleados">
 `;
 
-btns.appendChild(sliderBtnLeft);
-btns.appendChild(sliderBtnRight);
+//btns.appendChild(sliderBtnLeft);
+//btns.appendChild(sliderBtnRight);
 
 
-slider.appendChild(btns);
+slider.appendChild(sliderBtnLeft);
 slider.appendChild(sliderContainer);
-
+slider.appendChild(sliderBtnRight);
 
 webEmployee.appendChild(slider);
 
@@ -269,8 +281,9 @@ slider.style.borderRadius = '10px';
 slider.style.border = '2px solid skyblue';
 slider.style.overflow = 'hidden';
 slider.style.display = 'flex';
-slider.style.flexDirection = 'column';
-slider.style.justifyContent = 'center';
+//slider.style.flexDirection = 'column';
+//slider.style.justifyContent = 'center';
+//slider.style.justifyContent = 'space-between';
 
 
 sliderContainer.style.display = 'flex';
@@ -280,14 +293,14 @@ sliderContainer.style.gap = '10px';
 sliderContainer.style.padding = '10px';
 
 //btns.style.border = '3px solid blue';
-btns.style.width = '100%';
-btns.style.display = 'flex';
-btns.style.justifyContent = 'space-between';
-btns.style.padding = '10px';
+//btns.style.width = '100%';
+//btns.style.display = 'flex';
+//btns.style.justifyContent = 'space-between';
+//btns.style.padding = '10px';
 
-btns.style.zIndex = '990';
+//btns.style.zIndex = '990';
 
-btns.querySelectorAll('button').forEach(btn => btn.style.fontSize = '2em');
+//btns.querySelectorAll('button').forEach(btn => btn.style.fontSize = '2em');
 
 const sliderImgs = sliderContainer.querySelectorAll('img');
 
