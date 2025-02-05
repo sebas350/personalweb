@@ -265,7 +265,7 @@ sectionWeb.appendChild(webEmployee);
 
 //style webEmployee
 
-slider.style.borderRadius = '15px';
+slider.style.borderRadius = '10px';
 slider.style.border = '2px solid skyblue';
 slider.style.overflow = 'hidden';
 slider.style.display = 'flex';
@@ -274,7 +274,7 @@ slider.style.justifyContent = 'center';
 
 
 sliderContainer.style.display = 'flex';
-sliderContainer.style.border = '2px solid red';
+//sliderContainer.style.border = '2px solid red';
 sliderContainer.style.width = '100%';
 sliderContainer.style.gap = '10px';
 sliderContainer.style.padding = '10px';
@@ -292,7 +292,7 @@ btns.querySelectorAll('button').forEach(btn => btn.style.fontSize = '2em');
 const sliderImgs = sliderContainer.querySelectorAll('img');
 
 sliderImgs.forEach(img => {
-img.style.width = '85%';
+img.style.width = '90%';
 img.style.height = 'auto';
 img.style.flexShrink = '0';
 });
@@ -355,7 +355,7 @@ img.style.transform = 'translateX(-10%)';
 
 img.style.transition = 'transform 1000ms, opacity 1000ms';
 
-img.style.borderRadius = '10px';
+img.style.borderRadius = '5px';
 img.style.boxShadow = '2px 2px #E0E0E0';
 
 });
