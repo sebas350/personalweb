@@ -214,6 +214,90 @@ beautySpa.appendChild(tecno);
     container.appendChild(sectionWeb);
     
 
+//section employee store
+
+const webEmployee = document.createElement('div');
+
+const slider = document.createElement('div');
+slider.style.position = 'relative';
+
+
+const btns = document.createElement('div');
+btns.style.position = 'absolute';
+
+const sliderBtnRight = document.createElement('button');
+sliderBtnRight.textContent = '>';
+
+sliderBtnRight.onclick = () => {
+    sliderContainer.scrollBy({ left: 200, behavior: 'smooth' });
+};
+
+const sliderBtnLeft = document.createElement('button');
+sliderBtnLeft.textContent = '<';
+
+sliderBtnLeft.onclick = () => {
+    sliderContainer.scrollBy({ left: -200, behavior: 'smooth' });
+};
+
+const sliderContainer = document.createElement('div');
+sliderContainer.style.transition = 'transform 1000ms';
+sliderContainer.style.overflow = 'scroll';
+
+
+sliderContainer.innerHTML = `<img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index1.png" alt="empleados">
+<img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index2.png" alt="empleados">
+<img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index3.png" alt="empleados">
+<img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index4.png" alt="empleados">
+`;
+
+btns.appendChild(sliderBtnLeft);
+btns.appendChild(sliderBtnRight);
+
+
+slider.appendChild(btns);
+slider.appendChild(sliderContainer);
+
+
+webEmployee.appendChild(slider);
+
+sectionWeb.appendChild(webEmployee);
+
+
+//style webEmployee
+
+slider.style.borderRadius = '15px';
+slider.style.border = '2px solid skyblue';
+slider.style.overflow = 'hidden';
+slider.style.display = 'flex';
+slider.style.flexDirection = 'column';
+slider.style.justifyContent = 'center';
+
+
+sliderContainer.style.display = 'flex';
+sliderContainer.style.border = '2px solid red';
+sliderContainer.style.width = '100%';
+sliderContainer.style.gap = '10px';
+sliderContainer.style.padding = '10px';
+
+//btns.style.border = '3px solid blue';
+btns.style.width = '100%';
+btns.style.display = 'flex';
+btns.style.justifyContent = 'space-between';
+btns.style.padding = '10px';
+
+btns.style.zIndex = '990';
+
+btns.querySelectorAll('button').forEach(btn => btn.style.fontSize = '2em');
+
+const sliderImgs = sliderContainer.querySelectorAll('img');
+
+sliderImgs.forEach(img => {
+img.style.width = '85%';
+img.style.height = 'auto';
+img.style.flexShrink = '0';
+});
+
+
 //styles
 
     sectionWeb.style.padding = '10px';
