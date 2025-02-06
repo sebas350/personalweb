@@ -222,39 +222,11 @@ const slider = document.createElement('div');
 slider.style.position = 'relative';
 
 
-const btns = document.createElement('div');
-//btns.style.position = 'absolute';
-
-const sliderBtnRight = document.createElement('button');
-sliderBtnRight.textContent = '>';
-sliderBtnRight.style.position = 'absolute';
-sliderBtnRight.style.top = '50%';
-sliderBtnRight.style.right = '0px';
-sliderBtnRight.style.zIndex = '10';
-sliderBtnRight.style.padding = '10px';
-
-sliderBtnRight.onclick = () => {
-    sliderContainer.scrollBy({ left: 200, behavior: 'smooth' });
-};
-
-const sliderBtnLeft = document.createElement('button');
-sliderBtnLeft.textContent = '<';
-sliderBtnLeft.style.position = 'absolute';
-sliderBtnLeft.style.padding = '10px';
-sliderBtnLeft.style.top = '50%';
-sliderBtnLeft.style.zIndex = '10';
-
-sliderBtnLeft.onclick = () => {
-    sliderContainer.scrollBy({ left: -200, behavior: 'smooth' });
-};
-
 const sliderContainer = document.createElement('div');
 sliderContainer.style.transition = 'transform 1000ms';
 sliderContainer.style.overflow = 'scroll';
 sliderContainer.style.zIndex = '1';
 sliderContainer.style.position = 'relative';
-
-
 
 sliderContainer.innerHTML = `<img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index1.png" alt="empleados">
 <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index2.png" alt="empleados">
@@ -262,9 +234,69 @@ sliderContainer.innerHTML = `<img src="https://raw.githubusercontent.com/sebas35
 <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index4.png" alt="empleados">
 `;
 
-//btns.appendChild(sliderBtnLeft);
-//btns.appendChild(sliderBtnRight);
 
+const sliderBtnRight = document.createElement('button');
+sliderBtnRight.textContent = '>';
+sliderBtnRight.style.position = 'absolute';
+sliderBtnRight.style.top = '50%';
+sliderBtnRight.style.right = '0px';
+sliderBtnRight.style.zIndex = '10';
+sliderBtnRight.style.padding = '20px';
+sliderBtnRight.style.display = 'none';
+sliderBtnRight.style.border = 'none';
+sliderBtnRight.style.background = 'transparent';
+sliderBtnRight.style.transform = 'scaleY(2)';
+
+
+sliderBtnRight.onmouseenter = () => {
+        sliderBtnRight.style.color = 'blue'; 
+    };
+    
+    sliderBtnRight.onmouseleave = () => {
+        sliderBtnRight.style.color = 'black'; 
+    };
+   
+    
+sliderBtnRight.onclick = () => {
+    sliderContainer.scrollBy({ left: 300, behavior: 'smooth' });  
+};
+
+const sliderBtnLeft = document.createElement('button');
+sliderBtnLeft.textContent = '<';
+sliderBtnLeft.style.position = 'absolute';
+sliderBtnLeft.style.padding = '20px';
+sliderBtnLeft.style.top = '50%';
+sliderBtnLeft.style.zIndex = '10';
+sliderBtnLeft.style.display = 'none';
+sliderBtnLeft.style.border = 'none';
+sliderBtnLeft.style.background = 'transparent';
+sliderBtnLeft.style.transform = 'scaleY(2)';
+
+
+sliderBtnLeft.onmouseenter = () => {
+        sliderBtnLeft.style.color = 'blue'; 
+    };
+
+sliderBtnLeft.onmouseleave = () => {
+        sliderBtnLeft.style.color = 'black'; 
+    };
+
+
+sliderBtnLeft.onclick = () => {
+    sliderContainer.scrollBy({ left: -300, behavior: 'smooth' });
+};
+
+slider.onmouseenter = () =>{
+    sliderBtnLeft.style.display = 'block';
+    sliderBtnRight.style.display = 'block';
+};
+    
+
+slider.onmouseleave = () =>{
+    sliderBtnRight.style.display = 'none';
+    sliderBtnLeft.style.display = 'none';
+};
+    
 
 slider.appendChild(sliderBtnLeft);
 slider.appendChild(sliderContainer);
@@ -300,7 +332,10 @@ sliderContainer.style.padding = '10px';
 
 //btns.style.zIndex = '990';
 
-//btns.querySelectorAll('button').forEach(btn => btn.style.fontSize = '2em');
+slider.querySelectorAll('button').forEach(btn =>{
+   btn.style.fontSize = '2em';
+   btn.style.fontWeight = '300'; 
+});
 
 const sliderImgs = sliderContainer.querySelectorAll('img');
 
