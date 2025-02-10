@@ -38,7 +38,10 @@ const translations = {
                     'Herramientas usadas para Beauty Spa',
                 ],
             },
-            employers: {},
+            storeEmployee: {
+                title: 'StoreEmployee',
+                description: 'En esta aplicación web, tanto las personas que buscan trabajo como aquellas que buscan empleados pueden encontrar una solución eficiente. La plataforma permite la conexión entre empleadores y candidatos de manera rápida y organizada.',
+            },
             fastapi: {},
             plataform: {},
         },
@@ -78,7 +81,10 @@ const translations = {
                     'Tools used for Beauty Spa',
                 ],
             },
-            employers: {},
+            storeEmployee: {
+                title: 'StoreEmployee',
+                description: 'In this web application, both job seekers and employers can find an efficient solution. The platform facilitates the connection between employers and candidates quickly and in an organized manner.',
+            },
             fastapi: {},
             plataform: {},
         },
@@ -116,34 +122,34 @@ const beautySpa = document.createElement('div');
             <h2 style="color: skyblue;">${web1.title}</h2>
             <p style="font-size:1.5em;">${web1.description}</p>
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar.png" style="width:100%; margin: 20px 0px;"  alt="">
+            <img class="img" src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar.png" style="width:100%; margin: 20px 0px;"  alt="">
             
             ${web1.navbar.map((p) => `<p>${p}</p>`).join('')}
   
   <div style="display: flex; flex-wrap: wrap; gap:10px; margin: 20px 0px; ">  
-      <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar1.png" style="width:100%"  alt="">
+      <img class="img" src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar1.png" style="width:100%"  alt="">
  
- <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar2.png" style="width:100%;"  alt="">
+ <img class="img" src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/navbar2.png" style="width:100%;"  alt="">
  
  </div>
                   
             <p>${web1.main[0]}</p></br>
             <p>${web1.main[1]}</p>
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main1.png" style="width:100%; margin:20px 0px;"  alt="">
+            <img class="img" src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main1.png" style="width:100%; margin:20px 0px;"  alt="">
             <p>${web1.main[2]}</p>
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main2.png" style="width:100%; margin:20px 0px;"  alt="">
+            <img class="img" src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main2.png" style="width:100%; margin:20px 0px;"  alt="">
             <p>${web1.main[3]}</p>
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main3.png" style="width:100%; margin:20px 0px;"  alt="">
+            <img class="img" src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main3.png" style="width:100%; margin:20px 0px;"  alt="">
             <p>${web1.main[4]}</p>
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main4.png" style="width:100%; margin:20px 0px;"  alt="">
+            <img class="img" src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/main4.png" style="width:100%; margin:20px 0px;"  alt="">
             
             ${web1.footer.map((p) => `<p>${p}</p>`).join('')}
             
-            <img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/footer.png" style="width:100%; margin:20px 0px;"  alt="">
+            <img class="img" src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/footer.png" style="width:100%; margin:20px 0px;"  alt="">
         
             `;
             
@@ -207,7 +213,17 @@ const invisible = tecno.querySelectorAll('.invisible');
 invisible.forEach(svg => svg.style.display = 'none');
 
 beautySpa.appendChild(tecno);
-    
+
+const hr = document.createElement('hr');
+
+    hr.style.border = "none"; // Elimina el borde por defecto
+    hr.style.height = "2px"; // Define el grosor de la línea
+    hr.style.backgroundColor = "#ccc"; // Define el color de la línea
+    hr.style.width = "80%"; // Define el ancho de la línea
+    hr.style.margin = "40px auto"; // Establece el margen superior e inferior
+
+beautySpa.appendChild(hr);
+ 
     sectionWeb.appendChild(beautySpa);
     
     container.appendChild(divout);
@@ -218,9 +234,21 @@ beautySpa.appendChild(tecno);
 
 const webEmployee = document.createElement('div');
 
+const web2 = webs.storeEmployee;
+
+const storeEmployeeSection = document.createElement('div');
+
+const htmlStoreEmployee = ` 
+    <h2 style="color: skyblue;">${web2.title}</h2>
+    <p style="font-size:1.5em;">${web2.description}</p>
+`;
+
+storeEmployeeSection.innerHTML = htmlStoreEmployee;
+
+sectionWeb.appendChild(storeEmployeeSection);
+
 const slider = document.createElement('div');
 slider.style.position = 'relative';
-
 
 const sliderContainer = document.createElement('div');
 sliderContainer.style.transition = 'transform 1000ms';
@@ -246,7 +274,8 @@ sliderBtnRight.style.display = 'none';
 sliderBtnRight.style.border = 'none';
 sliderBtnRight.style.background = 'transparent';
 sliderBtnRight.style.transform = 'scaleY(2)';
-
+sliderBtnRight.style.opacity = '0';
+sliderBtnRight.style.transition = 'opacity 1000ms';
 
 sliderBtnRight.onmouseenter = () => {
         sliderBtnRight.style.color = 'blue'; 
@@ -271,6 +300,8 @@ sliderBtnLeft.style.display = 'none';
 sliderBtnLeft.style.border = 'none';
 sliderBtnLeft.style.background = 'transparent';
 sliderBtnLeft.style.transform = 'scaleY(2)';
+sliderBtnLeft.style.opacity = '0';
+sliderBtnLeft.style.transition = 'opacity 1000ms';
 
 
 sliderBtnLeft.onmouseenter = () => {
@@ -289,12 +320,16 @@ sliderBtnLeft.onclick = () => {
 slider.onmouseenter = () =>{
     sliderBtnLeft.style.display = 'block';
     sliderBtnRight.style.display = 'block';
+    sliderBtnRight.style.opacity = '1';
+    sliderBtnLeft.style.opacity = '1';
 };
     
 
 slider.onmouseleave = () =>{
     sliderBtnRight.style.display = 'none';
     sliderBtnLeft.style.display = 'none';
+    sliderBtnRight.style.opacity = '0';
+    sliderBtnLeft.style.opacity = '0';
 };
     
 
@@ -303,6 +338,8 @@ slider.appendChild(sliderContainer);
 slider.appendChild(sliderBtnRight);
 
 webEmployee.appendChild(slider);
+
+//escribir
 
 sectionWeb.appendChild(webEmployee);
 
@@ -349,6 +386,9 @@ img.style.flexShrink = '0';
 //styles
 
     sectionWeb.style.padding = '10px';
+    sectionWeb.style.display = 'flex';
+    sectionWeb.style.flexDirection = 'column';
+    sectionWeb.style.gap = '10px';
 
     //container.style.fontFamily = "'Lora', serif";
     const salient = container.querySelectorAll('.salient');
@@ -389,7 +429,7 @@ img.style.flexShrink = '0';
 
 //observer    
     
-    const imgs = container.querySelectorAll('img');
+    const imgs = container.querySelectorAll('.img');
     //webdescrip.style.opacity = '0';
     //webdescrip.style.transition = 'opacity 1500ms, transform 1500ms';
     //webdescrip.style.transform = 'translateY(50%)';
@@ -432,6 +472,8 @@ imgs.forEach(entry => observer.observe(entry));
 
 //observer.observe(outv);
 observer.observe(webdescrip);
+
+//container.style.gap = '10px';
 
     return container;
 }
