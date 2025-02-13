@@ -1,7 +1,7 @@
 //import { document } from '../dom.js';
 import { Present } from './present.js';
 import {svgsTecno, others} from './svgs.js';
-import {svgsSize} from './utils.js';
+import {svgsSize, createSlider} from './utils.js';
 
 export function Portfolio(language='es') {
 
@@ -16,6 +16,7 @@ const translations = {
             beautySpa: {
                 title: 'Beauty Spa',
                 description: 'En esta aplicación web, los usuarios pueden explorar diferentes técnicas de cuidado de la piel, conocer los servicios que ofrecemos, y reservar turnos para realizar tratamientos. Además, proporcionamos información sobre nuestra ubicación física.',
+                visite: 'Visita BeautySpa',
                 navbar: [
                     'En la barra de navegacion podemos ver como se trabajo con los botones y el diseno.',
                     'Los link nos llevan a distintas partes del la pagina',
@@ -41,6 +42,8 @@ const translations = {
             storeEmployee: {
                 title: 'StoreEmployee',
                 description: 'En esta aplicación web, tanto las personas que buscan trabajo como aquellas que buscan empleados pueden encontrar una solución eficiente. La plataforma permite la conexión entre empleadores y candidatos de manera rápida y organizada.',
+                p1:'hola',
+                p2:'Chau',
             },
             fastapi: {},
             plataform: {},
@@ -58,6 +61,7 @@ const translations = {
             beautySpa: {
                 title: 'Beauty Spa',
                 description: 'In this web application, users can explore different skincare techniques, learn about the services we offer, and book appointments for treatments. Additionally, we provide information about our physical location.',
+                visite: 'Go in Beauty Spa',
                 navbar: [
                     'In the navigation bar, we can see how the buttons and design were implemented.',
                     'The links take us to different sections of the page.',
@@ -84,6 +88,8 @@ const translations = {
             storeEmployee: {
                 title: 'StoreEmployee',
                 description: 'In this web application, both job seekers and employers can find an efficient solution. The platform facilitates the connection between employers and candidates quickly and in an organized manner.',
+                p1: 'hello',
+                p2:'By',
             },
             fastapi: {},
             plataform: {},
@@ -214,6 +220,18 @@ invisible.forEach(svg => svg.style.display = 'none');
 
 beautySpa.appendChild(tecno);
 
+//visita la pagina
+
+
+const visiteWeb1 = document.createElement('div');
+
+visiteWeb1.innerHTML = `<a href="www.google.com">${web1.visite}</a>`;
+
+visiteWeb1.style.display = 'flex';
+visiteWeb1.style.justifyContent = 'center';
+
+beautySpa.appendChild(visiteWeb1);
+
 const hr = document.createElement('hr');
 
     hr.style.border = "none"; // Elimina el borde por defecto
@@ -238,6 +256,8 @@ const web2 = webs.storeEmployee;
 
 const storeEmployeeSection = document.createElement('div');
 
+
+//descripcion
 const htmlStoreEmployee = ` 
     <h2 style="color: skyblue;">${web2.title}</h2>
     <p style="font-size:1.5em;">${web2.description}</p>
@@ -247,119 +267,47 @@ storeEmployeeSection.innerHTML = htmlStoreEmployee;
 
 sectionWeb.appendChild(storeEmployeeSection);
 
-const slider = document.createElement('div');
-slider.style.position = 'relative';
+const slider1 = createSlider(['employee-index1.png', 'employee-index2.png', 'employee-index3.png', 'employee-index4.png']);
 
-const sliderContainer = document.createElement('div');
-sliderContainer.style.transition = 'transform 1000ms';
-sliderContainer.style.overflow = 'scroll';
-sliderContainer.style.zIndex = '1';
-sliderContainer.style.position = 'relative';
+webEmployee.appendChild(slider1);
 
-sliderContainer.innerHTML = `<img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index1.png" alt="empleados">
-<img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index2.png" alt="empleados">
-<img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index3.png" alt="empleados">
-<img src="https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/employee-index4.png" alt="empleados">
-`;
+//primer parrafo
+const p1Employee = document.createElement('p');
+p1Employee.textContent = web2.p1;
 
+webEmployee.appendChild(p1Employee);
 
-const sliderBtnRight = document.createElement('button');
-sliderBtnRight.textContent = '>';
-sliderBtnRight.style.position = 'absolute';
-sliderBtnRight.style.top = '50%';
-sliderBtnRight.style.right = '0px';
-sliderBtnRight.style.zIndex = '10';
-sliderBtnRight.style.padding = '20px';
-sliderBtnRight.style.display = 'none';
-sliderBtnRight.style.border = 'none';
-sliderBtnRight.style.background = 'transparent';
-sliderBtnRight.style.transform = 'scaleY(2)';
-sliderBtnRight.style.opacity = '0';
-sliderBtnRight.style.transition = 'opacity 1000ms';
+const slider2 = createSlider(['employee-index1.png', 'employee-index2.png', 'employee-index3.png']);
 
-sliderBtnRight.onmouseenter = () => {
-        sliderBtnRight.style.color = 'blue'; 
-    };
-    
-    sliderBtnRight.onmouseleave = () => {
-        sliderBtnRight.style.color = 'black'; 
-    };
-   
-    
-sliderBtnRight.onclick = () => {
-    sliderContainer.scrollBy({ left: 300, behavior: 'smooth' });  
-};
-
-const sliderBtnLeft = document.createElement('button');
-sliderBtnLeft.textContent = '<';
-sliderBtnLeft.style.position = 'absolute';
-sliderBtnLeft.style.padding = '20px';
-sliderBtnLeft.style.top = '50%';
-sliderBtnLeft.style.zIndex = '10';
-sliderBtnLeft.style.display = 'none';
-sliderBtnLeft.style.border = 'none';
-sliderBtnLeft.style.background = 'transparent';
-sliderBtnLeft.style.transform = 'scaleY(2)';
-sliderBtnLeft.style.opacity = '0';
-sliderBtnLeft.style.transition = 'opacity 1000ms';
+webEmployee.appendChild(slider2);
 
 
-sliderBtnLeft.onmouseenter = () => {
-        sliderBtnLeft.style.color = 'blue'; 
-    };
 
-sliderBtnLeft.onmouseleave = () => {
-        sliderBtnLeft.style.color = 'black'; 
-    };
+//segundo parrafo
+const p2Employee = document.createElement('p');
+p2Employee.textContent = web2.p2;
+
+webEmployee.appendChild(p2Employee);
+
+const slider3 = createSlider(['employee-index1.png', 'employee-index2.png', 'employee-index3.png']);
+
+webEmployee.appendChild(slider3);
 
 
-sliderBtnLeft.onclick = () => {
-    sliderContainer.scrollBy({ left: -300, behavior: 'smooth' });
-};
 
-slider.onmouseenter = () =>{
-    sliderBtnLeft.style.display = 'block';
-    sliderBtnRight.style.display = 'block';
-    sliderBtnRight.style.opacity = '1';
-    sliderBtnLeft.style.opacity = '1';
-};
-    
-
-slider.onmouseleave = () =>{
-    sliderBtnRight.style.display = 'none';
-    sliderBtnLeft.style.display = 'none';
-    sliderBtnRight.style.opacity = '0';
-    sliderBtnLeft.style.opacity = '0';
-};
-    
-
-slider.appendChild(sliderBtnLeft);
-slider.appendChild(sliderContainer);
-slider.appendChild(sliderBtnRight);
-
-webEmployee.appendChild(slider);
-
-//escribir
 
 sectionWeb.appendChild(webEmployee);
 
 
 //style webEmployee
 
-slider.style.borderRadius = '10px';
-slider.style.border = '2px solid skyblue';
-slider.style.overflow = 'hidden';
-slider.style.display = 'flex';
+
 //slider.style.flexDirection = 'column';
 //slider.style.justifyContent = 'center';
 //slider.style.justifyContent = 'space-between';
 
 
-sliderContainer.style.display = 'flex';
-//sliderContainer.style.border = '2px solid red';
-sliderContainer.style.width = '100%';
-sliderContainer.style.gap = '10px';
-sliderContainer.style.padding = '10px';
+
 
 //btns.style.border = '3px solid blue';
 //btns.style.width = '100%';
@@ -369,18 +317,7 @@ sliderContainer.style.padding = '10px';
 
 //btns.style.zIndex = '990';
 
-slider.querySelectorAll('button').forEach(btn =>{
-   btn.style.fontSize = '2em';
-   btn.style.fontWeight = '300'; 
-});
 
-const sliderImgs = sliderContainer.querySelectorAll('img');
-
-sliderImgs.forEach(img => {
-img.style.width = '90%';
-img.style.height = 'auto';
-img.style.flexShrink = '0';
-});
 
 
 //styles
