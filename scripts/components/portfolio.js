@@ -1,7 +1,7 @@
 //import { document } from '../dom.js';
 import { Present } from './present.js';
 import {svgsTecno, others} from './svgs.js';
-import {svgsSize, createSlider} from './utils.js';
+import {svgsSize, createSlider, containerTecno} from './utils.js';
 
 export function Portfolio(language='es') {
 
@@ -45,6 +45,7 @@ const translations = {
                 visite: 'Visita Store Employee',
                 p1:'hola',
                 p2:'Chau',
+                tools: 'Herramientas usadas para Employee Store',
             },
             fastapi: {},
             plataform: {},
@@ -92,6 +93,7 @@ const translations = {
                 visite: 'Go in Store Employee',
                 p1: 'hello',
                 p2:'By',
+                tools: 'Tools used for Employee Store',
             },
             fastapi: {},
             plataform: {},
@@ -163,64 +165,9 @@ const beautySpa = document.createElement('div');
             
     beautySpa.innerHTML = htmlSpa;
     
-//display none para los svg
+const tecno1 = containerTecno(web1.tools, svgsTecno, others);
 
-const tecno = document.createElement('div');
-//const front = document.createElement('div');
-//const back = document.createElement('div');
-
-//const tecnoP = document.createElement('p');
-
-tecno.style.border = '1px solid black';
-tecno.style.borderRadius = '10px';
-tecno.style.padding = '10px';
-
-
-/*
-//1era forma de incluir los svg de una variable.
-
-tecno.innerHTML = `<p style="text-align: center;">${web1.tools}</p>`;
-
-front.innerHTML = `<p>Frontend</p>${svgsTecno}`;
-back.innerHTML = `<p>Backend</p>${svgsTecno}`;
-
-const backOff = front.querySelectorAll('.back');
-
-const frontOff = back.querySelectorAll('.front');
-
-frontOff.forEach(svg => svg.style.display = 'none');
-
-backOff.forEach(svg => svg.style.display = 'none');
-
-tecno.appendChild(front);
-tecno.appendChild(back);
-
-*/
-
-//2da forma  de filtrar svg de un variable
-
-tecno.innerHTML = `<p style="text-align: center;">${web1.tools}</p>
-<p>Frontend</p>
-<div class="sec-front">${svgsTecno}</div>
-<p>Backend</p>
-<div class="sec-back">${svgsTecno}</div>
-<p>Otros</p>
-${others}`;
-
-const secFront = tecno.querySelectorAll('.sec-front .back');
-secFront.forEach(svg => svg.style.display = 'none');
-
-const secBack = tecno.querySelectorAll('.sec-back .front');
-secBack.forEach(svg => svg.style.display = 'none');
-
-
-svgsSize(tecno);
-
-const invisible = tecno.querySelectorAll('.invisible');
-
-invisible.forEach(svg => svg.style.display = 'none');
-
-beautySpa.appendChild(tecno);
+beautySpa.appendChild(tecno1);
 
 //visita la pagina
 
@@ -244,6 +191,11 @@ const hr = document.createElement('hr');
     hr.style.margin = "40px auto"; // Establece el margen superior e inferior
 
 beautySpa.appendChild(hr);
+
+beautySpa.style.display = 'flex';
+beautySpa.style.flexDirection = 'column';
+beautySpa.style.alignItems = 'center';
+beautySpa.style.gap = '10px';
  
     sectionWeb.appendChild(beautySpa);
     
@@ -295,11 +247,16 @@ const slider3 = createSlider(['employee-index1.png', 'employee-index2.png', 'emp
 
 webEmployee.appendChild(slider3);
 
+const tecno2 = containerTecno(web2.tools, svgsTecno, others);
+
+webEmployee.appendChild(tecno2);
+
 const visiteWeb2 = document.createElement('div');
 
 visiteWeb2.innerHTML = `<a href="https://webemployerstore.onrender.com/">${web2.visite}</a>`;
 
 webEmployee.appendChild(visiteWeb2);
+
 
 webEmployee.style.display = 'flex';
 webEmployee.style.flexDirection = 'column';

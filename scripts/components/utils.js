@@ -137,3 +137,60 @@ img.style.flexShrink = '0';
 
 return slider;
 };
+
+export function containerTecno(description, svgs, others){
+
+const tecno = document.createElement('div');
+
+tecno.style.border = '1px solid black';
+tecno.style.borderRadius = '10px';
+tecno.style.padding = '10px';
+
+
+/*
+//1era forma de incluir los svg de una variable.
+
+tecno.innerHTML = `<p style="text-align: center;">${web1.tools}</p>`;
+
+front.innerHTML = `<p>Frontend</p>${svgsTecno}`;
+back.innerHTML = `<p>Backend</p>${svgsTecno}`;
+
+const backOff = front.querySelectorAll('.back');
+
+const frontOff = back.querySelectorAll('.front');
+
+frontOff.forEach(svg => svg.style.display = 'none');
+
+backOff.forEach(svg => svg.style.display = 'none');
+
+tecno.appendChild(front);
+tecno.appendChild(back);
+
+*/
+
+//2da forma  de filtrar svg de un variable
+
+tecno.innerHTML = `<p style="text-align: center;">${description}</p>
+<p>Frontend</p>
+<div class="sec-front">${svgs}</div>
+<p>Backend</p>
+<div class="sec-back">${svgs}</div>
+<p>Otros</p>
+${others}`;
+
+const secFront = tecno.querySelectorAll('.sec-front .back');
+secFront.forEach(svg => svg.style.display = 'none');
+
+const secBack = tecno.querySelectorAll('.sec-back .front');
+secBack.forEach(svg => svg.style.display = 'none');
+
+
+svgsSize(tecno);
+
+const invisible = tecno.querySelectorAll('.invisible');
+
+invisible.forEach(svg => svg.style.display = 'none');
+
+return tecno;
+
+};
