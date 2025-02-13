@@ -42,6 +42,7 @@ const translations = {
             storeEmployee: {
                 title: 'StoreEmployee',
                 description: 'En esta aplicación web, tanto las personas que buscan trabajo como aquellas que buscan empleados pueden encontrar una solución eficiente. La plataforma permite la conexión entre empleadores y candidatos de manera rápida y organizada.',
+                visite: 'Visita Store Employee',
                 p1:'hola',
                 p2:'Chau',
             },
@@ -88,6 +89,7 @@ const translations = {
             storeEmployee: {
                 title: 'StoreEmployee',
                 description: 'In this web application, both job seekers and employers can find an efficient solution. The platform facilitates the connection between employers and candidates quickly and in an organized manner.',
+                visite: 'Go in Store Employee',
                 p1: 'hello',
                 p2:'By',
             },
@@ -225,10 +227,11 @@ beautySpa.appendChild(tecno);
 
 const visiteWeb1 = document.createElement('div');
 
-visiteWeb1.innerHTML = `<a href="www.google.com">${web1.visite}</a>`;
+visiteWeb1.innerHTML = `<a href="https://beauty-grupo15.netlify.app/">${web1.visite}</a>`;
 
 visiteWeb1.style.display = 'flex';
 visiteWeb1.style.justifyContent = 'center';
+visiteWeb1.style.padding = '10px';
 
 beautySpa.appendChild(visiteWeb1);
 
@@ -282,7 +285,6 @@ const slider2 = createSlider(['employee-index1.png', 'employee-index2.png', 'emp
 webEmployee.appendChild(slider2);
 
 
-
 //segundo parrafo
 const p2Employee = document.createElement('p');
 p2Employee.textContent = web2.p2;
@@ -293,31 +295,22 @@ const slider3 = createSlider(['employee-index1.png', 'employee-index2.png', 'emp
 
 webEmployee.appendChild(slider3);
 
+const visiteWeb2 = document.createElement('div');
 
+visiteWeb2.innerHTML = `<a href="https://webemployerstore.onrender.com/">${web2.visite}</a>`;
+
+webEmployee.appendChild(visiteWeb2);
+
+webEmployee.style.display = 'flex';
+webEmployee.style.flexDirection = 'column';
+webEmployee.style.alignItems = 'center';
+webEmployee.style.gap = '10px';
 
 
 sectionWeb.appendChild(webEmployee);
 
 
 //style webEmployee
-
-
-//slider.style.flexDirection = 'column';
-//slider.style.justifyContent = 'center';
-//slider.style.justifyContent = 'space-between';
-
-
-
-
-//btns.style.border = '3px solid blue';
-//btns.style.width = '100%';
-//btns.style.display = 'flex';
-//btns.style.justifyContent = 'space-between';
-//btns.style.padding = '10px';
-
-//btns.style.zIndex = '990';
-
-
 
 
 //styles
