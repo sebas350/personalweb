@@ -1,6 +1,6 @@
 //import { document } from '../dom.js';
 import { Present } from './present.js';
-import {svgsTecno, others} from './svgs.js';
+import {svgsTecno, others, svgsEmployee} from './svgs.js';
 import {svgsSize, createSlider, containerTecno} from './utils.js';
 
 export function Portfolio(language='es') {
@@ -43,8 +43,8 @@ const translations = {
                 title: 'StoreEmployee',
                 description: 'En esta aplicación web, tanto las personas que buscan trabajo como aquellas que buscan empleados pueden encontrar una solución eficiente. La plataforma permite la conexión entre empleadores y candidatos de manera rápida y organizada.',
                 visite: 'Visita Store Employee',
-                p1:'hola',
-                p2:'Chau',
+                p1:'Employee Store cuenta con una sección dedicada tanto a quienes buscan empleo como a quienes necesitan contratar personal. La plataforma ofrece un menú de navegación intuitivo para acceder rápidamente a las distintas funciones, facilitando la conexión entre empleadores y candidatos.',
+                p2:'La plataforma permite que tanto empleadores como candidatos se registren y muestren sus habilidades o necesidades laborales. Además, cuenta con un sistema de inicio de sesión que facilita el control y gestión de los registros.',
                 tools: 'Herramientas usadas para Employee Store',
             },
             fastapi: {},
@@ -91,8 +91,8 @@ const translations = {
                 title: 'StoreEmployee',
                 description: 'In this web application, both job seekers and employers can find an efficient solution. The platform facilitates the connection between employers and candidates quickly and in an organized manner.',
                 visite: 'Go in Store Employee',
-                p1: 'hello',
-                p2:'By',
+                p1: 'Employee Store features a dedicated section for both job seekers and employers looking to hire. The platform provides an intuitive navigation menu for quick access to different functions, making it easier to connect employers with candidates.',
+                p2:'The platform allows both employers and job seekers to register and showcase their skills or job needs. Additionally, it includes a login system to manage and track registrations efficiently.',
                 tools: 'Tools used for Employee Store',
             },
             fastapi: {},
@@ -213,37 +213,40 @@ const storeEmployeeSection = document.createElement('div');
 
 
 //descripcion
-const htmlStoreEmployee = ` 
+const htmlStoreEmployee = `
+    ${svgsEmployee.users} 
     <h2 style="color: skyblue;">${web2.title}</h2>
     <p style="font-size:1.5em;">${web2.description}</p>
 `;
-
+    
 storeEmployeeSection.innerHTML = htmlStoreEmployee;
 
-sectionWeb.appendChild(storeEmployeeSection);
+webEmployee.appendChild(storeEmployeeSection);
 
 const slider1 = createSlider(['employee-index1.png', 'employee-index2.png', 'employee-index3.png', 'employee-index4.png']);
 
 webEmployee.appendChild(slider1);
 
 //primer parrafo
-const p1Employee = document.createElement('p');
-p1Employee.textContent = web2.p1;
+const p1Employee = document.createElement('div');
+p1Employee.innerHTML = `${svgsEmployee.p1}<p>${web2.p1}</p>`;
+
+
 
 webEmployee.appendChild(p1Employee);
 
-const slider2 = createSlider(['employee-index1.png', 'employee-index2.png', 'employee-index3.png']);
+const slider2 = createSlider(['employee-employee.png', 'employee-employeer.png', 'employee-menu.png']);
 
 webEmployee.appendChild(slider2);
 
 
 //segundo parrafo
-const p2Employee = document.createElement('p');
-p2Employee.textContent = web2.p2;
+const p2Employee = document.createElement('div');
+p2Employee.innerHTML = `${svgsEmployee.p2}<p>${web2.p2}</p>`;
 
 webEmployee.appendChild(p2Employee);
 
-const slider3 = createSlider(['employee-index1.png', 'employee-index2.png', 'employee-index3.png']);
+const slider3 = createSlider(['employee-register1.png', 'employee-register2.png', 'employee-admin.png']);
 
 webEmployee.appendChild(slider3);
 
@@ -256,6 +259,13 @@ const visiteWeb2 = document.createElement('div');
 visiteWeb2.innerHTML = `<a href="https://webemployerstore.onrender.com/">${web2.visite}</a>`;
 
 webEmployee.appendChild(visiteWeb2);
+
+const svgsSizeEmployee = webEmployee.querySelectorAll('svg');
+svgsSizeEmployee.forEach(svg => {
+        svg.style.width = '50px';
+        svg.style.height = '50px';
+    });
+
 
 
 webEmployee.style.display = 'flex';
