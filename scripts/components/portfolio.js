@@ -260,7 +260,7 @@ visiteWeb2.innerHTML = `<a href="https://webemployerstore.onrender.com/">${web2.
 
 webEmployee.appendChild(visiteWeb2);
 
-const svgsSizeEmployee = webEmployee.querySelectorAll('svg');
+const svgsSizeEmployee = webEmployee.querySelectorAll('.employee');
 svgsSizeEmployee.forEach(svg => {
         svg.style.width = '50px';
         svg.style.height = '50px';

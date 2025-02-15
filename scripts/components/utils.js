@@ -37,6 +37,16 @@ imgs.forEach(src => {
     sliderContainer.appendChild(img);
 });
 
+//puntos
+const indicators = document.createElement('div');
+indicators.style.position = 'absolute';
+indicators.style.bottom = '5px';
+indicators.style.left = '50%';
+indicators.style.transform = 'translateX(-50%)';
+indicators.style.display = 'flex';
+indicators.style.gap = '8px';
+indicators.style.zIndex = '10';
+
 
 const sliderBtnRight = document.createElement('button');
 sliderBtnRight.textContent = '>';
@@ -127,13 +137,64 @@ slider.querySelectorAll('button').forEach(btn =>{
    btn.style.fontWeight = '300'; 
 });
 
+
+
+const dots = []; // Para almacenar los puntos
+
 const sliderImgs =     sliderContainer.querySelectorAll('img');
 
-sliderImgs.forEach(img => {
+sliderImgs.forEach((img, index) => {
+img.style.scrollSnapAlign = 'center';
 img.style.width = '90%';
 img.style.height = 'auto';
 img.style.flexShrink = '0';
+img.style.margin = '10px';
+//img.style.objectFit = 'contain';
+
+//para los puntos
+const dot = document.createElement('div');
+    dot.style.width = '10px';
+    dot.style.height = '10px';
+    dot.style.borderRadius = '50%';
+    dot.style.background = index === 0 ? 'blue' : 'gray'; // Primer punto activo
+    dot.style.transition = 'background 0.3s';
+    
+    indicators.appendChild(dot);
+    dots.push(dot);
+
 });
+
+
+
+
+sliderContainer.style.scrollSnapType = 'x mandatory';
+
+//Esto funciono.
+
+sliderBtnRight.onclick = () => {
+    const imgWidth = sliderImgs[0]?.offsetWidth || 300; // Obtener ancho de la primera imagen
+    sliderContainer.scrollBy({ left: imgWidth, behavior: 'smooth' });
+};
+
+sliderBtnLeft.onclick = () => {
+    const imgWidth = sliderImgs[0]?.offsetWidth || 300;
+    sliderContainer.scrollBy({ left: -imgWidth, behavior: 'smooth' });
+};
+
+
+sliderContainer.onscroll = () => {
+    const scrollLeft = sliderContainer.scrollLeft;
+    const totalWidth = sliderContainer.scrollWidth - sliderContainer.clientWidth;
+    const index = Math.round((scrollLeft / totalWidth) * (dots.length - 1));
+
+    dots.forEach((dot, i) => {
+        dot.style.background = i === index ? 'blue' : 'gray';
+    });
+};
+
+
+
+slider.appendChild(indicators);
 
 return slider;
 };
