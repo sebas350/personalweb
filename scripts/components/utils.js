@@ -148,7 +148,7 @@ img.style.scrollSnapAlign = 'center';
 img.style.width = '90%';
 img.style.height = 'auto';
 img.style.flexShrink = '0';
-img.style.margin = '10px';
+img.style.margin = '10px 0px';
 //img.style.objectFit = 'contain';
 
 //para los puntos
