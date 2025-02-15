@@ -12,28 +12,28 @@ const translations = {
         description: 'Este portafolio muestra proyectos de desarrollo web, programación con Arduino y soluciones de software, destacando mi experiencia y creatividad en tecnología.',
         webs: {
             title: 'Desarrollo Web',
-            description: 'En esta seccion encotraras los proyectos mas destacados sobre desarrollo Web',
+            description: 'En esta sección encontrarás los proyectos mas destacados sobre Desarrollo Web',
             beautySpa: {
                 title: 'Beauty Spa',
                 description: 'En esta aplicación web, los usuarios pueden explorar diferentes técnicas de cuidado de la piel, conocer los servicios que ofrecemos, y reservar turnos para realizar tratamientos. Además, proporcionamos información sobre nuestra ubicación física.',
                 visite: 'Visita BeautySpa',
                 navbar: [
-                    'En la barra de navegacion podemos ver como se trabajo con los botones y el diseno.',
+                    'Cabe destacar que esta Aplicacion Web se trabajo en conjunto con un equipo de trabajo de cuatro. Al tener formación sobre Habilidades Blandas pudimos aplicar todo lo aprendido y llevar adelante el proyecto con exito.',
+                    'En la barra de navegación podemos ver como se trabajó con los botones y el diseño.',
                     'Los link nos llevan a distintas partes del la pagina',
-                    'Por detras de la barra de navegacion podemos ver que su codigo esta compuesto por un html que cuenta con elementos ul y li',
-                    'Tambien contamos con un menu amburgeza dependiendo del tamaneo de pantalla'
+                    'También contamos con un menu amburguesa dependiendo del tamaño de pantalla'
                 ],
                 main: [
-                    'En el cuerpo principal de la Pagina podemos ver como esta organizada en secciones',
+                    'En el cuerpo principal de la Página podemos ver como esta organizada en secciones',
                     'Cuenta una carrucel para poder seleccionar y tener mas informacion acerca de los tratamientos',
-                    'Cuenta con una secciones donde podemos encotrar a los profesionales, el codigo trabajado aqui se relizo usando la api nativa de js',
-                    'Podemos contactarnos mediente un formulario donde podemos detallar los pedidos',
+                    'Posee con una secciones donde podemos encontrar a los profesionales, el código trabajado aqui se relizo usando la API nativa de javascript',
+                    'Podemos contactarnos mediante un formulario donde detallamos los pedidos',
                     
-                    'En la seccion de ubicacion usamos ijustramos un etiqueta iframe para logar mostrar la ubicacion del lugar'
+                    'En la sección de ubicación usamos un etiqueta iframe para logar mostrar la ubicación del lugar'
                 ],
                 footer: [
-                    'El foother cuenta con un codigo que nos muestra los contactos y usamos iconos para los link',
-                    'Tambien podemos destacar que tanto el fooder como el navbar esta presente en todos los html usando un template',
+                    'El Pie de Página cuenta con un código que nos muestra los contactos y usamos íconos para los link',
+                    'También podemos destacar que tanto el Pie de Página como la Barra de Navegación esta presente en todos los HTML usando un template',
                 ],
                 tools: [
                     'Herramientas usadas para Beauty Spa',
@@ -65,27 +65,25 @@ const translations = {
                 description: 'In this web application, users can explore different skincare techniques, learn about the services we offer, and book appointments for treatments. Additionally, we provide information about our physical location.',
                 visite: 'Go in Beauty Spa',
                 navbar: [
-                    'In the navigation bar, we can see how the buttons and design were implemented.',
-                    'The links take us to different sections of the page.',
-                    'Behind the navigation bar, the code includes an HTML structure with ul and li elements.',
-                    'We also have a hamburger menu depending on the screen size.'
-                ],
-                main: [
-                    'In the main body of the page, we can see how it is organized into sections.',
-                    'It includes a carousel to select and get more information about the treatments.',
-                    'There is a section where we can find professionals, and the code here was created using the native JavaScript API.',
-                    
-                    'We can contact us through a form where we can detail the orders',
-
-                    'In the location section, we use an iframe tag to display the location of the spa.'
-                ],
-                footer: [
-                    'The footer includes code displaying contact details and icons for the links.',
-                    'We also highlight that both the footer and the navbar are present across all HTML files using a template.'
-                ],
-                tools: [
-                    'Tools used for Beauty Spa',
-                ],
+    'It is worth mentioning that this Web Application was developed in collaboration with a team of four. Having training in Soft Skills allowed us to apply everything we learned and successfully carry out the project.',
+    'In the navigation bar, we can see how the buttons and design were implemented.',
+    'The links take us to different parts of the page.',
+    'We also have a hamburger menu depending on the screen size.'
+],
+main: [
+    'In the main body of the Page, we can see how it is organized into sections.',
+    'It includes a carousel to select and obtain more information about the treatments.',
+    'There are sections where we can find professionals; the code used here was developed using JavaScript’s native API.',
+    'We can get in touch through a form where we provide details about our requests.',
+    'In the location section, we use an iframe tag to display the location of the place.'
+],
+footer: [
+    'The Footer includes code that displays contact information, and we use icons for the links.',
+    'It is also worth noting that both the Footer and the Navigation Bar are present in all HTML files using a template.'
+],
+tools: [
+    'Tools used for Beauty Spa.',
+],
             },
             storeEmployee: {
                 title: 'StoreEmployee',
@@ -271,7 +269,7 @@ svgsSizeEmployee.forEach(svg => {
 webEmployee.style.display = 'flex';
 webEmployee.style.flexDirection = 'column';
 webEmployee.style.alignItems = 'center';
-webEmployee.style.gap = '10px';
+webEmployee.style.gap = '50px';
 
 
 sectionWeb.appendChild(webEmployee);
