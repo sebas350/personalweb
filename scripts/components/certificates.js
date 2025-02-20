@@ -95,6 +95,7 @@ export function Certificates
     certs.style.display = 'flex';
     certs.style.flexDirection = 'column';
     certs.style.gap = '30px';
+    certs.style.paddingTop = '10px';
     certs.style.margin = 'auto';
     certs.style.width = 'min(90vw, 720px)';
       
