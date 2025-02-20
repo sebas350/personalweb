@@ -192,7 +192,7 @@ beautySpa.appendChild(hr);
 
 beautySpa.style.display = 'flex';
 beautySpa.style.flexDirection = 'column';
-beautySpa.style.alignItems = 'center';
+//beautySpa.style.alignItems = 'center';
 beautySpa.style.gap = '10px';
  
     sectionWeb.appendChild(beautySpa);

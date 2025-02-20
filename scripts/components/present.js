@@ -33,7 +33,7 @@ export function Present(description, title, color) {
    
    const outv = divout.querySelector('#out');
     outv.style.width = '100%';
-    outv.style.height = '90vh';
+    outv.style.height = '100dvh';
     outv.style.display = 'flex';
     outv.style.flexDirection = 'column';
     outv.style.alignItems = 'center';
