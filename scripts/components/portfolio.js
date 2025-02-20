@@ -47,7 +47,14 @@ const translations = {
                 p2:'La plataforma permite que tanto empleadores como candidatos se registren y muestren sus habilidades o necesidades laborales. Además, cuenta con un sistema de inicio de sesión que facilita el control y gestión de los registros.',
                 tools: 'Herramientas usadas para Employee Store',
             },
-            fastapi: {},
+            fastapi: {
+                title: 'FastAPI Tareas',
+                description: 'Esta aplicación web de gestión de tareas nació como el backend de un proyecto final en una capacitación de programación con Python. Sin embargo, mi pasión por el desarrollo me llevó a ir más allá y agregar un frontend práctico y funcional.',
+                visite: 'Hecha un vistazo a la Aplicación de Tareas',
+                p1:'Employee Store cuenta con una sección dedicada tanto a quienes buscan empleo como a quienes necesitan contratar personal. La plataforma ofrece un menú de navegación intuitivo para acceder rápidamente a las distintas funciones, facilitando la conexión entre empleadores y candidatos.',
+                p2:'La plataforma permite que tanto empleadores como candidatos se registren y muestren sus habilidades o necesidades laborales. Además, cuenta con un sistema de inicio de sesión que facilita el control y gestión de los registros.',
+                tools: 'Herramientas usadas para Employee Store',
+            },
             plataform: {},
         },
         programs: {},
@@ -93,7 +100,14 @@ tools: [
                 p2:'The platform allows both employers and job seekers to register and showcase their skills or job needs. Additionally, it includes a login system to manage and track registrations efficiently.',
                 tools: 'Tools used for Employee Store',
             },
-            fastapi: {},
+            fastapi: {
+                title: 'FastAPI Tasks',
+                description: 'This task management web application was initially developed as the backend for a final project in a Python programming course. However, my passion for development led me to go beyond and add a practical and functional frontend.',
+                visite: 'Check out TastWeb',
+                p1: 'Employee Store features a dedicated section for both job seekers and employers looking to hire. The platform provides an intuitive navigation menu for quick access to different functions, making it easier to connect employers with candidates.',
+                p2:'The platform allows both employers and job seekers to register and showcase their skills or job needs. Additionally, it includes a login system to manage and track registrations efficiently.',
+                tools: 'Tools used for Employee Store',
+            },
             plataform: {},
         },
         programs: {},
@@ -257,6 +271,7 @@ const visiteWeb2 = document.createElement('div');
 visiteWeb2.innerHTML = `<a href="https://webemployerstore.onrender.com/">${web2.visite}</a>`;
 
 webEmployee.appendChild(visiteWeb2);
+webEmployee.appendChild(hr);
 
 const svgsSizeEmployee = webEmployee.querySelectorAll('.employee');
 svgsSizeEmployee.forEach(svg => {
@@ -275,8 +290,33 @@ webEmployee.style.gap = '50px';
 sectionWeb.appendChild(webEmployee);
 
 
-//style webEmployee
 
+///////////////////////////
+//section fastAPI tasks
+
+const webTasks = document.createElement('div');
+
+const web3 = webs.fastapi;
+
+//title and description
+const h2_tasks = document.createElement('h2');
+h2_tasks.textContent = web3.title;
+const p1_tasks = document.createElement('p');
+p1_tasks.textContent = web3.description;
+
+const img = document.createElement('img');
+img.src = "https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/tasks1.png";
+
+webTasks.append(h2_tasks, p1_tasks, img);
+
+sectionWeb.appendChild(webTasks);
+
+//styles
+
+h2_tasks.style.color = 'green';
+
+
+/////////////////////////
 
 //styles
 
