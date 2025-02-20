@@ -13,11 +13,11 @@ export function Home(language='es') {
         sec1_h2_:`Welcome to my`,
         sec1_p1: `Hello, I am Sebastián and I am dedicated to the development of web applications. With 3 years of experience, I am capable of creating websites using the latest in design, taking into account the aesthetics and elegance that each project requires.`,
         sec1_p2: `On this site, you will find information about my professional career, my technical skills, and a sample of the projects I have worked on and are currently working on.`,
-        sec1_h2: `Who am I?`,
+        sec1_h2: `Who am I`,
         sec1_p3: `I am a developer who is always looking to focus on code quality, best development practices and the latest in technologies.`,
         sec1_p4: `I have experience working with a variety of technologies on both the frontend and backend.`,
         btnResumeLang:`Get to know my CV`,
-        sec2_h2: `What can I do?`,
+        sec2_h2: `What can I do`,
         sec2_p1: `From building intuitive user interfaces to developing complex backend systems, I have the ability to handle all aspects of web application development. My skills include:`,
         sec2_p2: `HTML, CSS, JavaScript, React, Angular`,
         sec2_p3: `Node.js, Express, Django, Ruby on Rails`,
@@ -40,11 +40,11 @@ export function Home(language='es') {
         sec1_h2_:`Bienvenidos a mi`,
         sec1_p1: `Hola soy Sebastián y me dedico al desarrollo de aplicaciones web, con una experiencia de 3 años soy capaza de crear webs usando lo ultmo en diseño teniendo encuenta la estetica y elegancia que exige cada proyecto.`,
         sec1_p2: `En este sitio, encontrarás información sobre mi trayectoria profesional, mis habilidades técnicas, y una muestra de los proyectos en los que he trabajado y trabajo actuamente.`,
-        sec1_h2: `¿QUIEN SOY?`,
+        sec1_h2: `Quien Soy`,
         sec1_p3: `Soy un desarrollador que siempre esta en buscando enforcarse en la calidad del código, las mejores prácticas de desarrollo y lo ultimo en tecnologias.`,
         sec1_p4:`Tengo experiencia trabajando con una variedad de tecnologías tanto en el frontend como en el backend.`,
         btnResumeLang:`CONOCE MI CURRICULUM`,
-        sec2_h2: `¿QUE PUEDO HACER?`,
+        sec2_h2: `Que Puedo Hacer`,
         sec2_p1: `Desde construir interfaces de usuario intuitivas hasta desarrollar complejos sistemas backend, tengo la capacidad de manejar todos los aspectos del desarrollo de aplicaciones web. Mis habilidades incluyen:`,
         sec2_p2: `HTML, CSS, JavaScript, React, Angular`,
         sec2_p3: `Node.js, Express, Django, Ruby on Rails`,
@@ -133,7 +133,7 @@ secMe_2.innerHTML = `
             
             <svg class="svg-absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
             <path d="M192 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8 384l0-128 16 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-288 56 0 64 0 16 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16 0 0-64 192 0 0 192-192 0 0-32-64 0 0 48c0 26.5 21.5 48 48 48l224 0c26.5 0 48-21.5 48-48l0-224c0-26.5-21.5-48-48-48L368 0c-26.5 0-48 21.5-48 48l0 80-76.9 0-65.9 0c-33.7 0-64.9 17.7-82.3 46.6l-58.3 97c-9.1 15.1-4.2 34.8 10.9 43.9s34.8 4.2 43.9-10.9L120 256.9 120 480c0 17.7 14.3 32 32 32s32-14.3 32-32z"/></svg>
-           <h2 class="light relative" >${sec2_h2}</h2>
+           <h2 class="light relative diagonal" >${sec2_h2}</h2>
            <p class="relative">${sec2_p1}</p>
             
         </section>
@@ -397,6 +397,16 @@ const observer = new IntersectionObserver(effect,{threshold: 0.3});
 
 entriesp.forEach(entry => observer.observe(entry));
 
+    
+    
+//AQUI!!!!!!!!!!!!!!!!!!!    
+    
+    
+    //secMe.style.padding = '10px'; YA TIENE PADDING
+    secMe.style.margin = 'auto';
+    secMe.style.width = 'min(90vw, 720px)';
+    secMe.style.margin = 'auto';
+    secMe.style.width = 'min(90vw, 720px)';
     
     
     //h1.style.color = 'blue';

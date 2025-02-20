@@ -284,6 +284,9 @@ sectionWeb.appendChild(webEmployee);
     sectionWeb.style.display = 'flex';
     sectionWeb.style.flexDirection = 'column';
     sectionWeb.style.gap = '10px';
+    sectionWeb.style.padding = '10px';
+    sectionWeb.style.margin = 'auto';
+    sectionWeb.style.width = 'min(90vw, 720px)';
 
     //container.style.fontFamily = "'Lora', serif";
     const salient = container.querySelectorAll('.salient');
