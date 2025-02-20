@@ -282,7 +282,11 @@ const sec1_divs = secMe.querySelectorAll('div');
     secMe.style.display = 'flex';
     secMe.style.flexDirection = 'column';
     secMe.style.gap= '20px';
-    secMe.style.padding = '10px';
+    //secMe.style.padding = '10px';
+    secMe.style.margin = 'auto';
+    secMe.style.width = 'min(90vw, 720px)';
+    secMe.style.margin = 'auto';
+    secMe.style.width = 'min(90vw, 720px)';
     
 //style circle    
     const styleCircle = secMe_1.querySelector('#circle');
@@ -397,31 +401,8 @@ const observer = new IntersectionObserver(effect,{threshold: 0.3});
 
 entriesp.forEach(entry => observer.observe(entry));
 
-    
-    
-//AQUI!!!!!!!!!!!!!!!!!!!    
-    
-    
-    //secMe.style.padding = '10px'; YA TIENE PADDING
-    secMe.style.margin = 'auto';
-    secMe.style.width = 'min(90vw, 720px)';
-    secMe.style.margin = 'auto';
-    secMe.style.width = 'min(90vw, 720px)';
-    
-    
-    //h1.style.color = 'blue';
-    //h1.style.textAlign = 'center';
-    
-    //pa.style.textAlign = 'justify';
-    //pa.style.textIndent = '20px';
-    //p.style.border = '2px solid blue';
-    //p.style.color = 'rgb(173,()216,230)';
-    //h1.style.color = '#dd8e6';
-    //circle.style.border = '2px solid blue';
-    
-    //div.appendChild(h1);
-    
-    div.appendChild(secMe);
+
+div.appendChild(secMe);
     
     
 
