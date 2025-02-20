@@ -220,7 +220,7 @@ const sec1_divs = secs.querySelectorAll('.sec');
     secs.style.display = 'flex';
     secs.style.flexDirection = 'column';
     secs.style.gap= '20px';
-    secs.style.padding = '10px';
+    //secs.style.padding = '10px';
     secs.style.margin = 'auto';
     secs.style.width = 'min(90vw, 720px)';
     

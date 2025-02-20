@@ -280,7 +280,7 @@ sectionWeb.appendChild(webEmployee);
 
 //styles
 
-    sectionWeb.style.padding = '10px';
+    //sectionWeb.style.padding = '10px';
     sectionWeb.style.display = 'flex';
     sectionWeb.style.flexDirection = 'column';
     sectionWeb.style.gap = '10px';

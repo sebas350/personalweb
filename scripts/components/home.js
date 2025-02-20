@@ -38,10 +38,10 @@ export function Home(language='es') {
     es: {
         sec1_h1:`PÁGINA PROFESIONAL`,
         sec1_h2_:`Bienvenidos a mi`,
-        sec1_p1: `Hola soy Sebastián y me dedico al desarrollo de aplicaciones web, con una experiencia de 3 años soy capaza de crear webs usando lo ultmo en diseño teniendo encuenta la estetica y elegancia que exige cada proyecto.`,
+        sec1_p1: `Hola soy Sebastián y me dedico al desarrollo de aplicaciones web, con una experiencia de 3 años soy capaz de crear webs usando lo ultmo en diseño, teniendo encuenta la estetica y elegancia que exige cada proyecto.`,
         sec1_p2: `En este sitio, encontrarás información sobre mi trayectoria profesional, mis habilidades técnicas, y una muestra de los proyectos en los que he trabajado y trabajo actuamente.`,
         sec1_h2: `Quien Soy`,
-        sec1_p3: `Soy un desarrollador que siempre esta en buscando enforcarse en la calidad del código, las mejores prácticas de desarrollo y lo ultimo en tecnologias.`,
+        sec1_p3: `Soy un desarrollador que siempre busca enforcarse en la calidad del código, las mejores prácticas de desarrollo y lo ultimo en tecnologias.`,
         sec1_p4:`Tengo experiencia trabajando con una variedad de tecnologías tanto en el frontend como en el backend.`,
         btnResumeLang:`CONOCE MI CURRICULUM`,
         sec2_h2: `Que Puedo Hacer`,
