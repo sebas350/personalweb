@@ -206,6 +206,7 @@ const tecno = document.createElement('div');
 tecno.style.border = '1px solid black';
 tecno.style.borderRadius = '10px';
 tecno.style.padding = '10px';
+tecno.style.margin = 'auto';
 
 
 /*

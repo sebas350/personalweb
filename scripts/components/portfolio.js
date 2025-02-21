@@ -53,7 +53,7 @@ const translations = {
                 visite: 'Hecha un vistazo a la Aplicación de Tareas',
                 p1:'Esta aplicación web permite a los usuarios gestionar sus tareas de manera sencilla y eficiente. Cuenta con una interfaz intuitiva en la que se pueden agregar, editar y eliminar tareas mediante botones de acción claramente identificados.',
                 p2:'La plataforma permite que tanto empleadores como candidatos se registren y muestren sus habilidades o necesidades laborales. Además, cuenta con un sistema de inicio de sesión que facilita el control y gestión de los registros.',
-                tools: 'Herramientas usadas para Employee Store',
+                tools: 'Herramientas usadas para la Aplicacion de Tareas',
             },
             plataform: {},
         },
@@ -103,10 +103,10 @@ tools: [
             fastapi: {
                 title: 'FastAPI Tasks',
                 description: 'This task management web application was initially developed as the backend for a final project in a Python programming course. However, my passion for development led me to go beyond and add a practical and functional frontend.',
-                visite: 'Check out TastWeb',
+                visite: 'Check out TastsWeb',
                 p1: 'This web application allows users to manage their tasks easily and efficiently. It features an intuitive interface where users can add, edit, and delete tasks using clearly labeled action buttons.',
                 p2:'The platform allows both employers and job seekers to register and showcase their skills or job needs. Additionally, it includes a login system to manage and track registrations efficiently.',
-                tools: 'Tools used for Employee Store',
+                tools: 'Tools used for TasksWeb',
             },
             plataform: {},
         },
@@ -316,7 +316,14 @@ const imgTasks2 = document.createElement('img');
 const imgTasks3 = document.createElement('img');
 const imgTasks4 = document.createElement('img');
 
-webTasks.append(h2_tasks, p1_tasks, imgTasks1, p2_tasks, imgTasks2, imgTasks3, imgTasks4);
+//tecnos
+const tecno3 = containerTecno(web3.tools, svgsTecno, others);
+
+const visiteWeb3 = document.createElement('div');
+
+visiteWeb3.innerHTML = `<a href="https://tasks-t3lh.onrender.com/">${web3.visite}</a>`;
+
+webTasks.append(h2_tasks, p1_tasks, imgTasks1, p2_tasks, imgTasks2, imgTasks3, imgTasks4, tecno3, visiteWeb3, hr);
 
 
 const imgsTasks = [imgTasks1, imgTasks2, imgTasks3, imgTasks4];
@@ -330,6 +337,8 @@ sectionWeb.appendChild(webTasks);
 
 h2_tasks.style.color = 'green';
 
+tecno3.querySelector('#vue').style.display = 'none';
+tecno3.querySelector('#fast').style.display = 'block';
 
 imgsTasks.forEach((img, index) => {
     img.src = `https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/tasks${index+1}.jpg`;
@@ -343,6 +352,8 @@ img.style.transition = 'filter 1000ms';
 webTasks.style.display = 'flex';
 webTasks.style.flexDirection = 'column';
 webTasks.style.gap = '20px';
+
+visiteWeb3.style.textAlign = 'center';
 
 /////////////////////////
 
