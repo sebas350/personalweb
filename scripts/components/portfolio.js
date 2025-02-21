@@ -307,17 +307,19 @@ p1_tasks.textContent = web3.description;
 
 const imgTasks1 = document.createElement('img');
 
-//elements p + img
+//elements p + imgs
 const p2_tasks = document.createElement('p');
 p2_tasks.textContent = web3.p1;
 
+
 const imgTasks2 = document.createElement('img');
+const imgTasks3 = document.createElement('img');
+const imgTasks4 = document.createElement('img');
+
+webTasks.append(h2_tasks, p1_tasks, imgTasks1, p2_tasks, imgTasks2, imgTasks3, imgTasks4);
 
 
-webTasks.append(h2_tasks, p1_tasks, imgTasks1, p2_tasks, imgTasks2);
-
-
-const imgsTasks = [imgTasks1, imgTasks2];
+const imgsTasks = [imgTasks1, imgTasks2, imgTasks3, imgTasks4];
 
 
 
