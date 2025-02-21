@@ -331,9 +331,11 @@ h2_tasks.style.color = 'green';
 
 imgsTasks.forEach((img, index) => {
     img.src = `https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/tasks${index+1}.jpg`;
+img.className = 'imgTasks';
 img.style.width = '100%';
 img.style.height = 'auto';
-img.style.opacity = '0.5';
+img.style.filter = 'brightness(50%)';
+img.style.transition = 'filter 1000ms';
 });
 
 webTasks.style.display = 'flex';
@@ -419,6 +421,9 @@ const effect = entries => {
           }
           if(entry.target.id === 'subtitle'){
                  entry.target.style.transform = 'translateY(0px)';
+          }
+          if(entry.target.className === 'imgTasks'){
+                 entry.target.style.filter = 'brightness(100%)';
           }  
        }else{
       //entry.target.style.opacity = '0';
@@ -430,6 +435,8 @@ const effect = entries => {
 
 const observer = new IntersectionObserver(effect,{threshold: 0.3});
 
+
+imgsTasks.forEach(entry => observer.observe(entry));
 imgs.forEach(entry => observer.observe(entry));
 
 //observer.observe(outv);
