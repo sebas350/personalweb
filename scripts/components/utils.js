@@ -1,3 +1,22 @@
+export function animateCounter(element, end, duration = 2000) {
+    let startTime = null;
+
+    function updateCounter(timestamp) {
+        if (!startTime) startTime = timestamp;
+        let progress = timestamp - startTime;
+        let value = Math.min(Math.round((progress / duration) * end), end);
+        
+        element.textContent = `${value}%`; // Actualiza el número en el DOM
+        element.style.width = `${value}%`;
+
+        if (value < end) {
+            requestAnimationFrame(updateCounter);
+        }
+    }
+
+    requestAnimationFrame(updateCounter);
+};
+
 export function hr() {
     const hr = document.createElement('hr');
 

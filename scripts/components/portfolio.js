@@ -1,7 +1,7 @@
 //import { document } from '../dom.js';
 import { Present } from './present.js';
 import {svgsTecno, others, svgsEmployee} from './svgs.js';
-import {svgsSize, createSlider, containerTecno, hr} from './utils.js';
+import {svgsSize, createSlider, containerTecno, hr, animateCounter} from './utils.js';
 
 export function Portfolio(language='es') {
 
@@ -359,6 +359,28 @@ visiteWeb3.style.textAlign = 'center';
 
 /////////////////////////
 
+//contador animado
+/////////////////////////
+const counter = document.createElement('div');
+counter.id = 'counter';
+counter.style.border = '3px solid red';
+counter.style.borderRadius = '15px';
+counter.style.textAlign = 'center';
+counter.style.color = 'white';
+counter.style.background = 'red';
+
+sectionWeb.appendChild(counter);
+
+/////////////////////////
+
+
+
+
+
+
+
+
+
 //styles
 
     //sectionWeb.style.padding = '10px';
@@ -439,7 +461,10 @@ const effect = entries => {
           }
           if(entry.target.className === 'imgTasks'){
                  entry.target.style.filter = 'brightness(100%)';
-          }  
+          }
+          if(entry.target.id === 'counter'){
+                animateCounter(counter, 60, 1000);
+          }
        }else{
       //entry.target.style.opacity = '0';
       //entry.target.style.transform = 'translateX(-50%)';
@@ -456,7 +481,7 @@ imgs.forEach(entry => observer.observe(entry));
 
 //observer.observe(outv);
 observer.observe(webdescrip);
-
+observer.observe(counter);
 //container.style.gap = '10px';
 
     return container;
