@@ -1,7 +1,7 @@
 //import { document } from '../dom.js';
 import { Present } from './present.js';
 import {svgsTecno, others, svgsEmployee} from './svgs.js';
-import {svgsSize, createSlider, containerTecno} from './utils.js';
+import {svgsSize, createSlider, containerTecno, hr} from './utils.js';
 
 export function Portfolio(language='es') {
 
@@ -181,6 +181,8 @@ const tecno1 = containerTecno(web1.tools, svgsTecno, others);
 
 beautySpa.appendChild(tecno1);
 
+tecno1.querySelector('.sec-back #fast').style.display = 'none';
+
 //visita la pagina
 
 
@@ -194,15 +196,9 @@ visiteWeb1.style.padding = '10px';
 
 beautySpa.appendChild(visiteWeb1);
 
-const hr = document.createElement('hr');
+const hr1 = hr();
 
-    hr.style.border = "none"; // Elimina el borde por defecto
-    hr.style.height = "2px"; // Define el grosor de la línea
-    hr.style.backgroundColor = "#ccc"; // Define el color de la línea
-    hr.style.width = "80%"; // Define el ancho de la línea
-    hr.style.margin = "40px auto"; // Establece el margen superior e inferior
-
-beautySpa.appendChild(hr);
+beautySpa.appendChild(hr1);
 
 beautySpa.style.display = 'flex';
 beautySpa.style.flexDirection = 'column';
@@ -265,13 +261,17 @@ webEmployee.appendChild(slider3);
 const tecno2 = containerTecno(web2.tools, svgsTecno, others);
 
 webEmployee.appendChild(tecno2);
+tecno2.querySelector('.sec-back #fast').style.display = 'none';
+tecno2.querySelector('.sec-front #vue').style.display = 'none';
 
 const visiteWeb2 = document.createElement('div');
 
 visiteWeb2.innerHTML = `<a href="https://webemployerstore.onrender.com/">${web2.visite}</a>`;
 
+const hr2 = hr();
+
 webEmployee.appendChild(visiteWeb2);
-webEmployee.appendChild(hr);
+webEmployee.appendChild(hr2);
 
 const svgsSizeEmployee = webEmployee.querySelectorAll('.employee');
 svgsSizeEmployee.forEach(svg => {
@@ -323,7 +323,9 @@ const visiteWeb3 = document.createElement('div');
 
 visiteWeb3.innerHTML = `<a href="https://tasks-t3lh.onrender.com/">${web3.visite}</a>`;
 
-webTasks.append(h2_tasks, p1_tasks, imgTasks1, p2_tasks, imgTasks2, imgTasks3, imgTasks4, tecno3, visiteWeb3, hr);
+const hr3 = hr();
+
+webTasks.append(h2_tasks, p1_tasks, imgTasks1, p2_tasks, imgTasks2, imgTasks3, imgTasks4, tecno3, visiteWeb3, hr3);
 
 
 const imgsTasks = [imgTasks1, imgTasks2, imgTasks3, imgTasks4];
@@ -338,7 +340,7 @@ sectionWeb.appendChild(webTasks);
 h2_tasks.style.color = 'green';
 
 tecno3.querySelector('#vue').style.display = 'none';
-tecno3.querySelector('#fast').style.display = 'block';
+//tecno3.querySelector('#fast').style.display = 'block';
 
 imgsTasks.forEach((img, index) => {
     img.src = `https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/tasks${index+1}.jpg`;

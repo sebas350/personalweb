@@ -1,3 +1,14 @@
+export function hr() {
+    const hr = document.createElement('hr');
+
+    hr.style.border = "none"; // Elimina el borde por defecto
+    hr.style.height = "2px"; // Define el grosor de la línea
+    hr.style.backgroundColor = "#ccc"; // Define el color de la línea
+    hr.style.width = "80%"; // Define el ancho de la línea
+    hr.style.margin = "40px auto"; // Establece el margen superior e inferior
+    return hr;
+};
+
 export function styleSvgs(container, fillColor = 'white', size = '30px') {
     const svgs = container.querySelectorAll('.svg');
     svgs.forEach(svg => {
