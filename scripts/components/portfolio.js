@@ -347,7 +347,9 @@ imgsTasks.forEach((img, index) => {
 img.className = 'imgTasks';
 img.style.width = '100%';
 img.style.height = 'auto';
-img.style.filter = 'brightness(50%)';
+img.style.borderRadius = '10px';
+img.style.boxShadow = '10px 10px 10px grey';
+img.style.filter = 'brightness(20%)';
 img.style.transition = 'filter 1000ms';
 });
 
@@ -463,7 +465,7 @@ const effect = entries => {
                  entry.target.style.filter = 'brightness(100%)';
           }
           if(entry.target.id === 'counter'){
-                animateCounter(counter, 60, 1000);
+              animateCounter(counter, 60, 1000);      
           }
        }else{
       //entry.target.style.opacity = '0';
@@ -475,8 +477,10 @@ const effect = entries => {
 
 const observer = new IntersectionObserver(effect,{threshold: 0.3});
 
+const observer1 = new IntersectionObserver(effect,{threshold: 1.0});
 
-imgsTasks.forEach(entry => observer.observe(entry));
+
+imgsTasks.forEach(entry => observer1.observe(entry));
 imgs.forEach(entry => observer.observe(entry));
 
 //observer.observe(outv);
