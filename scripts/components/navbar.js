@@ -88,26 +88,61 @@ export function Navbar(main, footer) {
         svgMenu();
         
     };
+    
+  //loadComponentFromURL();  
+    
+    const loadComponentFromURL = () => {
+        const path = window.location.pathname;
+        let component;
+        
+        switch (path) {
+            case "/resume":
+                component = Resume;
+                break;
+            case "/home":
+                component = Home;
+                break;
+            case "/portfolio":
+                component = Portfolio;
+                break;
+            case "/certificates":
+                component = Certificates;
+                break;
+            default:
+                component = Home; // Fallback si el estado es inválido
+          }
+        updateComponent(component);
+    };
+    
+    
+    window.onpopstate = () => {
+        loadComponentFromURL();
+    };
+    
         
     resume.onclick = () => {
+        history.pushState({component: "Resume"}, "", "/resume");
         updateComponent(Resume);
         window.scrollTo(0,0);
         menu.style.transform = 'translateY(-100%)';
         svgMenu();
     };
     home.onclick = () => {
+        history.pushState({component: "Home"}, "", "/");
         updateComponent(Home);
         window.scrollTo(0,0);
         menu.style.transform = 'translateY(-100%)';
         svgMenu();
     };
     portfolio.onclick = () => {
+        history.pushState({component: "Portfolio"}, "", "/portfolio");
         updateComponent(Portfolio);
         window.scrollTo(0,0);
         menu.style.transform = 'translateY(-100%)';
         svgMenu();
     };
     cert.onclick = () => {
+        history.pushState({component: "Certificates"}, "", "/certificates");
         updateComponent(Certificates);
         window.scrollTo(0,0);
         menu.style.transform = 'translateY(-100%)';
