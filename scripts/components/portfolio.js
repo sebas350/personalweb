@@ -56,6 +56,15 @@ const translations = {
                 tools: 'Herramientas usadas para la Aplicacion de Tareas',
             },
             plataform: {},
+            personal: {
+                title: 'Aplicación web profesional',
+                description: 'Este proyecto nació de la necesidad de mostrar mi trayectoria profesional y las habilidades que he adquirido en los últimos años. Para lograrlo, desarrollé una aplicación web que organiza mi experiencia en distintas secciones, incluyendo una presentación personal, mi currículum, mis proyectos y un portafolio interactivo.',
+                visite: 'Hecha un vistazo a mi Pagina Profesional',
+                p1: 'Uno de los mayores desafíos de este proyecto fue mi decisión de no utilizar frameworks. En lugar de optar por herramientas como React o Angular, me propuse desarrollar la aplicación utilizando JavaScript puro, lo que me permitió profundizar en los fundamentos del lenguaje y mejorar mis habilidades tanto en el frontend como en el backend.',
+                p2:'El desarrollo de esta aplicación no solo me ayudó a perfeccionar mis conocimientos en HTML, CSS y JavaScript, sino que también me permitió optimizar el rendimiento, estructurar mejor mi código y entender con mayor profundidad el funcionamiento del DOM y las interacciones dinámicas en la web. Además, trabajé en la implementación de un backend ligero para gestionar ciertos aspectos del sitio, lo que fortaleció mis habilidades en desarrollo fullstack.',
+                p3:'Este proyecto representa un punto clave en mi evolución como programador y es una muestra tangible de mi capacidad para crear soluciones desde cero, enfrentando desafíos técnicos y aprendiendo en el proceso.',
+                tools: 'Tecnologias usadas para PersonalWeb',    
+             },
         },
         programs: {},
         softHard: {},
@@ -109,6 +118,15 @@ tools: [
                 tools: 'Tools used for TasksWeb',
             },
             plataform: {},
+            personal: { 
+                title: 'Professional Web Application',
+                description: 'This project was born out of the need to showcase my professional journey and the skills I have acquired over the years. To achieve this, I developed a web application that organizes my experience into different sections, including a personal introduction, my resume, my projects, and an interactive portfolio.',
+                visite: 'Check out PersonalWeb',
+                p1: 'One of the biggest challenges of this project was my decision not to use frameworks. Instead of opting for tools like React or Angular, I decided to develop the application using pure JavaScript, which allowed me to deepen my understanding of the language’s fundamentals and improve my skills in both frontend and backend development.',
+                p2: 'The development of this application not only helped me refine my knowledge of HTML, CSS, and JavaScript but also allowed me to optimize performance, structure my code better, and gain a deeper understanding of how the DOM works and how dynamic interactions function on the web. Additionally, I worked on implementing a lightweight backend to manage certain aspects of the site, which strengthened my fullstack development skills.',
+                p3: 'This project represents a key milestone in my evolution as a programmer and is a tangible demonstration of my ability to create solutions from scratch, tackling technical challenges and learning in the process.',
+                tools: 'Technologies used for PersonalWeb',
+            },
         },
         programs: {},
         softHard: {},
@@ -298,6 +316,16 @@ const webTasks = document.createElement('div');
 
 const web3 = webs.fastapi;
 
+const contentSvgFast = document.createElement('div');
+contentSvgFast.innerHTML = `${svgsTecno}`;
+contentSvgFast.querySelectorAll('.svg').forEach(svg => svg.style.display = 'none');
+const svgFast = contentSvgFast.querySelector('#fast');
+svgFast.style.display = 'block';
+svgFast.style.opacity = '0';
+svgFast.style.width = '50px';
+svgFast.style.height = '50px';
+svgFast.style.transition = 'opacity 1000ms';
+
 
 //title and description + img
 const h2_tasks = document.createElement('h2');
@@ -325,7 +353,7 @@ visiteWeb3.innerHTML = `<a href="https://tasks-t3lh.onrender.com/">${web3.visite
 
 const hr3 = hr();
 
-webTasks.append(h2_tasks, p1_tasks, imgTasks1, p2_tasks, imgTasks2, imgTasks3, imgTasks4, tecno3, visiteWeb3, hr3);
+webTasks.append(svgFast, h2_tasks, p1_tasks, imgTasks1, p2_tasks, imgTasks2, imgTasks3, imgTasks4, tecno3, visiteWeb3, hr3);
 
 
 const imgsTasks = [imgTasks1, imgTasks2, imgTasks3, imgTasks4];
@@ -336,6 +364,8 @@ const imgsTasks = [imgTasks1, imgTasks2, imgTasks3, imgTasks4];
 sectionWeb.appendChild(webTasks);
 
 //styles
+
+svgsSize(contentSvgFast, '50px');
 
 h2_tasks.style.color = 'green';
 
@@ -360,6 +390,119 @@ webTasks.style.gap = '20px';
 visiteWeb3.style.textAlign = 'center';
 
 /////////////////////////
+
+
+///////////////////////////
+// section personal web
+
+const personalWeb = document.createElement('div');
+
+const web4 = webs.personal;
+
+const svgPersonal = document.createElement('div');
+svgPersonal.innerHTML = `${svgsTecno}`;
+
+// title and description + img
+const h2_personal = document.createElement('h2');
+h2_personal.textContent = web4.title;
+
+const p1_personal = document.createElement('p');
+p1_personal.textContent = web4.description;
+
+const imgPersonal1 = document.createElement('img');
+
+// elements p + imgs
+const p2_personal = document.createElement('p');
+p2_personal.textContent = web4.p1;
+
+
+const p3_personal = document.createElement('p');
+p3_personal.textContent = web4.p2;
+
+const p4_personal = document.createElement('p');
+p4_personal.textContent = web4.p3;
+
+
+const imgPersonal2 = document.createElement('img');
+const imgPersonal3 = document.createElement('img');
+const imgPersonal4 = document.createElement('img');
+
+// tecnos
+    const tecno4 = document.createElement('div');
+
+    const h2_tecno4 = document.createElement('h2');
+    h2_tecno4.textContent = 'Porcentaje de Tecnologias Aplicadas en el Proyecto';
+
+    
+    //front
+    const frontPersonal = document.createElement('p');
+    frontPersonal.textContent = 'Frontend';
+    
+    const svgs_front_personal = document.createElement('div');
+    svgs_front_personal.innerHTML = `${svgsTecno}`;
+    
+    //const svgCss_personal = document.createElement('div');
+    //svgCss_personal.innerHTML = `${svgsTecno}`;
+    
+    //const svgJs_personal = document.createElement('div');
+   // svgJs_personal.innerHTML = `${svgsTecno}`;
+
+    //back
+    const backPersonal = document.createElement('p');
+    backPersonal.textContent = 'Backend';
+    
+    const svgNodejs_personal = document.createElement('div');
+    svgNodejs_personal.innerHTML = `${svgsTecno}`;
+    
+    tecno4.append(h2_tecno4, frontPersonal, svgs_front_personal, backPersonal, svgNodejs_personal)
+
+//visite
+
+const visiteWeb4 = document.createElement('div');
+visiteWeb4.innerHTML = `<a href="https://tasks-t3lh.onrender.com/">${web4.visite}</a>`;
+
+const hr4 = hr();
+
+personalWeb.append(svgPersonal, h2_personal, p1_personal, imgPersonal1, p2_personal, imgPersonal2, p3_personal, imgPersonal3, p4_personal, imgPersonal4, tecno4, visiteWeb4, hr4);
+
+const imgsPersonal = [imgPersonal1, imgPersonal2, imgPersonal3, imgPersonal4];
+
+sectionWeb.appendChild(personalWeb);
+
+// styles
+
+svgsSize(svgPersonal, '50px');
+
+h2_personal.style.color = 'orange';
+
+tecno4.querySelectorAll('svg').forEach(svg => svg.style.display = 'none');
+svgsSize(tecno4, '50px');
+
+svgs_front_personal.querySelectorAll('.personal').forEach(svg => svg.style.display = 'block');
+
+// tecno4.querySelector('#fast').style.display = 'block';
+
+imgsPersonal.forEach((img, index) => {
+    img.src = `https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/personal${index + 1}.jpg`;
+    img.className = 'imgPersonal';
+    img.style.width = '100%';
+    img.style.height = 'auto';
+    img.style.borderRadius = '10px';
+    img.style.boxShadow = '10px 10px 10px grey';
+    img.style.filter = 'brightness(20%)';
+    img.style.transition = 'filter 1000ms';
+});
+
+personalWeb.style.display = 'flex';
+personalWeb.style.flexDirection = 'column';
+personalWeb.style.gap = '20px';
+
+visiteWeb4.style.textAlign = 'center';
+
+/////////////////////////
+
+
+
 
 //contador animado
 /////////////////////////
@@ -467,7 +610,14 @@ const effect = entries => {
           if(entry.target.id === 'counter'){
               animateCounter(counter, 60, 1000);      
           }
+          if(entry.target.id === 'fast'){
+              entry.target.animate([{transform: 'scale(0.1)'},{transform: 'scale(1)'}],{duration: 200, iterations: 1});
+              //observer1.unobserve(entry.target);   dejar de observer el elemento.   
+          }
        }else{
+       if(entry.target.id === 'fast'){
+              svgFast.style.opacity = '0';      
+          }
       //entry.target.style.opacity = '0';
       //entry.target.style.transform = 'translateX(-50%)';
      }
@@ -486,6 +636,7 @@ imgs.forEach(entry => observer.observe(entry));
 //observer.observe(outv);
 observer.observe(webdescrip);
 observer.observe(counter);
+observer1.observe(svgFast);
 //container.style.gap = '10px';
 
     return container;
