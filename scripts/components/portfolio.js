@@ -435,18 +435,53 @@ const imgPersonal4 = document.createElement('img');
 
     
     //front
-    const frontPersonal = document.createElement('p');
-    frontPersonal.textContent = 'Frontend';
+    const frontPersonal = document.createElement('div');
+    
+    const frontPersonal_p = document.createElement('p');
+    frontPersonal_p.textContent = 'Frontend';
     
     const svgs_front_personal = document.createElement('div');
     svgs_front_personal.innerHTML = `${svgsTecno}`;
     
-    //const svgCss_personal = document.createElement('div');
-    //svgCss_personal.innerHTML = `${svgsTecno}`;
-    
-    //const svgJs_personal = document.createElement('div');
-   // svgJs_personal.innerHTML = `${svgsTecno}`;
+        //contador animado
+/////////////////////////
+const counter1 = document.createElement('div');
+counter1.id = 'counter1';
+//counter1.style.border = '3px solid red';
+counter1.style.borderRadius = '15px';
+counter1.style.textAlign = 'center';
+counter1.style.color = 'white';
+counter1.style.background = '#74C0FC';
 
+const counter2 = document.createElement('div');
+counter2.id = 'counter2';
+//counter1.style.border = '3px solid red';
+counter2.style.borderRadius = '15px';
+counter2.style.textAlign = 'center';
+counter2.style.color = 'white';
+counter2.style.background = '#ff8605';
+
+const counter3 = document.createElement('div');
+counter3.id = 'counter3';
+//counter1.style.border = '3px solid red';
+counter3.style.borderRadius = '15px';
+counter3.style.textAlign = 'center';
+counter3.style.color = 'white';
+counter3.style.background = '#FFD43B';
+    
+   
+    const secFrontPersonal = document.createElement('div');
+    const barFrontPersonal = document.createElement('div');
+    
+    barFrontPersonal.append(counter1, counter2, counter3);
+    
+    
+    secFrontPersonal.append(svgs_front_personal, barFrontPersonal);
+    
+    frontPersonal.append(frontPersonal_p, secFrontPersonal);
+    
+    
+    
     //back
     const backPersonal = document.createElement('p');
     backPersonal.textContent = 'Backend';
@@ -454,7 +489,9 @@ const imgPersonal4 = document.createElement('img');
     const svgNodejs_personal = document.createElement('div');
     svgNodejs_personal.innerHTML = `${svgsTecno}`;
     
-    tecno4.append(h2_tecno4, frontPersonal, svgs_front_personal, backPersonal, svgNodejs_personal)
+    
+    tecno4.append(h2_tecno4, frontPersonal, backPersonal, svgNodejs_personal);
+
 
 //visite
 
@@ -471,6 +508,19 @@ sectionWeb.appendChild(personalWeb);
 
 // styles
 
+//front
+secFrontPersonal.style.display = 'flex';
+
+barFrontPersonal.style.display = 'flex';
+barFrontPersonal.style.flexDirection = 'column';
+barFrontPersonal.style.width = '100%';
+barFrontPersonal.style.height = '150px';
+//barFrontPersonal.style.border = '3px solid red';
+barFrontPersonal.style.justifyContent = 'space-around';
+barFrontPersonal.style.gap = '20px';
+
+
+
 svgsSize(svgPersonal, '50px');
 
 h2_personal.style.color = 'orange';
@@ -480,7 +530,7 @@ svgsSize(tecno4, '50px');
 
 svgs_front_personal.querySelectorAll('.personal').forEach(svg => svg.style.display = 'block');
 
-// tecno4.querySelector('#fast').style.display = 'block';
+svgNodejs_personal.querySelector('#nodejs').style.display = 'block';
 
 imgsPersonal.forEach((img, index) => {
     img.src = `https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/personal${index + 1}.jpg`;
@@ -607,9 +657,16 @@ const effect = entries => {
           if(entry.target.className === 'imgTasks'){
                  entry.target.style.filter = 'brightness(100%)';
           }
-          if(entry.target.id === 'counter'){
-              animateCounter(counter, 60, 1000);      
+          
+          
+          if (entry.target.id === 'counter1') {
+                animateCounter(counter1, 10, 1000);
+          } else if (entry.target.id === 'counter2') {
+                animateCounter(counter2, 5, 1000);
+          } else if (entry.target.id === 'counter3') {
+                animateCounter(counter3, 100, 1000);
           }
+              
           if(entry.target.id === 'fast'){
               entry.target.animate([{transform: 'scale(0.1)'},{transform: 'scale(1)'}],{duration: 200, iterations: 1});
               //observer1.unobserve(entry.target);   dejar de observer el elemento.   
@@ -635,7 +692,10 @@ imgs.forEach(entry => observer.observe(entry));
 
 //observer.observe(outv);
 observer.observe(webdescrip);
-observer.observe(counter);
+observer.observe(counter1);
+observer.observe(counter2);
+observer.observe(counter3);
+
 observer1.observe(svgFast);
 //container.style.gap = '10px';
 
