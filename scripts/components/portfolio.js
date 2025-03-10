@@ -514,10 +514,10 @@ secFrontPersonal.style.display = 'flex';
 barFrontPersonal.style.display = 'flex';
 barFrontPersonal.style.flexDirection = 'column';
 barFrontPersonal.style.width = '100%';
-barFrontPersonal.style.height = '150px';
+barFrontPersonal.style.height = '90px';
 //barFrontPersonal.style.border = '3px solid red';
 barFrontPersonal.style.justifyContent = 'space-around';
-barFrontPersonal.style.gap = '20px';
+barFrontPersonal.style.gap = '10px';
 
 
 
@@ -526,7 +526,7 @@ svgsSize(svgPersonal, '30px');
 h2_personal.style.color = 'orange';
 
 tecno4.querySelectorAll('svg').forEach(svg => svg.style.display = 'none');
-svgsSize(tecno4, '50px');
+svgsSize(tecno4, '30px');
 
 svgs_front_personal.querySelectorAll('.personal').forEach(svg => svg.style.display = 'block');
 
