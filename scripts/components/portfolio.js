@@ -450,7 +450,7 @@ counter1.id = 'counter1';
 //counter1.style.border = '3px solid red';
 counter1.style.borderRadius = '15px';
 counter1.style.textAlign = 'center';
-counter1.style.color = 'white';
+//counter1.style.color = 'white';
 counter1.style.background = '#74C0FC';
 
 const counter2 = document.createElement('div');
@@ -458,7 +458,7 @@ counter2.id = 'counter2';
 //counter1.style.border = '3px solid red';
 counter2.style.borderRadius = '15px';
 counter2.style.textAlign = 'center';
-counter2.style.color = 'white';
+//counter2.style.color = 'white';
 counter2.style.background = '#ff8605';
 
 const counter3 = document.createElement('div');
@@ -466,7 +466,7 @@ counter3.id = 'counter3';
 //counter1.style.border = '3px solid red';
 counter3.style.borderRadius = '15px';
 counter3.style.textAlign = 'center';
-counter3.style.color = 'white';
+//counter3.style.color = 'white';
 counter3.style.background = '#FFD43B';
     
    
@@ -521,7 +521,7 @@ barFrontPersonal.style.gap = '20px';
 
 
 
-svgsSize(svgPersonal, '50px');
+svgsSize(svgPersonal, '30px');
 
 h2_personal.style.color = 'orange';
 
