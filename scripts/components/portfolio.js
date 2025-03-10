@@ -444,36 +444,31 @@ const imgPersonal4 = document.createElement('img');
     svgs_front_personal.innerHTML = `${svgsTecno}`;
     
         //contador animado
-/////////////////////////
-const counter1 = document.createElement('div');
-counter1.id = 'counter1';
-//counter1.style.border = '3px solid red';
-counter1.style.borderRadius = '15px';
-counter1.style.textAlign = 'center';
-//counter1.style.color = 'white';
-counter1.style.background = '#74C0FC';
+/////////////////////////74C0FC
+const createBar = (color, id) => {
+    const bar = document.createElement('div');
+    bar.id = id;
+    bar.style.borderRadius = '15px';
+    bar.style.textAlign = 'center';
+    //counter1.style.color = 'white';
+    bar.style.background = color;
+    return bar;
+};
 
-const counter2 = document.createElement('div');
-counter2.id = 'counter2';
-//counter1.style.border = '3px solid red';
-counter2.style.borderRadius = '15px';
-counter2.style.textAlign = 'center';
-//counter2.style.color = 'white';
-counter2.style.background = '#ff8605';
+const bar1 = createBar('#74C0FC','bar1');
 
-const counter3 = document.createElement('div');
-counter3.id = 'counter3';
-//counter1.style.border = '3px solid red';
-counter3.style.borderRadius = '15px';
-counter3.style.textAlign = 'center';
-//counter3.style.color = 'white';
-counter3.style.background = '#FFD43B';
+const bar2 = createBar('#ff8605','bar2');
+
+const bar3 = createBar('#FFD43B','bar3');
+
+const bar4 = createBar('#74C0FC','bar4');
+
     
    
     const secFrontPersonal = document.createElement('div');
     const barFrontPersonal = document.createElement('div');
     
-    barFrontPersonal.append(counter1, counter2, counter3);
+    barFrontPersonal.append(bar1, bar2, bar3);
     
     
     secFrontPersonal.append(svgs_front_personal, barFrontPersonal);
@@ -659,12 +654,12 @@ const effect = entries => {
           }
           
           
-          if (entry.target.id === 'counter1') {
-                animateCounter(counter1, 10, 1000);
-          } else if (entry.target.id === 'counter2') {
-                animateCounter(counter2, 5, 1000);
-          } else if (entry.target.id === 'counter3') {
-                animateCounter(counter3, 100, 1000);
+          if (entry.target.id === 'bar1') {
+                animateCounter(bar1, 10, 1000);
+          } else if (entry.target.id === 'bar2') {
+                animateCounter(bar2, 5, 1000);
+          } else if (entry.target.id === 'bar3') {
+                animateCounter(bar3, 100, 1000);
           }
               
           if(entry.target.id === 'fast'){
@@ -692,9 +687,9 @@ imgs.forEach(entry => observer.observe(entry));
 
 //observer.observe(outv);
 observer.observe(webdescrip);
-observer.observe(counter1);
-observer.observe(counter2);
-observer.observe(counter3);
+observer.observe(bar1);
+observer.observe(bar2);
+observer.observe(bar3);
 
 observer1.observe(svgFast);
 //container.style.gap = '10px';
