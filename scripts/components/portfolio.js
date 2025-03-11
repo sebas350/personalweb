@@ -1,7 +1,7 @@
 //import { document } from '../dom.js';
 import { Present } from './present.js';
 import {svgsTecno, others, svgsEmployee} from './svgs.js';
-import {svgsSize, createSlider, containerTecno, hr, animateCounter} from './utils.js';
+import {svgsSize, createSlider, containerTecno, hr, animateCounter, createBar} from './utils.js';
 
 export function Portfolio(language='es') {
 
@@ -445,23 +445,13 @@ const imgPersonal4 = document.createElement('img');
     
         //contador animado
 /////////////////////////74C0FC
-const createBar = (color, id) => {
-    const bar = document.createElement('div');
-    bar.id = id;
-    bar.style.borderRadius = '15px';
-    bar.style.textAlign = 'center';
-    //counter1.style.color = 'white';
-    bar.style.background = color;
-    return bar;
-};
+
 
 const bar1 = createBar('#74C0FC','bar1');
 
 const bar2 = createBar('#ff8605','bar2');
 
 const bar3 = createBar('#FFD43B','bar3');
-
-const bar4 = createBar('#74C0FC','bar4');
 
     
    
@@ -478,14 +468,23 @@ const bar4 = createBar('#74C0FC','bar4');
     
     
     //back
-    const backPersonal = document.createElement('p');
-    backPersonal.textContent = 'Backend';
+    
+    const backPersonal= document.createElement('div');
+    const secBackPersonal= document.createElement('div');
+    
+    const backPersonal_p = document.createElement('p');
+    backPersonal_p.textContent = 'Backend';
     
     const svgNodejs_personal = document.createElement('div');
     svgNodejs_personal.innerHTML = `${svgsTecno}`;
     
+    const bar4 = createBar('#5fad47','bar4');
     
-    tecno4.append(h2_tecno4, frontPersonal, backPersonal, svgNodejs_personal);
+    secBackPersonal.append(svgNodejs_personal, bar4);
+    
+    backPersonal.append(backPersonal_p, secBackPersonal);
+    
+    tecno4.append(h2_tecno4, frontPersonal, backPersonal);
 
 
 //visite
@@ -514,6 +513,9 @@ barFrontPersonal.style.height = '90px';
 barFrontPersonal.style.justifyContent = 'space-around';
 barFrontPersonal.style.gap = '10px';
 
+//back
+secBackPersonal.style.display = 'flex';
+secBackPersonal.style.height = '20px';
 
 
 svgsSize(svgPersonal, '30px');
@@ -660,6 +662,8 @@ const effect = entries => {
                 animateCounter(bar2, 5, 1000);
           } else if (entry.target.id === 'bar3') {
                 animateCounter(bar3, 100, 1000);
+          }else if (entry.target.id === 'bar4') {
+                animateCounter(bar4, 100, 1000);
           }
               
           if(entry.target.id === 'fast'){
@@ -690,6 +694,7 @@ observer.observe(webdescrip);
 observer.observe(bar1);
 observer.observe(bar2);
 observer.observe(bar3);
+observer.observe(bar4);
 
 observer1.observe(svgFast);
 //container.style.gap = '10px';

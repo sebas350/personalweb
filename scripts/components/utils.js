@@ -1,3 +1,13 @@
+export function createBar(color, id) {
+    const bar = document.createElement('div');
+    bar.id = id;
+    bar.style.borderRadius = '15px';
+    bar.style.textAlign = 'center';
+    //counter1.style.color = 'white';
+    bar.style.background = color;
+    return bar;
+};
+
 export function animateCounter(element, end, duration = 2000) {
     let startTime = null;
 
