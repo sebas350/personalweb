@@ -502,6 +502,14 @@ sectionWeb.appendChild(personalWeb);
 
 // styles
 
+//tecno
+tecno4.style.display = 'flex';
+tecno4.style.flexDirection = 'column';
+tecno4.style.gap = '20px';
+
+h2_tecno4.style.textAlign = 'center';
+
+
 //front
 secFrontPersonal.style.display = 'flex';
 
