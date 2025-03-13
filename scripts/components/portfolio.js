@@ -266,6 +266,12 @@ visiteWeb3.style.textAlign = 'center';
 /////////////////////////
 
 
+
+
+
+
+
+
 ///////////////////////////
 // section personal web
 
@@ -429,24 +435,6 @@ personalWeb.style.gap = '20px';
 visiteWeb4.style.textAlign = 'center';
 
 /////////////////////////
-
-
-
-
-//contador animado
-/////////////////////////
-const counter = document.createElement('div');
-counter.id = 'counter';
-counter.style.border = '3px solid red';
-counter.style.borderRadius = '15px';
-counter.style.textAlign = 'center';
-counter.style.color = 'white';
-counter.style.background = 'red';
-
-sectionWeb.appendChild(counter);
-
-/////////////////////////
-
 
 
 

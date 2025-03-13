@@ -47,7 +47,18 @@ export const translationsPortfolio = {
                 p2:'La plataforma permite que tanto empleadores como candidatos se registren y muestren sus habilidades o necesidades laborales. Además, cuenta con un sistema de inicio de sesión que facilita el control y gestión de los registros.',
                 tools: 'Herramientas usadas para la Aplicacion de Tareas',
             },
-            plataform: {},
+            plataform: {
+            title: 'Plataforma Educativa',
+            description: 'Esta plataforma fue creada con el propósito de digitalizar los libros de la biblioteca escolar. Permite a los docentes acceder con su usuario y contraseña a una colección organizada por ciclos, incluyendo materias como Lengua, Matemáticas, Sociales, Naturales y Tecnología.',
+            features: [
+            'Organización por ciclos para facilitar la navegación y el acceso a los libros.',
+            'Búsqueda avanzada por autor, editorial y materia para encontrar rápidamente el material necesario.',
+            'Índice de cada libro disponible para facilitar la consulta de contenidos.',
+            'Opción de visualización online para leer directamente desde la plataforma.'
+            ],
+            visite: 'Explora la Plataforma Educativa',
+            tools: 'Herramientas utilizadas en la Plataforma Educativa',
+            },
             personal: {
                 title: 'Aplicación web profesional',
                 description: 'Este proyecto nació de la necesidad de mostrar mi trayectoria profesional y las habilidades que he adquirido en los últimos años. Para lograrlo, desarrollé una aplicación web que organiza mi experiencia en distintas secciones, incluyendo una presentación personal, mi currículum, mis proyectos y un portafolio interactivo.',
@@ -109,7 +120,18 @@ tools: [
                 p2:'The platform allows both employers and job seekers to register and showcase their skills or job needs. Additionally, it includes a login system to manage and track registrations efficiently.',
                 tools: 'Tools used for TasksWeb',
             },
-            plataform: {},
+            plataform: {
+            title: 'Educational Platform',
+            description: 'This platform was created with the aim of digitizing the school library books. It allows teachers to log in with their username and password to access a collection organized by educational cycles, including subjects such as Language, Mathematics, Social Sciences, Natural Sciences, and Technology.',
+            features: [
+            'Cycle-based organization for easy navigation and book access.',
+            'Advanced search by author, publisher, and subject to quickly find necessary materials.',
+            'Index of each book available for easy content reference.',
+            'Online viewing option to read directly from the platform.'
+            ],
+            visite: 'Explore the Educational Platform',
+            tools: 'Tools used in the Educational Platform',
+            },
             personal: { 
                 title: 'Professional Web Application',
                 description: 'This project was born out of the need to showcase my professional journey and the skills I have acquired over the years. To achieve this, I developed a web application that organizes my experience into different sections, including a personal introduction, my resume, my projects, and an interactive portfolio.',
