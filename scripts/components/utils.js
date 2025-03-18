@@ -1,3 +1,90 @@
+export function createImgs(numberImgs, imgName, srcImgs){
+    
+    const imgs = [];
+    
+    for(let index = 0; index < numberImgs; index++){
+        const img = document.createElement('img');
+        img.src =`${srcImgs}${imgName}${index + 1}.jpg`;
+        img.className = `img-${imgName}`;
+        img.style.width = '100%';
+        img.style.height = 'auto';
+        img.style.borderRadius = '10px';
+        img.style.boxShadow = '10px 10px 10px grey';
+        img.style.filter = 'brightness(20%)';
+        img.style.transition = 'filter 1000ms';
+        
+        imgs.push(img);
+        
+    }
+
+return imgs;
+
+};
+
+
+export function createWeb(translateWeb, numberImgs, imgName, srcImgs, visiteUrl){
+    const web = document.createElement('div');
+       // const web = translateWeb; //webs.fastapi;
+       //style
+        web.style.display = 'flex';
+        web.style.flexDirection = 'column';
+        web.style.gap = '20px';
+
+    //svg tecno
+    //const svgs = document.createElement('div');
+   // svgs.innerHTML = `${svgsTecno}`;
+   // svgs.querySelectorAll('.svg').forEach(svg => svg.style.display = 'none');
+    
+    //const idSvg= svgs.querySelector(idTecno);
+    //idSvg.style.display = 'block';
+    //idSvg.style.opacity = '0';
+    //idSvg.style.width = '50px';
+    //idSvg.style.height = '50px';
+    //idSvg.style.transition = 'opacity 1000ms';
+    
+   //title and description + img
+    
+    const title = document.createElement('h2');
+    title.textContent = translateWeb.title;
+    
+    const description= document.createElement('p');
+    description.textContent = translateWeb.description;
+    
+    const p1= document.createElement('p');
+    p1.textContent = translateWeb.features[0];
+    const p2= document.createElement('p');
+    p2.textContent = translateWeb.features[1];
+    const p3= document.createElement('p');
+    p3.textContent = translateWeb.features[2];
+    
+    //tecnos
+   // const tecno = containerTecno(translateWeb.tools, svgsTecno, others);
+        //style
+       // svgsSize(tecno, '50px');
+      //  tecno.querySelector('#fast').style.display = 'block';
+    
+    
+    //visite
+    const visite = document.createElement('div');
+    visite.innerHTML = `<a href= ${visiteUrl}>${translateWeb.visite}</a>`;
+        //style
+        visite.style.textAlign = 'center';
+    
+    //separator
+
+    const hr1 = hr();
+    
+    const imgs = createImgs(numberImgs, imgName, srcImgs);
+    
+    //append
+    
+    web.append(title, description, imgs[0], p1, imgs[1], p2, imgs[2], p3, imgs[3], visite, hr1);
+    
+    return web;
+    
+};
+
+
 export function createBar(color, id) {
     const bar = document.createElement('div');
     bar.id = id;

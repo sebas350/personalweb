@@ -2,7 +2,7 @@
 import { Present } from './present.js';
 import { translationsPortfolio } from './translations.js';
 import {svgsTecno, others, svgsEmployee} from './svgs.js';
-import {svgsSize, createSlider, containerTecno, hr, animateCounter, createBar} from './utils.js';
+import {svgsSize, createSlider, containerTecno, hr, animateCounter, createBar, createWeb, createImgs } from './utils.js';
 
 export function Portfolio(language='es') {
 
@@ -263,14 +263,14 @@ webTasks.style.gap = '20px';
 
 visiteWeb3.style.textAlign = 'center';
 
-/////////////////////////
+////////////////////////
+//plataform
+const plataform = createWeb(webs.plataform, 4, 'plataform', 'https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/', 'https://plataform-xf6v.onrender.com/');
+
+sectionWeb.appendChild(plataform);
 
 
-
-
-
-
-
+////////////////////////
 
 ///////////////////////////
 // section personal web
