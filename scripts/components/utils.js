@@ -22,18 +22,21 @@ return imgs;
 };
 
 
-export function createWeb(translateWeb, numberImgs, imgName, srcImgs, visiteUrl){
+export function createWeb(translateWeb, numberImgs, imgName, srcImgs, visiteUrl, svgsT, svgsArray){
     const web = document.createElement('div');
        // const web = translateWeb; //webs.fastapi;
        //style
         web.style.display = 'flex';
         web.style.flexDirection = 'column';
-        web.style.gap = '20px';
+        web.style.gap = '30px';
 
     //svg tecno
-    //const svgs = document.createElement('div');
-   // svgs.innerHTML = `${svgsTecno}`;
-   // svgs.querySelectorAll('.svg').forEach(svg => svg.style.display = 'none');
+    const svgs = document.createElement('div');
+   svgs.innerHTML = `${svgsT}`;
+   svgs.querySelectorAll('.svg').forEach(svg => svg.style.display = 'none');
+   
+   svgsSize(svgs, '50px');
+   svgs.querySelector('#fast').style.display = 'block';
     
     //const idSvg= svgs.querySelector(idTecno);
     //idSvg.style.display = 'block';
@@ -57,12 +60,6 @@ export function createWeb(translateWeb, numberImgs, imgName, srcImgs, visiteUrl)
     const p3= document.createElement('p');
     p3.textContent = translateWeb.features[2];
     
-    //tecnos
-   // const tecno = containerTecno(translateWeb.tools, svgsTecno, others);
-        //style
-       // svgsSize(tecno, '50px');
-      //  tecno.querySelector('#fast').style.display = 'block';
-    
     
     //visite
     const visite = document.createElement('div');
@@ -76,9 +73,20 @@ export function createWeb(translateWeb, numberImgs, imgName, srcImgs, visiteUrl)
     
     const imgs = createImgs(numberImgs, imgName, srcImgs);
     
+    //svgsWeb
+        const svgsWeb = [];
+        svgsArray.forEach(svg => {
+            const svgElement = document.createElement('div');
+            svgElement.innerHTML = svg;
+            svgElement.style.width = '50px';
+            svgElement.style.height = '50px';
+            svgsWeb.push(svgElement);
+        });
+        
+    
     //append
     
-    web.append(title, description, imgs[0], p1, imgs[1], p2, imgs[2], p3, imgs[3], visite, hr1);
+    web.append(svgsWeb[0], title, description, imgs[0], svgsWeb[1], p1, imgs[1], svgsWeb[2], p2, imgs[2], svgsWeb[3], p3, imgs[3], visite, hr1);
     
     return web;
     

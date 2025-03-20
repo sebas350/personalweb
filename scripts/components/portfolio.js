@@ -3,6 +3,7 @@ import { Present } from './present.js';
 import { translationsPortfolio } from './translations.js';
 import {svgsTecno, others, svgsEmployee} from './svgs.js';
 import {svgsSize, createSlider, containerTecno, hr, animateCounter, createBar, createWeb, createImgs } from './utils.js';
+import { svgsPlataform } from './svgsPlataform.js';
 
 export function Portfolio(language='es') {
 
@@ -265,7 +266,7 @@ visiteWeb3.style.textAlign = 'center';
 
 ////////////////////////
 //plataform
-const plataform = createWeb(webs.plataform, 4, 'plataform', 'https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/', 'https://plataform-xf6v.onrender.com/');
+const plataform = createWeb(webs.plataform, 4, 'plataform', 'https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/', 'https://plataform-xf6v.onrender.com/', svgsTecno, svgsPlataform);
 
 sectionWeb.appendChild(plataform);
 
