@@ -10,7 +10,7 @@ export function createImgs(numberImgs, imgName, srcImgs){
         img.style.height = 'auto';
         img.style.borderRadius = '10px';
         img.style.boxShadow = '10px 10px 10px grey';
-        img.style.filter = 'brightness(20%)';
+        //img.style.filter = 'brightness(20%)';
         img.style.transition = 'filter 1000ms';
         
         imgs.push(img);
