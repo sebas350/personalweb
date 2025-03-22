@@ -307,6 +307,8 @@ p4_personal.textContent = web4.p3;
 const imgPersonal2 = document.createElement('img');
 const imgPersonal3 = document.createElement('img');
 const imgPersonal4 = document.createElement('img');
+const imgPersonal5 = document.createElement('img');
+const imgPersonal6 = document.createElement('img');
 
 // tecnos
     const tecno4 = document.createElement('div');
@@ -375,9 +377,9 @@ visiteWeb4.innerHTML = `<a href="https://tasks-t3lh.onrender.com/">${web4.visite
 
 const hr4 = hr();
 
-personalWeb.append(svgPersonal, h2_personal, p1_personal, imgPersonal1, p2_personal, imgPersonal2, p3_personal, imgPersonal3, p4_personal, imgPersonal4, tecno4, visiteWeb4, hr4);
+personalWeb.append(svgPersonal, h2_personal, p1_personal, imgPersonal1, p2_personal, imgPersonal2, imgPersonal3, p3_personal, imgPersonal4, imgPersonal5, p4_personal, imgPersonal6, tecno4, visiteWeb4, hr4);
 
-const imgsPersonal = [imgPersonal1, imgPersonal2, imgPersonal3, imgPersonal4];
+const imgsPersonal = [imgPersonal1, imgPersonal2, imgPersonal3, imgPersonal4, imgPersonal5, imgPersonal6];
 
 sectionWeb.appendChild(personalWeb);
 
@@ -419,7 +421,7 @@ svgs_front_personal.querySelectorAll('.personal').forEach(svg => svg.style.displ
 svgNodejs_personal.querySelector('#nodejs').style.display = 'block';
 
 imgsPersonal.forEach((img, index) => {
-    img.src = `https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/personal${index + 1}.jpg`;
+    img.src = `https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/personal${index + 1}.png`;
     img.className = 'imgPersonal';
     img.style.width = '100%';
     img.style.height = 'auto';
