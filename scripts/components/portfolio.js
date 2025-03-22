@@ -290,7 +290,7 @@ h2_personal.textContent = web4.title;
 const p1_personal = document.createElement('p');
 p1_personal.textContent = web4.description;
 
-const imgPersonal1 = document.createElement('img');
+const imgPersonal1 = document.createElement('div');
 
 // elements p + imgs
 const p2_personal = document.createElement('p');
@@ -304,11 +304,11 @@ const p4_personal = document.createElement('p');
 p4_personal.textContent = web4.p3;
 
 
-const imgPersonal2 = document.createElement('img');
-const imgPersonal3 = document.createElement('img');
-const imgPersonal4 = document.createElement('img');
-const imgPersonal5 = document.createElement('img');
-const imgPersonal6 = document.createElement('img');
+const imgPersonal2 = document.createElement('div');
+const imgPersonal3 = document.createElement('div');
+const imgPersonal4 = document.createElement('div');
+const imgPersonal5 = document.createElement('div');
+const imgPersonal6 = document.createElement('div');
 
 // tecnos
     const tecno4 = document.createElement('div');
@@ -421,14 +421,18 @@ svgs_front_personal.querySelectorAll('.personal').forEach(svg => svg.style.displ
 svgNodejs_personal.querySelector('#nodejs').style.display = 'block';
 
 imgsPersonal.forEach((img, index) => {
-    img.src = `https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/personal${index + 1}.png`;
+    img.style.backgroundImage = `url("https://raw.githubusercontent.com/sebas350/personalweb/main/scripts/components/img/personal${index + 1}.png")`;
     img.className = 'imgPersonal';
     img.style.width = '100%';
-    img.style.height = 'auto';
+    img.style.height = '100vh';
     img.style.borderRadius = '10px';
     img.style.boxShadow = '10px 10px 10px grey';
-    img.style.filter = 'brightness(20%)';
+    //img.style.filter = 'brightness(20%)';
     img.style.transition = 'filter 1000ms';
+    img.style.backgroundAttachment = 'fixed';
+    img.style.backgroundSize = '90%';
+    img.style.backgroundPosition = 'center';
+    img.style.backgroundRepeat = 'no-repeat';
 });
 
 personalWeb.style.display = 'flex';
