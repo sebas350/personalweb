@@ -18,7 +18,7 @@ export function Loader() {
   
   
   title.textContent = 'PROFESIONAL WEB';
-  subtitle.textContent = 'Designado por Tello sebastian jose';
+  subtitle.textContent = 'Creado por Tello sebastian jose';
 
 //effect descubierto 
 
