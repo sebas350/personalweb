@@ -373,7 +373,7 @@ const bar3 = createBar('#FFD43B','bar3');
 //visite
 
 const visiteWeb4 = document.createElement('div');
-visiteWeb4.innerHTML = `<a href="https://tasks-t3lh.onrender.com/">${web4.visite}</a>`;
+visiteWeb4.innerHTML = `<a href="https://sebas350.github.io/personalweb/">${web4.visite}</a>`;
 
 const hr4 = hr();
 
